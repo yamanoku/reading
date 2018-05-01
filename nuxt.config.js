@@ -1,0 +1,54 @@
+module.exports = {
+  head: {
+    title: 'READING...',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '@yamanoku Reading News List' },
+      { hid: 'og:image', name: 'og:image', content: 'https://yamanoku.net/iam.jpg' },
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
+  },
+  css: [
+    'modern-normalize'
+  ],
+  build: {
+    extend (config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
+    },
+    vendor: [
+      'axios',
+      'vue-paginate'
+    ]
+  },
+  router: {
+    base: '/reading/'
+  },
+  plugins: ['~/plugins/vue-paginate'],
+  modules: [
+    '@nuxtjs/pwa',
+  ],
+  workbox: {
+    dev: true,
+  },
+  manifest: {
+    name: 'READING...',
+    short_name: 'READING...',
+    title: 'READING...',
+    'og:title': 'READING...',
+    description: '@yamanoku Reading News List',
+    'og:description': '@yamanoku Reading News List',
+    lang: 'en',
+    theme_color: '#36465d',
+    background_color: '#36465d'
+  },
+}
