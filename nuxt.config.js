@@ -5,7 +5,7 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '@yamanoku Reading News List' },
-      { hid: 'og:image', name: 'og:image', content: 'https://yamanoku.net/iam.jpg' },
+      { hid: 'og:image', name: 'og:image', content: 'https://yamanoku.net/reading/icon.png' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -48,7 +48,7 @@ module.exports = {
     description: '@yamanoku Reading News List',
     'og:description': '@yamanoku Reading News List',
     lang: 'en',
-    theme_color: '#36465d',
-    background_color: '#36465d'
+    theme_color: '#f9f9f9',
+    background_color: '#f9f9f9'
   },
 }
