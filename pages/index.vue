@@ -5,12 +5,10 @@
 </template>
 
 <script>
-import HeaderComponent from '~/components/Header.vue'
 import NewsList from '~/components/NewsList.vue'
 
 export default {
   components: {
-    HeaderComponent,
     NewsList
   }
 }
