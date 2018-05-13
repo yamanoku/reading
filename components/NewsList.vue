@@ -14,9 +14,25 @@
       :per="20">
       <li v-for="list in paginated('lists')" :key="list.iid">
         <!-- title not response -->
-        <a v-if="!list.attachments[0].title" :href="urlRender(list.attachments[0].text)" target="_blank" rel="noopener">{{ textRender(list.attachments[0].text) }}</a>
+        <a
+          v-if="!list.attachments[0].title"
+          :href="urlRender(list.attachments[0].text)"
+          :title="'Read More: ' + list.attachments[0].text"
+          target="_blank"
+          rel="noopener">
+            <span class="off-screen">{{ unix2ymd (list.attachments[0].ts) }}</span>
+            {{ textRender(list.attachments[0].text) }}
+        </a>
         <!-- title response -->
-        <a v-else :href="list.attachments[0].title_link" target="_blank" rel="noopener">{{ list.attachments[0].title }}</a>
+        <a
+          v-else
+          :href="list.attachments[0].title_link"
+          :title="'Read More: ' + list.attachments[0].title"
+          target="_blank"
+          rel="noopener">
+            <span class="off-screen">{{ unix2ymd (list.attachments[0].ts) }}</span>
+            {{ list.attachments[0].title }}
+        </a>
       </li>
     </paginate>
   </div>
@@ -62,7 +78,14 @@
       },
       onPageChange() {
         document.getElementsByClassName('news-list')[0].scrollTop = 0;
-      }
+      },
+      unix2ymd (intTime) {
+        const d = new Date( intTime * 1000 );
+        const year  = d.getFullYear();
+        const month = ("0" + (d.getMonth() + 1)).slice(-2);
+        const day  = ("0" + d.getDate()).slice(-2);
+        return( year + '-' + month + '-' + day);
+      },
     }
   }
 </script>
@@ -166,5 +189,13 @@
     border: 1px solid #37455d;
     color: #fff;
   }
+}
+.off-screen {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 </style>
