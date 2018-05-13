@@ -124,6 +124,7 @@
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 10;
   width: 100vw;
   height: 10vh;
   background-color: #fff;
@@ -171,6 +172,7 @@
   position: fixed;
   top: 0;
   left: 5px;
+  z-index: 0;
   li {
     display: block;
     padding: 0;
