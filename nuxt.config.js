@@ -30,9 +30,6 @@ module.exports = {
       'vue-paginate'
     ]
   },
-  router: {
-    base: '/reading/'
-  },
   plugins: ['~/plugins/vue-paginate'],
   modules: [
     '@nuxtjs/pwa',
