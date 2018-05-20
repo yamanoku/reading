@@ -150,7 +150,7 @@
   li.left-arrow a,
   li.right-arrow a {
     color: #fff;
-    background-color: #37455d;
+    background-color: #0c9bf3;
     opacity: 1;
   }
   li.right-arrow {
@@ -186,9 +186,23 @@
     text-decoration: none;
     border: 1px solid #ddd;
   }
-  a:hover {
-    background-color: #37455d;
-    border: 1px solid #37455d;
+  a:hover,
+  a:focus {
+    background-color: #0c9bf3;
+    border: 1px solid #0c9bf3;
+    color: #fff;
+  }
+  a:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 3px #fff;
+  }
+  a:visited {
+    color: #999;
+  }
+  a:visited:hover,
+  a:visited:focus {
+    background-color: #0c9bf3;
+    border: 1px solid #0c9bf3;
     color: #fff;
   }
 }
