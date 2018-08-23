@@ -96,7 +96,7 @@
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@nuxtjs/meta/-/meta-2.2.1.tgz#ad7c8658ef0357cdef56856a9ff21d595102e089"
 
-"@nuxtjs/pwa@^2.0.8":
+"@nuxtjs/pwa@2.0.8":
   version "2.0.8"
   resolved "https://registry.yarnpkg.com/@nuxtjs/pwa/-/pwa-2.0.8.tgz#0e36ea1e3a63c1531f4e9e6b1d03a9390b09f8b5"
   dependencies:
@@ -390,7 +390,7 @@ aws4@^1.2.1, aws4@^1.6.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.7.0.tgz#d4d0e9b9dbfca77bf08eeb0a8a471550fe39e289"
 
-axios@^0.18.0:
+axios@0.18.0:
   version "0.18.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
   dependencies:
@@ -429,7 +429,7 @@ babel-core@^6.26.0:
     slash "^1.0.0"
     source-map "^0.5.6"
 
-babel-eslint@^8.2.1:
+babel-eslint@8.2.3:
   version "8.2.3"
   resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-8.2.3.tgz#1a2e6681cc9bc4473c32899e59915e19cd6733cf"
   dependencies:
@@ -2205,7 +2205,7 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-friendly-formatter@^3.0.0:
+eslint-friendly-formatter@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/eslint-friendly-formatter/-/eslint-friendly-formatter-3.0.0.tgz#278874435a6c46ec1d94fa0b1ff494e30ef04290"
   dependencies:
@@ -2215,7 +2215,7 @@ eslint-friendly-formatter@^3.0.0:
     minimist "^1.2.0"
     text-table "^0.2.0"
 
-eslint-loader@^1.7.1:
+eslint-loader@1.9.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/eslint-loader/-/eslint-loader-1.9.0.tgz#7e1be9feddca328d3dcfaef1ad49d5beffe83a13"
   dependencies:
@@ -2225,7 +2225,7 @@ eslint-loader@^1.7.1:
     object-hash "^1.1.4"
     rimraf "^2.6.1"
 
-eslint-plugin-vue@^4.0.0:
+eslint-plugin-vue@4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-4.5.0.tgz#09d6597f4849e31a3846c2c395fccf17685b69c3"
   dependencies:
@@ -2242,7 +2242,7 @@ eslint-visitor-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
 
-eslint@^4.15.0:
+eslint@4.19.1:
   version "4.19.1"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.19.1.tgz#32d1d653e1d90408854bfb296f076ec7e186a300"
   dependencies:
@@ -3977,7 +3977,7 @@ mkdirp@0.5.1, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkd
   dependencies:
     minimist "0.0.8"
 
-modern-normalize@^0.4.0:
+modern-normalize@0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/modern-normalize/-/modern-normalize-0.4.0.tgz#1ccbc52861e1bce258144d28e890dc709b120ed2"
 
@@ -4123,7 +4123,7 @@ node-pre-gyp@^0.9.0:
     semver "^5.3.0"
     tar "^4"
 
-node-sass@^4.8.3:
+node-sass@4.8.3:
   version "4.8.3"
   resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.8.3.tgz#d077cc20a08ac06f661ca44fb6f19cd2ed41debb"
   dependencies:
@@ -4228,7 +4228,7 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt@^1.4.2:
+nuxt@1.4.2:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-1.4.2.tgz#54165be580374b8392ed1150f758e37ab3f7c61d"
   dependencies:
@@ -5275,7 +5275,7 @@ punycode@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.0.tgz#5f863edc89b96db09074bad7947bf09056ca4e7d"
 
-push-dir@^0.4.1:
+push-dir@0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/push-dir/-/push-dir-0.4.1.tgz#29481eacd9c2106bbb7941db6d37d122a071ecb4"
   dependencies:
@@ -5702,7 +5702,7 @@ sass-graph@^2.2.4:
     scss-tokenizer "^0.2.3"
     yargs "^7.0.0"
 
-sass-loader@^7.0.1:
+sass-loader@7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-7.0.1.tgz#fd937259ccba3a9cfe0d5f8a98746d48adfcc261"
   dependencies:
@@ -6620,7 +6620,7 @@ vue-meta@^1.4.3:
     lodash.isplainobject "^4.0.6"
     object-assign "^4.1.1"
 
-vue-paginate@^3.6.0:
+vue-paginate@3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/vue-paginate/-/vue-paginate-3.6.0.tgz#254aa144e4f92efe4b2c89fb04a6399e19319c0d"
   dependencies:
@@ -6665,7 +6665,7 @@ vue@2.3.3:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.3.3.tgz#d1eaa8fde5240735a4563e74f2c7fead9cbb064c"
 
-vue@^2.5.17:
+vue@2.5.17, vue@^2.5.17:
   version "2.5.17"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.17.tgz#0f8789ad718be68ca1872629832ed533589c6ada"
 
