@@ -103,7 +103,7 @@
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/@nuxtjs/meta/-/meta-2.3.2.tgz#43c13f17c40e44b0b360eb355556a5b0988eb3bb"
 
-"@nuxtjs/pwa@^2.3.2":
+"@nuxtjs/pwa@2.3.2":
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/@nuxtjs/pwa/-/pwa-2.3.2.tgz#ffa79fb82f6d07eeb880feed158936d8113b74d5"
   dependencies:
