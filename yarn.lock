@@ -85,7 +85,7 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@nuxtjs/icon@^2.1.0":
+"@nuxtjs/icon@^2.3.2":
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/@nuxtjs/icon/-/icon-2.3.2.tgz#394f745dc9bd9e3d3bbaeaa2746af0db2517dfbb"
   dependencies:
@@ -93,26 +93,26 @@
     hash-sum "^1.0.2"
     jimp "^0.3.5"
 
-"@nuxtjs/manifest@^2.1.0":
+"@nuxtjs/manifest@^2.3.2":
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/@nuxtjs/manifest/-/manifest-2.3.2.tgz#adcf1f3f995925e3de77ff22ab88e83fbb5112d9"
   dependencies:
     hash-sum "^1.0.2"
 
-"@nuxtjs/meta@^2.2.1":
+"@nuxtjs/meta@^2.3.2":
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/@nuxtjs/meta/-/meta-2.3.2.tgz#43c13f17c40e44b0b360eb355556a5b0988eb3bb"
 
-"@nuxtjs/pwa@2.0.8":
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/pwa/-/pwa-2.0.8.tgz#0e36ea1e3a63c1531f4e9e6b1d03a9390b09f8b5"
+"@nuxtjs/pwa@^2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/pwa/-/pwa-2.3.2.tgz#ffa79fb82f6d07eeb880feed158936d8113b74d5"
   dependencies:
-    "@nuxtjs/icon" "^2.1.0"
-    "@nuxtjs/manifest" "^2.1.0"
-    "@nuxtjs/meta" "^2.2.1"
-    "@nuxtjs/workbox" "^2.2.0"
+    "@nuxtjs/icon" "^2.3.2"
+    "@nuxtjs/manifest" "^2.3.2"
+    "@nuxtjs/meta" "^2.3.2"
+    "@nuxtjs/workbox" "^2.3.2"
 
-"@nuxtjs/workbox@^2.2.0":
+"@nuxtjs/workbox@^2.3.2":
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/@nuxtjs/workbox/-/workbox-2.3.2.tgz#2c88108934835b65e15f9620cdce26d402d36f43"
   dependencies:
