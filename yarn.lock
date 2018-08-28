@@ -50,13 +50,6 @@
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.0.0.tgz#697655183394facffb063437ddf52c0277698775"
 
-"@babel/polyfill@^7.0.0-rc.1":
-  version "7.0.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@babel/polyfill/-/polyfill-7.0.0-rc.3.tgz#af142a5d5ce82f5ee0ae615c798e3a5bffacee84"
-  dependencies:
-    core-js "^2.5.7"
-    regenerator-runtime "^0.11.1"
-
 "@babel/template@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.0.0.tgz#c2bc9870405959c89a9c814376a2ecb247838c80"
@@ -87,36 +80,36 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@nuxtjs/icon@^2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/icon/-/icon-2.3.2.tgz#394f745dc9bd9e3d3bbaeaa2746af0db2517dfbb"
+"@nuxtjs/icon@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/icon/-/icon-2.4.0.tgz#a24a46ac80deb31efc9089c3bc4256759986d116"
   dependencies:
     fs-extra "^7.0.0"
     hash-sum "^1.0.2"
-    jimp "^0.3.5"
+    jimp "0.3.4"
 
-"@nuxtjs/manifest@^2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/manifest/-/manifest-2.3.2.tgz#adcf1f3f995925e3de77ff22ab88e83fbb5112d9"
+"@nuxtjs/manifest@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/manifest/-/manifest-2.4.0.tgz#78148c172f46d7c8e677cf67f8d6752def2542fe"
   dependencies:
     hash-sum "^1.0.2"
 
-"@nuxtjs/meta@^2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/meta/-/meta-2.3.2.tgz#43c13f17c40e44b0b360eb355556a5b0988eb3bb"
+"@nuxtjs/meta@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/meta/-/meta-2.4.0.tgz#910490c0cb7f204430663122218386472476bde3"
 
-"@nuxtjs/pwa@2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/pwa/-/pwa-2.3.2.tgz#ffa79fb82f6d07eeb880feed158936d8113b74d5"
+"@nuxtjs/pwa@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/pwa/-/pwa-2.4.0.tgz#7ee6bda501e7b768cd3fbac5a1d8bcac881e9de4"
   dependencies:
-    "@nuxtjs/icon" "^2.3.2"
-    "@nuxtjs/manifest" "^2.3.2"
-    "@nuxtjs/meta" "^2.3.2"
-    "@nuxtjs/workbox" "^2.3.2"
+    "@nuxtjs/icon" "^2.4.0"
+    "@nuxtjs/manifest" "^2.4.0"
+    "@nuxtjs/meta" "^2.4.0"
+    "@nuxtjs/workbox" "^2.4.0"
 
-"@nuxtjs/workbox@^2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/workbox/-/workbox-2.3.2.tgz#2c88108934835b65e15f9620cdce26d402d36f43"
+"@nuxtjs/workbox@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/workbox/-/workbox-2.4.0.tgz#61d3f6996e048a2e574cf0be07544dd040867969"
   dependencies:
     workbox-build "^3.4.1"
 
@@ -1621,7 +1614,7 @@ copy-descriptor@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
 
-core-js@^2.4.0, core-js@^2.5.0, core-js@^2.5.7:
+core-js@^2.4.0, core-js@^2.5.0:
   version "2.5.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
 
@@ -3409,11 +3402,10 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-jimp@^0.3.5:
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/jimp/-/jimp-0.3.5.tgz#299a3648d306ca114cc302f7df53eebc4d6b8af6"
+jimp@0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/jimp/-/jimp-0.3.4.tgz#df0bca587c28c263102dc72af712bda01a211c51"
   dependencies:
-    "@babel/polyfill" "^7.0.0-rc.1"
     any-base "^1.1.0"
     bmp-js "0.1.0"
     buffer "^5.2.0"
@@ -5453,7 +5445,7 @@ regenerator-runtime@^0.10.0:
   version "0.10.5"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz#336c3efc1220adcedda2c9fab67b5a7955a33658"
 
-regenerator-runtime@^0.11.0, regenerator-runtime@^0.11.1:
+regenerator-runtime@^0.11.0:
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
 
