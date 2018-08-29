@@ -17,21 +17,21 @@
         <a
           v-if="!list.attachments[0].title"
           :href="urlRender(list.attachments[0].text)"
-          :title="'Read More: ' + list.attachments[0].text"
+          :title="'Read More: ' + emoji(list.attachments[0].text)"
           target="_blank"
           rel="noopener">
             <span class="off-screen">{{ unix2ymd (list.attachments[0].ts) }}</span>
-            {{ textRender(list.attachments[0].text) }}
+            {{ emoji(textRender(list.attachments[0].text)) }}
         </a>
         <!-- title response -->
         <a
           v-else
           :href="list.attachments[0].title_link"
-          :title="'Read More: ' + list.attachments[0].title"
+          :title="'Read More: ' + emoji(list.attachments[0].title)"
           target="_blank"
           rel="noopener">
             <span class="off-screen">{{ unix2ymd (list.attachments[0].ts) }}</span>
-            {{ list.attachments[0].title }}
+            {{ emoji(list.attachments[0].title) }}
         </a>
       </li>
     </paginate>
@@ -45,6 +45,7 @@
 
 <script>
   import axios from 'axios';
+  import emoji from 'node-emoji';
   import {TOKEN} from '~/static/config.js';
   export default {
     data() {
@@ -72,6 +73,9 @@
           const mystr = text.split("Reading… ").join("");
           return mystr.replace(/^<[^>]h>|<[^>]*>$/g, "");
         }
+      },
+      emoji (text) {
+        return emoji.emojify(text);
       },
       urlRender (text) {
         return text.match(/ <([^\s]+)/)[1].slice(0, -1);
