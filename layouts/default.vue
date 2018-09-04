@@ -4,6 +4,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  mounted() {
+    if((new Date()).getHours() >= 21 || (new Date()).getHours() < 6 ) {
+      document.body.className += "night-mode";
+    }
+  },
+}
+</script>
+
 <style>
 html {
   font : inherit;
@@ -14,8 +24,17 @@ html {
 }
 html, body {
   height: 100vh;
+  background-color: #fff;
 }
 *, *:before, *:after {
   box-sizing: border-box;
+}
+.night-mode {
+  animation: night 2s ease 0s 1 normal;
+  animation-fill-mode: forwards;
+}
+@keyframes night {
+  0% {filter:invert(0);}
+  100% {filter:invert(100);}
 }
 </style>
