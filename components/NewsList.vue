@@ -58,7 +58,7 @@
     mounted() {
       axios.get(TOKEN)
         .then((res) => {
-          this.lists = res.data.messages.matches;
+          this.lists = res.data.api;
           setTimeout(() => {
             this.shown = true;
           }, 150);
