@@ -1,3 +1,4 @@
+---
 engines:
   duplication:
     enabled: true
@@ -5,9 +6,16 @@ engines:
       languages:
       - javascript
       extensions:
-      - .js
       - .vue
+  eslint:
+    enabled: true
+    channel: "eslint-4"
+  fixme:
+    enabled: true
 ratings:
   paths:
-  - "**/**.js"
-  - "**/**.vue"
+  - "./**/*.vue"
+exclude_paths:
+- dist/
+- .nuxt/
+- node_modules/
