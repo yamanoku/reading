@@ -1,4 +1,6 @@
 # READING...
+[![CircleCI](https://circleci.com/gh/yamanoku/reading/tree/dev.svg?style=svg)](https://circleci.com/gh/yamanoku/reading/tree/dev)
+[![Maintainability](https://api.codeclimate.com/v1/badges/854501b332960820e4c7/maintainability)](https://codeclimate.com/github/yamanoku/reading/maintainability)
 
 > @yamanoku Reading News List Page by PWA
 
