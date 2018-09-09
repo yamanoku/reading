@@ -1,25 +1,21 @@
 ---
 version: "2"
-engines:
+plugins:
+  eslint:
+    enabled: true
+    channel: "eslint-4"
+    config:
+      extensions:
+      - .vue
+      - .js
   duplication:
     enabled: true
     config:
       languages:
       - javascript
-      extensions:
-      - .vue
-  eslint:
-    enabled: true
-    channel: "eslint-4"
-      extensions:
-      - .vue
-      - .js
   fixme:
     enabled: true
-ratings:
-  paths:
-  - "components/NewsList.vue"
-exclude_paths:
+exclude_patterns:
 - dist/
 - .nuxt/
 - node_modules/
