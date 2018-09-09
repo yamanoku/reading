@@ -11,7 +11,8 @@ module.exports = {
     'plugin:vue/essential'
   ],
   plugins: [
-    'vue'
+    'vue',
+    'html'
   ],
   rules: {}
 }
