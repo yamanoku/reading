@@ -9,5 +9,5 @@ engines:
       - .vue
 ratings:
   paths:
-  - "**.js"
-  - "**.vue"
+  - "**/**.js"
+  - "**/**.vue"
