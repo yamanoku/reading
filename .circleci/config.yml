@@ -33,5 +33,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
+      - run: $tokenAPI | base64 --decode > ./static/config.js
       # run tests!
       - run: yarn build
