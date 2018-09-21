@@ -15,20 +15,22 @@ module.exports = {
     'modern-normalize'
   ],
   build: {
-    extend (config, { isDev, isClient }) {
-      if (isDev && isClient) {
+    extend (config, { isDev }) {
+      if (isDev && process.client) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(vue)$/,
+          loader: 'vue-loader',
+          exclude: /(node_modules)/
+        })
       }
-    },
-    vendor: [
-      'axios',
-      'vue-paginate'
-    ]
+    }
   },
   plugins: ['~/plugins/vue-paginate'],
   modules: [
