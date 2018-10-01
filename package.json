@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@nuxtjs/pwa": "2.6.0",
-    "nuxt": "2.0.0",
+    "nuxt": "2.1.0",
     "vue": "2.5.17"
   },
   "devDependencies": {
