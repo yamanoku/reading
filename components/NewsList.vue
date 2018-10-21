@@ -3,8 +3,7 @@
     <paginate-links
       for="lists"
       @change="onPageChange"
-      :show-step-links="true"
-      :limit="2">
+      :show-step-links="false">
     </paginate-links>
     <paginate
       tag="ul"
@@ -109,7 +108,7 @@
   z-index: -1;
   li {
     background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    border: 1px solid #cecece;
     height: 50px;
     line-height: 50px;
     padding: 0 20px;
@@ -132,7 +131,7 @@
   width: 100vw;
   height: 10vh;
   background-color: #fff;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #cecece;
   li {
     display: block;
     width: 32px;
@@ -140,25 +139,30 @@
     line-height: 32px;
     font-weight: 700;
     color: #3a2c09;
-    margin-right: 2px;
+    margin: 0 2px;
+    button {
+      appearance: none;
+      background-color: #fff;
+      border: 1px solid #cecece;
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: #333;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+    }
   }
-  li a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    color: #3a2c09;
-    cursor: pointer;
-  }
-  li a:hover,
-  li.active a,
-  li.left-arrow a,
-  li.right-arrow a {
+  li button:hover,
+  li button:focus,
+  li.active button,
+  li.left-arrow button,
+  li.right-arrow button {
     color: #fff;
+    border: 1px solid #0c9bf3;
     background-color: #0c9bf3;
     opacity: 1;
-  }
-  li.right-arrow {
-    margin-right: 0;
   }
   li.disabled {
     display: none;
@@ -188,7 +192,7 @@
     color: #333;
     font-weight: 700;
     text-decoration: none;
-    border: 1px solid #ddd;
+    border: 1px solid #cecece;
   }
   a:hover,
   a:focus {

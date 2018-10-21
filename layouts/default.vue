@@ -21,15 +21,16 @@ html {
   font-size : 100%;
   line-height: 1.4;
   -webkit-font-smoothing : antialiased;
+  background-color: #fff;
 }
 html, body {
   height: 100vh;
-  background-color: #fff;
 }
 *, *:before, *:after {
   box-sizing: border-box;
 }
 .night-mode {
+  background-color: #fff;
   animation: night 2s ease 0s 1 normal;
   animation-fill-mode: forwards;
 }
