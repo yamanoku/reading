@@ -43,54 +43,66 @@
 </template>
 
 <script>
-  import axios from 'axios';
-  import emoji from 'node-emoji';
-  import {TOKEN} from '~/static/config.js';
-  export default {
-    data() {
-      return {
-        lists: [],
-        paginate: ['lists'],
-        shown: false
+import axios from "axios";
+import emoji from "node-emoji";
+import { TOKEN } from "~/static/config.js";
+export default {
+  data() {
+    return {
+      lists: [],
+      paginate: ["lists"],
+      shown: false
+    };
+  },
+  mounted() {
+    axios
+      .get(TOKEN)
+      .then(res => {
+        this.lists = res.data.api;
+        this.shown = true;
+      })
+      .catch(error => {
+        if (error.response) {
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+          console.log(error.response.request);
+        } else if (error.request) {
+          console.log(error.request);
+        } else {
+          console.log("Error", error.message);
+        }
+        console.log(error.config);
+      });
+  },
+  methods: {
+    textRender(text) {
+      if (text.indexOf("Reading... ") != -1) {
+        const mystr = text.split("Reading... ").join("");
+        return mystr.replace(/^<[^>]h>|<[^>]*>$/g, "");
+      } else if (text.indexOf("Reading… ") != -1) {
+        const mystr = text.split("Reading… ").join("");
+        return mystr.replace(/^<[^>]h>|<[^>]*>$/g, "");
       }
     },
-    mounted() {
-      axios.get(TOKEN)
-        .then((res) => {
-          this.lists = res.data.api;
-          setTimeout(() => {
-            this.shown = true;
-          }, 150);
-        });
+    emoji(text) {
+      return emoji.emojify(text);
     },
-    methods: {
-      textRender (text) {
-        if (text.indexOf('Reading... ') != -1) {
-          const mystr = text.split("Reading... ").join("");
-          return mystr.replace(/^<[^>]h>|<[^>]*>$/g, "");
-        } else if (text.indexOf('Reading… ') != -1) {
-          const mystr = text.split("Reading… ").join("");
-          return mystr.replace(/^<[^>]h>|<[^>]*>$/g, "");
-        }
-      },
-      emoji (text) {
-        return emoji.emojify(text);
-      },
-      urlRender (text) {
-        return text.match(/ <([^\s]+)/)[1].slice(0, -1);
-      },
-      onPageChange() {
-        document.getElementsByClassName('news-list')[0].scrollTop = 0;
-      },
-      unix2ymd (intTime) {
-        const d = new Date( intTime * 1000 );
-        const year  = d.getFullYear();
-        const month = ("0" + (d.getMonth() + 1)).slice(-2);
-        const day  = ("0" + d.getDate()).slice(-2);
-        return( year + '-' + month + '-' + day);
-      },
+    urlRender(text) {
+      return text.match(/ <([^\s]+)/)[1].slice(0, -1);
+    },
+    onPageChange() {
+      document.getElementsByClassName("news-list")[0].scrollTop = 0;
+    },
+    unix2ymd(intTime) {
+      const d = new Date(intTime * 1000);
+      const year = d.getFullYear();
+      const month = ("0" + (d.getMonth() + 1)).slice(-2);
+      const day = ("0" + d.getDate()).slice(-2);
+      return year + "-" + month + "-" + day;
     }
   }
+};
 </script>
 
 <style lang="scss">
