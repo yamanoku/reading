@@ -5169,9 +5169,9 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt-generate-cluster@2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/nuxt-generate-cluster/-/nuxt-generate-cluster-2.3.2.tgz#c1382b39b111808b7b594e21f0527d2b10be4964"
+nuxt-generate-cluster@2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/nuxt-generate-cluster/-/nuxt-generate-cluster-2.3.3.tgz#d12a4c5d9889ffdbc02c0e69247df5f7f4113d4c"
   dependencies:
     consola "^2.3.2"
     data-store "^3.1.0"
