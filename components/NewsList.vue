@@ -1,16 +1,7 @@
 <template>
   <div v-if="shown">
-    <paginate-links
-      for="lists"
-      @change="onPageChange"
-      :show-step-links="false">
-    </paginate-links>
-    <paginate
-      tag="ul"
-      name="lists"
-      class="news-list"
-      :list="lists"
-      :per="20">
+    <paginate-links for="lists" @change="onPageChange" :show-step-links="false"></paginate-links>
+    <paginate tag="ul" name="lists" class="news-list" :list="lists" :per="20">
       <li v-for="list in paginated('lists')" :key="list.iid">
         <!-- title not response -->
         <a
@@ -18,9 +9,10 @@
           :href="urlRender(list.attachments[0].text)"
           :title="'Read More: ' + emoji(list.attachments[0].text)"
           target="_blank"
-          rel="noopener">
-            <span class="off-screen">{{ unix2ymd (list.attachments[0].ts) }}</span>
-            {{ emoji(textRender(list.attachments[0].text)) }}
+          rel="noopener"
+        >
+          <span class="off-screen">{{ unix2ymd (list.attachments[0].ts) }}</span>
+          {{ emoji(textRender(list.attachments[0].text)) }}
         </a>
         <!-- title response -->
         <a
@@ -28,17 +20,24 @@
           :href="list.attachments[0].title_link"
           :title="'Read More: ' + emoji(list.attachments[0].title)"
           target="_blank"
-          rel="noopener">
-            <span class="off-screen">{{ unix2ymd (list.attachments[0].ts) }}</span>
-            {{ emoji(list.attachments[0].title) }}
+          rel="noopener"
+        >
+          <span class="off-screen">{{ unix2ymd (list.attachments[0].ts) }}</span>
+          {{ emoji(list.attachments[0].title) }}
         </a>
       </li>
     </paginate>
   </div>
   <div v-else>
+    <loader />
     <ul class="loading">
       <li v-for="i in 20" :key="i"></li>
     </ul>
+    <transition name="fade">
+      <div class="modal" v-if="modal">
+        <p>Error</p>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -46,13 +45,18 @@
 import axios from "axios";
 import emoji from "node-emoji";
 import { TOKEN } from "~/static/config.js";
+import Loader from "~/components/Loader.vue";
 export default {
   data() {
     return {
       lists: [],
       paginate: ["lists"],
-      shown: false
+      shown: false,
+      modal: false
     };
+  },
+  components: {
+    Loader,
   },
   mounted() {
     axios
@@ -62,17 +66,8 @@ export default {
         this.shown = true;
       })
       .catch(error => {
-        if (error.response) {
-          console.log(error.response.data);
-          console.log(error.response.status);
-          console.log(error.response.headers);
-          console.log(error.response.request);
-        } else if (error.request) {
-          console.log(error.request);
-        } else {
-          console.log("Error", error.message);
-        }
-        console.log(error.config);
+        this.modal = true;
+        this.errorHundle(error);
       });
   },
   methods: {
@@ -100,6 +95,18 @@ export default {
       const month = ("0" + (d.getMonth() + 1)).slice(-2);
       const day = ("0" + d.getDate()).slice(-2);
       return year + "-" + month + "-" + day;
+    },
+    errorHundle(error) {
+      if (error.response) {
+        console.log(error.response.status);
+        console.log(error.response.headers);
+        console.log(error.response.request);
+      } else if (error.request) {
+        console.log(error.request);
+      } else {
+        console.log("Error", error.message);
+      }
+      console.log(error.config);
     }
   }
 };
@@ -233,5 +240,37 @@ export default {
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+.fade {
+  &-enter-active {
+    transition: all 0.3s ease-in;
+  }
+  &-leave-active {
+    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  }
+  &-enter,
+  &-leave-to {
+    transform: translateY(50vh);
+  }
+}
+.modal {
+  position: fixed;
+  width: 80vw;
+  height: 20vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    margin: 0;
+    font-size: 2rem;
+  }
 }
 </style>

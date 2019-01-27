@@ -16,8 +16,6 @@ export default {
 
 <style>
 main {
-  max-width: 1200px;
-  margin: auto;
   height: 100vh;
 }
 </style>
