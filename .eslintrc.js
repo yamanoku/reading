@@ -8,11 +8,11 @@ module.exports = {
     parser: 'babel-eslint'
   },
   extends: [
-    'plugin:vue/essential'
+    'plugin:vue/essential',
+    'plugin:vue-a11y/base'
   ],
   plugins: [
     'vue',
-    'html'
-  ],
-  rules: {}
+    'vue-a11y'
+  ]
 }
