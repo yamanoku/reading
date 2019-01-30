@@ -5854,19 +5854,19 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-generate-cluster@2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/nuxt-generate-cluster/-/nuxt-generate-cluster-2.3.3.tgz#d12a4c5d9889ffdbc02c0e69247df5f7f4113d4c"
-  integrity sha512-HUQQmEMTuqB2199BrxAaZrBLI9o9+/TPFZJSSdf2jyCxes4Noe6lJWjqUkJ8gAwDnu8ds9Sjd/b/bz1fC0MvQg==
+nuxt-generate-cluster@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/nuxt-generate-cluster/-/nuxt-generate-cluster-2.4.0.tgz#9db8c4a59f6e1a83b18ce5eef74847f032f70be9"
+  integrity sha512-69TLuNlrKJUC6luUsuxu+ZTUIeqs3vrqAMHESeSLbLZuT5Skg6gkBuPXW5RK9Yvwml2VsvmZB7M0atTn+vzBxA==
   dependencies:
     consola "^2.3.2"
     data-store "^3.1.0"
     lodash "^4.17.11"
     meow "^5.0.0"
-    nuxt "^2.3.4"
+    nuxt "^2.4.0"
     uuid "^3.3.2"
 
-nuxt@2.4.2, nuxt@^2.3.4:
+nuxt@2.4.2, nuxt@^2.4.0:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-2.4.2.tgz#72e377e1cad3c607f7ec900511f73ecd6259d0ac"
   integrity sha512-8zwwUGQtMKgHNfV8BxPYd0cx+XNseBM4rwToQbJL/yODsy7zlm6MfzVjLDY+wPU9Kaz7MiQ78RJZIYW0vVjpEQ==
