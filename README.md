@@ -1,4 +1,5 @@
 # READING...
+[![Netlify Status](https://api.netlify.com/api/v1/badges/59cc465b-4529-4f77-b704-01f585fb860a/deploy-status)](https://app.netlify.com/sites/sharp-morse-5bc006/deploys)
 [![CircleCI](https://circleci.com/gh/yamanoku/reading/tree/dev.svg?style=svg)](https://circleci.com/gh/yamanoku/reading/tree/dev)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f427ead7c3466f0869a4/maintainability)](https://codeclimate.com/github/yamanoku/reading/maintainability)
 
