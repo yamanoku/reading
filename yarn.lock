@@ -3387,10 +3387,10 @@ eslint-loader@2.1.1:
     object-hash "^1.1.4"
     rimraf "^2.6.1"
 
-eslint-plugin-html@5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-html/-/eslint-plugin-html-5.0.2.tgz#a250722a924a8a891c179a29765d7d72ff80c152"
-  integrity sha512-Rz+qzAIFOsRxoG1M8t16i9565IssS1wefwW2KOZtFRIfoQkG6eeCfD264kzbDyeKc/dgUpKF2ouA1c5q7+iLBQ==
+eslint-plugin-html@5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-html/-/eslint-plugin-html-5.0.3.tgz#3db133995e49a73596f6a473c16a1b83634deffd"
+  integrity sha512-46ruAnp3jVQP/5Bi5eEIOooscjUTPFU3vxCxHe/OG6ORdM7Xv5c25/Nz9fAbHklzCpiXuIiH4/mV/XBkm7MINw==
   dependencies:
     htmlparser2 "^3.10.0"
 
