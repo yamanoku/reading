@@ -3421,10 +3421,10 @@ eslint-plugin-vue-a11y@0.0.28:
     jsx-ast-utils "^2.0.1"
     vue-eslint-parser "^2.0.3"
 
-eslint-plugin-vue@5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-5.2.0.tgz#d460f4cd3f1b3c0f637a446465b6126435e92992"
-  integrity sha512-H1oLQt8mHjajbFO8OUGQ3jQ+vbiSO/7WrvQXl1rzv/U9JLnpCTTHzey0ugQ/TBORAqeJn/BHKLYtdnJfJVBzbw==
+eslint-plugin-vue@5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-5.2.1.tgz#89795895c08da56fe3a201955bd645ae67e01918"
+  integrity sha512-KPrv7Yau1B7PUB+TiEh0bw1lyzQjLp0npfAn7WbkQQFobgwXv4LqmQFBhYXEdXmxSBU/oZ46yBHoTo70RRivUA==
   dependencies:
     vue-eslint-parser "^5.0.0"
 
