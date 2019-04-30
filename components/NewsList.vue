@@ -29,13 +29,12 @@
     </paginate>
   </div>
   <div v-else>
-    <loader />
     <ul class="loading">
       <li v-for="i in 20" :key="i"></li>
     </ul>
     <transition name="fade">
-      <div class="modal" v-if="modal">
-        <p>Error</p>
+      <div class="modal">
+        <strong aria-live="assertive">Sorry, Error Page</strong>
       </div>
     </transition>
   </div>
@@ -45,30 +44,19 @@
 import axios from "axios";
 import emoji from "node-emoji";
 import { TOKEN } from "~/static/config.js";
-import Loader from "~/components/Loader.vue";
 export default {
+  props: {
+    data: Array,
+    success: Boolean,
+    error: Boolean,
+  },
   data() {
     return {
-      lists: [],
+      lists: this.data,
       paginate: ["lists"],
-      shown: false,
-      modal: false
+      shown: this.success,
+      modal: this.error
     };
-  },
-  components: {
-    Loader,
-  },
-  mounted() {
-    axios
-      .get(TOKEN)
-      .then(res => {
-        this.lists = res.data.api;
-        this.shown = true;
-      })
-      .catch(error => {
-        this.modal = true;
-        this.errorHundle(error);
-      });
   },
   methods: {
     textRender(text) {
@@ -96,18 +84,6 @@ export default {
       const day = ("0" + d.getDate()).slice(-2);
       return year + "-" + month + "-" + day;
     },
-    errorHundle(error) {
-      if (error.response) {
-        console.log(error.response.status);
-        console.log(error.response.headers);
-        console.log(error.response.request);
-      } else if (error.request) {
-        console.log(error.request);
-      } else {
-        console.log("Error", error.message);
-      }
-      console.log(error.config);
-    }
   }
 };
 </script>
@@ -268,8 +244,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  p {
-    margin: 0;
+  strong {
     font-size: 2rem;
   }
 }
