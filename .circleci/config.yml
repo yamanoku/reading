@@ -22,7 +22,9 @@ jobs:
 
     steps:
       - checkout
-
+      - add_ssh_keys:
+          fingerprints:
+            - "8c:70:51:68:58:88:9d:6b:a6:20:2a:f3:a3:8f:74:de"
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -41,15 +43,24 @@ jobs:
 
       - run: echo $tokenAPI | base64 --decode > ./static/config.js
       # run tests!
-      - run: yarn build
-      - deploy:
-          name: Deploy
+      - run: yarn generate
+
+      - run:
+          name: Install and configure dependencies
           command: |
-            if [ "${CIRCLE_BRANCH}" == "dev" ]; then
-              echo "Deploy Development"
-              yarn generate
-              ./node_modules/netlify-cli/bin/cli.js deploy \
-                --site-id ${DEV_SITE_ID} \
-                -p dist/ \
-                --access-token ${NETLIFY_TOKEN}
-            fi
+            npm install -g --silent gh-pages
+            git config --global user.name "ci-build"
+            git config --global user.email "ci-build@klukas.net"
+      - run:
+          name: Deploy docs to gh-pages branch
+          command: gh-pages --dist dist/
+
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - build_deploy:
+          filters:
+            branches:
+              only:
+                - dev
