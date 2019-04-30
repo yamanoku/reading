@@ -1,5 +1,5 @@
 <template>
-  <div v-if="shown">
+  <div>
     <paginate-links for="lists" @change="onPageChange" :show-step-links="false"></paginate-links>
     <paginate tag="ul" name="lists" class="news-list" :list="lists" :per="20">
       <li v-for="list in paginated('lists')" :key="list.iid">
@@ -28,16 +28,6 @@
       </li>
     </paginate>
   </div>
-  <div v-else>
-    <ul class="loading">
-      <li v-for="i in 20" :key="i"></li>
-    </ul>
-    <transition name="fade">
-      <div class="modal">
-        <strong aria-live="assertive">Sorry, Error Page</strong>
-      </div>
-    </transition>
-  </div>
 </template>
 
 <script>
@@ -47,15 +37,11 @@ import { TOKEN } from "~/static/config.js";
 export default {
   props: {
     data: Array,
-    success: Boolean,
-    error: Boolean,
   },
   data() {
     return {
       lists: this.data,
       paginate: ["lists"],
-      shown: this.success,
-      modal: this.error
     };
   },
   methods: {
