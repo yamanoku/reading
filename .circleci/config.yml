@@ -14,6 +14,10 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
+    branches:
+      only:
+        - dev
+
     working_directory: ~/repo
 
     steps:
@@ -38,3 +42,14 @@ jobs:
       - run: echo $tokenAPI | base64 --decode > ./static/config.js
       # run tests!
       - run: yarn build
+      - deploy:
+          name: Deploy
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "dev" ]; then
+              echo "Deploy Development"
+              yarn generate
+              ./node_modules/netlify-cli/bin/cli.js deploy \
+                --site-id ${DEV_SITE_ID} \
+                -p dist/ \
+                --access-token ${NETLIFY_TOKEN}
+            fi
