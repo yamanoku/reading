@@ -9,10 +9,8 @@ module.exports = {
   },
   extends: [
     'plugin:vue/essential',
-    'plugin:vue-a11y/base'
   ],
   plugins: [
     'vue',
-    'vue-a11y'
   ]
 }
