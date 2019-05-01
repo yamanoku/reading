@@ -24,7 +24,8 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    quiet: false,
   },
   plugins: ['~/plugins/vue-paginate'],
   modules: [
