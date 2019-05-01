@@ -51,6 +51,7 @@ jobs:
       - run: git config user.email $GITHUB_EMAIL
       - run: yarn generate
       - run:
+        name: Deploy gh-pages
         working_directory: ~/repo
         command: yarn deploy:gh-pages
 
