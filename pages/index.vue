@@ -16,7 +16,7 @@ export default {
       return {
         lists: data.api
       };
-    } catch {
+    } catch(e) {
       error({ statusCode: 404, message: "Connection Error" });
     }
   },
