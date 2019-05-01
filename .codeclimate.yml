@@ -3,11 +3,9 @@ version: "2"
 plugins:
   eslint:
     enabled: true
-    channel: "eslint-5"
     config:
       extensions:
       - .vue
-      - .js
   duplication:
     enabled: true
     config:
