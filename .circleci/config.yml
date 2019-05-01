@@ -43,24 +43,30 @@ jobs:
 
       - run: echo $tokenAPI | base64 --decode > ./static/config.js
       # run tests!
-      - run: yarn generate
+      - run: yarn build
 
-      - run:
-          name: Install and configure dependencies
-          command: |
-            npm install -g --silent gh-pages
-            git config --global user.name "ci-build"
-            git config --global user.email "ci-build@klukas.net"
-      - run:
-          name: Deploy docs to gh-pages branch
-          command: gh-pages --dist dist/
+  deploy:
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+      - run: yarn
+      - run: git config user.name $GITHUB_NAME
+      - run: git config user.email $GITHUB_EMAIL
+      - run: yarn generate
+      - run: yarn deploy
 
 workflows:
   version: 2
-  deploy:
+  build-deploy:
     jobs:
-      - build_deploy:
+      - build
+      - deploy:
+          requires:
+            - build
           filters:
             branches:
-              only:
-                - dev
+              only: dev
