@@ -14,17 +14,10 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
-    branches:
-      only:
-        - dev
-
     working_directory: ~/repo
 
     steps:
       - checkout
-      - add_ssh_keys:
-          fingerprints:
-            - "8c:70:51:68:58:88:9d:6b:a6:20:2a:f3:a3:8f:74:de"
       # Download and cache dependencies
       - restore_cache:
           keys:
