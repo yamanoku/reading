@@ -1,31 +1,39 @@
 <template>
   <div>
     <paginate-links for="lists" @change="onPageChange" :show-step-links="false"></paginate-links>
-    <paginate tag="ul" name="lists" class="news-list" :list="lists" :per="20">
-      <li v-for="list in paginated('lists')" :key="list.iid">
-        <!-- title not response -->
-        <a
-          v-if="!list.attachments[0].title"
-          :href="urlRender(list.attachments[0].text)"
-          :title="'Read More: ' + emoji(list.attachments[0].text)"
-          target="_blank"
-          rel="noopener"
-        >
-          <span class="off-screen">{{ unix2ymd (list.attachments[0].ts) }}</span>
-          {{ emoji(textRender(list.attachments[0].text)) }}
-        </a>
-        <!-- title response -->
-        <a
-          v-else
-          :href="list.attachments[0].title_link"
-          :title="'Read More: ' + emoji(list.attachments[0].title)"
-          target="_blank"
-          rel="noopener"
-        >
-          <span class="off-screen">{{ unix2ymd (list.attachments[0].ts) }}</span>
-          {{ emoji(list.attachments[0].title) }}
-        </a>
-      </li>
+    <paginate tag="nav" name="lists" class="news-list" :list="lists" :per="20">
+      <ul>
+        <template v-for="list in paginated('lists')">
+          <li v-if="list.attachments" :key="list.iid">
+            <!-- title not response -->
+            <a
+              v-if="!list.attachments[0].title"
+              :href="urlRender(list.attachments[0].text)"
+              :title="'Read More: ' + emoji(list.attachments[0].text)"
+              target="_blank"
+              rel="noopener"
+            >
+              <span v-if="list.attachments[0].ts" class="off-screen">
+                {{ unix2ymd (list.attachments[0].ts) }}
+              </span>
+              {{ emoji(textRender(list.attachments[0].text)) }}
+            </a>
+            <!-- title response -->
+            <a
+              v-else
+              :href="list.attachments[0].title_link"
+              :title="'Read More: ' + emoji(list.attachments[0].title)"
+              target="_blank"
+              rel="noopener"
+            >
+              <span v-if="list.attachments[0].ts" class="off-screen">
+                {{ unix2ymd (list.attachments[0].ts) }}
+              </span>
+              {{ emoji(list.attachments[0].title) }}
+            </a>
+          </li>
+        </template>
+      </ul>
     </paginate>
   </div>
 </template>
@@ -75,28 +83,6 @@ export default {
 </script>
 
 <style lang="scss">
-.loading {
-  margin: 0;
-  padding: 10px;
-  display: grid;
-  grid-gap: 10px;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  li {
-    background-color: #f9f9f9;
-    border: 1px solid #cecece;
-    height: 50px;
-    line-height: 50px;
-    padding: 0 20px;
-    display: block;
-    border-radius: 3px;
-  }
-}
 .paginate-links {
   text-align: center;
   padding: 0;
@@ -141,9 +127,13 @@ export default {
   li.left-arrow button,
   li.right-arrow button {
     color: #fff;
-    border: 1px solid #0c9bf3;
-    background-color: #0c9bf3;
+    border: 1px solid #36465d;
+    background-color: #36465d;
     opacity: 1;
+  }
+  li button:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px #fff;
   }
   li.disabled {
     display: none;
@@ -152,9 +142,6 @@ export default {
 .news-list {
   padding: 10px 0;
   margin: 0;
-  list-style-type: none;
-  display: grid;
-  grid-gap: 10px;
   width: calc(100vw - 10px);
   height: 90vh;
   overflow-y: scroll;
@@ -162,6 +149,13 @@ export default {
   top: 0;
   left: 5px;
   z-index: 0;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-gap: 10px;
+  }
   li {
     display: block;
     padding: 0;
@@ -177,8 +171,8 @@ export default {
   }
   a:hover,
   a:focus {
-    background-color: #0c9bf3;
-    border: 1px solid #0c9bf3;
+    background-color: #36465d;
+    border: 1px solid #36465d;
     color: #fff;
   }
   a:focus {
@@ -190,8 +184,8 @@ export default {
   }
   a:visited:hover,
   a:visited:focus {
-    background-color: #0c9bf3;
-    border: 1px solid #0c9bf3;
+    background-color: #36465d;
+    border: 1px solid #36465d;
     color: #fff;
   }
 }
