@@ -46,14 +46,14 @@ jobs:
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
-      - run: yarn
       - run: git config user.name $GITHUB_NAME
       - run: git config user.email $GITHUB_EMAIL
-      - run: yarn generate
       - run:
           name: Deploy gh-pages
-          working_directory: ~/repo
-          command: yarn deploy:gh-pages
+          command: |
+            yarn && \
+            yarn generate && \
+            yarn deploy:gh-pages
 
 workflows:
   version: 2
