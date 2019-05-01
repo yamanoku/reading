@@ -52,6 +52,7 @@ jobs:
           name: Deploy gh-pages
           command: |
             yarn && \
+            echo $tokenAPI | base64 --decode > ./static/config.js && \
             yarn generate && \
             yarn deploy:gh-pages
 
