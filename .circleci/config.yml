@@ -53,14 +53,15 @@ jobs:
             yarn && \
             echo $tokenAPI | base64 --decode > ./static/config.js && \
             yarn generate && \
-            yarn deploy:gh-pages
+            yarn deploy:gh-pages && \
+            curl -X POST -d {} https://api.netlify.com/build_hooks/5cc93fb77d8bfbb0cf910b05
 
 workflows:
   version: 2
-  commit-workflow:
+  commit:
     jobs:
       - build
-  scheduled-workflow:
+  nightly:
     triggers:
       - schedule:
           cron: "0 1 * * *"
@@ -68,5 +69,4 @@ workflows:
             branches:
               only: master
     jobs:
-      - build
-
+      - deploy
