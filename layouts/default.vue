@@ -29,7 +29,7 @@ html, body {
 *, *:before, *:after {
   box-sizing: border-box;
 }
-.night-mode {
+/* .night-mode {
   background-color: #fff;
   animation: night 2s ease 0s 1 normal;
   animation-fill-mode: forwards;
@@ -37,5 +37,5 @@ html, body {
 @keyframes night {
   0% {filter:invert(0);}
   100% {filter:invert(100);}
-}
+} */
 </style>
