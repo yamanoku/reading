@@ -111,6 +111,7 @@ export default {
       appearance: none;
       background-color: #fff;
       border: 1px solid #cecece;
+      border-radius: 3px;
       display: block;
       width: 100%;
       height: 100%;
@@ -127,8 +128,8 @@ export default {
   li.left-arrow button,
   li.right-arrow button {
     color: #fff;
-    border: 1px solid #36465d;
-    background-color: #36465d;
+    border: 1px solid #032F63;
+    background-color: #032F63;
     opacity: 1;
   }
   li button:focus {
@@ -168,11 +169,12 @@ export default {
     font-weight: 700;
     text-decoration: none;
     border: 1px solid #cecece;
+    border-radius: 3px;
   }
   a:hover,
   a:focus {
-    background-color: #36465d;
-    border: 1px solid #36465d;
+    background-color: #032F63;
+    border: 1px solid #032F63;
     color: #fff;
   }
   a:focus {
@@ -184,8 +186,8 @@ export default {
   }
   a:visited:hover,
   a:visited:focus {
-    background-color: #36465d;
-    border: 1px solid #36465d;
+    background-color: #032F63;
+    border: 1px solid #032F63;
     color: #fff;
   }
 }
@@ -196,36 +198,5 @@ export default {
   width: 1px;
   height: 1px;
   overflow: hidden;
-}
-.fade {
-  &-enter-active {
-    transition: all 0.3s ease-in;
-  }
-  &-leave-active {
-    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-  }
-  &-enter,
-  &-leave-to {
-    transform: translateY(50vh);
-  }
-}
-.modal {
-  position: fixed;
-  width: 80vw;
-  height: 20vh;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  strong {
-    font-size: 2rem;
-  }
 }
 </style>
