@@ -2,6 +2,10 @@ importScripts('/_nuxt/workbox.dev.4c4f5ca6.js')
 
 workbox.precaching.precacheAndRoute([
   {
+    "url": "/_nuxt/0ca7b4d53fd56a687181.js",
+    "revision": "d67551bb8014771df8ccabf406d6b790"
+  },
+  {
     "url": "/_nuxt/3783df213d1c45eab0ad.js",
     "revision": "4885b35c77d491e3ba97ca8fb59941f6"
   },
@@ -12,10 +16,6 @@ workbox.precaching.precacheAndRoute([
   {
     "url": "/_nuxt/4dbfc1f38458e600fddc.js",
     "revision": "7a854cd79cdd952bdfc7982410676c48"
-  },
-  {
-    "url": "/_nuxt/4e7a63b2f77000965c90.js",
-    "revision": "d67551bb8014771df8ccabf406d6b790"
   },
   {
     "url": "/_nuxt/71652220799434a02281.js",
