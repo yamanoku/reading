@@ -8,7 +8,7 @@
             <!-- title not response -->
             <a
               v-if="!list.attachments[0].title"
-              :href="urlRender(list.attachments[0].text)"
+              :href="list.attachments[0].text"
               :title="'Read More: ' + emoji(list.attachments[0].text)"
               target="_blank"
               rel="noopener"
@@ -64,9 +64,6 @@ export default {
     },
     emoji(text) {
       return emoji.emojify(text);
-    },
-    urlRender(text) {
-      return text.match(/ <([^\s]+)/)[1].slice(0, -1);
     },
     onPageChange() {
       document.getElementsByClassName("news-list")[0].scrollTop = 0;
