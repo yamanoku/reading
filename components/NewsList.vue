@@ -8,7 +8,7 @@
             <!-- title not response -->
             <a
               v-if="!list.attachments[0].title"
-              :href="list.attachments[0].text"
+              :href="urlRender(list.attachments[0].text)"
               :title="'Read More: ' + emoji(list.attachments[0].text)"
               target="_blank"
               rel="noopener"
@@ -61,6 +61,9 @@ export default {
         const mystr = text.split("Reading… ").join("");
         return mystr.replace(/^<[^>]h>|<[^>]*>$/g, "");
       }
+    },
+    urlRender(text) {
+      return text.match(/ <([^\s]+)/)[1].slice(0, -1);
     },
     emoji(text) {
       return emoji.emojify(text);
