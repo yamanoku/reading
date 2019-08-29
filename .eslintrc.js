@@ -5,10 +5,11 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: '@typescript-eslint/parser'
   },
   extends: [
     'plugin:vue/essential',
+    '@nuxtjs/eslint-config-typescript'
   ],
   plugins: [
     'vue',
