@@ -1,6 +1,6 @@
 <template>
   <div>
-    <paginate-links for="lists" @change="onPageChange" :show-step-links="false"></paginate-links>
+    <paginate-links for="lists" :show-step-links="false" @change="onPageChange" />
     <paginate tag="nav" name="lists" class="news-list" :list="lists" :per="20">
       <ul>
         <template v-for="list in paginated('lists')">
@@ -13,9 +13,10 @@
               target="_blank"
               rel="noopener"
             >
-              <span v-if="list.attachments[0].ts" class="off-screen">
-                {{ unix2ymd (list.attachments[0].ts) }}
-              </span>
+              <span
+                v-if="list.attachments[0].ts"
+                class="off-screen"
+              >{{ unix2ymd (list.attachments[0].ts) }}</span>
               {{ emoji(textRender(list.attachments[0].text)) }}
             </a>
             <!-- title response -->
@@ -26,9 +27,10 @@
               target="_blank"
               rel="noopener"
             >
-              <span v-if="list.attachments[0].ts" class="off-screen">
-                {{ unix2ymd (list.attachments[0].ts) }}
-              </span>
+              <span
+                v-if="list.attachments[0].ts"
+                class="off-screen"
+              >{{ unix2ymd (list.attachments[0].ts) }}</span>
               {{ emoji(list.attachments[0].title) }}
             </a>
           </li>
@@ -38,48 +40,56 @@
   </div>
 </template>
 
-<script>
-import axios from "axios";
-import emoji from "node-emoji";
-import { TOKEN } from "~/static/config.js";
-export default {
+<script lang="ts">
+import Vue from 'vue'
+import emoji from 'node-emoji'
+
+export default Vue.extend({
   props: {
-    data: Array,
+    data: {
+      type: Array,
+      default () {
+        return []
+      }
+    }
   },
-  data() {
+  data () {
     return {
       lists: this.data,
-      paginate: ["lists"],
-    };
+      paginate: ['lists']
+    }
   },
   methods: {
-    textRender(text) {
-      if (text.indexOf("Reading... ") != -1) {
-        const mystr = text.split("Reading... ").join("");
-        return mystr.replace(/^<[^>]h>|<[^>]*>$/g, "");
-      } else if (text.indexOf("Reading… ") != -1) {
-        const mystr = text.split("Reading… ").join("");
-        return mystr.replace(/^<[^>]h>|<[^>]*>$/g, "");
+    textRender (text: string) {
+      if (text.includes('Reading... ')) {
+        const mystr = text.split('Reading... ').join('')
+        return mystr.replace(/^<[^>]h>|<[^>]*>$/g, '')
+      } else if (text.includes('Reading… ')) {
+        const mystr = text.split('Reading… ').join('')
+        return mystr.replace(/^<[^>]h>|<[^>]*>$/g, '')
       }
     },
-    urlRender(text) {
-      return text.match(/ <([^\s]+)/)[1].slice(0, -1);
+    urlRender (text: string) {
+      if (text === null) {
+        return
+      }
+      return text.match(/ <([^\s]+)/)![1].slice(0, -1)
     },
-    emoji(text) {
-      return emoji.emojify(text);
+    emoji (text: string) {
+      return emoji.emojify(text)
     },
-    onPageChange() {
-      document.getElementsByClassName("news-list")[0].scrollTop = 0;
+    onPageChange ():void {
+      document.getElementsByClassName('news-list')[0].scrollTop = 0
     },
-    unix2ymd(intTime) {
-      const d = new Date(intTime * 1000);
-      const year = d.getFullYear();
-      const month = ("0" + (d.getMonth() + 1)).slice(-2);
-      const day = ("0" + d.getDate()).slice(-2);
-      return year + "-" + month + "-" + day;
-    },
+    unix2ymd (intTime: number) {
+      const d = new Date(intTime * 1000)
+      const year = d.getFullYear()
+      const month = ('0' + (d.getMonth() + 1)).slice(-2)
+      const day = ('0' + d.getDate()).slice(-2)
+      return year + '-' + month + '-' + day
+    }
   }
-};
+})
 </script>
 
 <style lang="scss">
@@ -128,8 +138,8 @@ export default {
   li.left-arrow button,
   li.right-arrow button {
     color: #fff;
-    border: 1px solid #032F63;
-    background-color: #032F63;
+    border: 1px solid #032f63;
+    background-color: #032f63;
     opacity: 1;
   }
   li button:focus {
@@ -173,8 +183,8 @@ export default {
   }
   a:hover,
   a:focus {
-    background-color: #032F63;
-    border: 1px solid #032F63;
+    background-color: #032f63;
+    border: 1px solid #032f63;
     color: #fff;
   }
   a:focus {
@@ -186,8 +196,8 @@ export default {
   }
   a:visited:hover,
   a:visited:focus {
-    background-color: #032F63;
-    border: 1px solid #032F63;
+    background-color: #032f63;
+    border: 1px solid #032f63;
     color: #fff;
   }
 }
