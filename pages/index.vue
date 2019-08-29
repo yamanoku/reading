@@ -1,29 +1,34 @@
 <template>
   <main>
-    <news-list :data="lists"/>
+    <news-list :data="lists" />
   </main>
 </template>
 
-<script>
-import axios from "axios";
-import { TOKEN } from "~/static/config.js";
-import NewsList from "~/components/NewsList.vue";
+<script lang="ts">
+import Vue from 'vue'
+import axios from 'axios'
+import { TOKEN } from '../static/config'
+import NewsList from '~/components/NewsList.vue'
 
-export default {
-  async asyncData({ params, error }) {
-    try {
-      const { data } = await axios.get(TOKEN);
-      return {
-        lists: data.api
-      };
-    } catch(e) {
-      error({ statusCode: 404, message: "Connection Error" });
-    }
-  },
+interface AsyncData {
+  [lists: string]: { data: { api: Array<Object> } }
+}
+export default Vue.extend({
   components: {
     NewsList
+  },
+  async asyncData (error: any): Promise<AsyncData> {
+    try {
+      const { data } = await axios.get<AsyncData>(TOKEN)
+      return {
+        lists: data.api
+      }
+    } catch (e) {
+      error({ statusCode: 404, message: 'Connection Error' })
+      throw new Error('Connection Error')
+    }
   }
-};
+})
 </script>
 
 <style>
