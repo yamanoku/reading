@@ -17,7 +17,7 @@ export default Vue.extend({
   components: {
     NewsList
   },
-  async asyncData (error: any): Promise<AsyncData> {
+  async asyncData (error: any): Promise<AsyncData | undefined> {
     try {
       const { data } = await axios.get<AsyncData>(TOKEN)
       return {
@@ -25,7 +25,7 @@ export default Vue.extend({
       }
     } catch (e) {
       error({ statusCode: 404, message: 'Connection Error' })
-      throw new Error('Connection Error')
+      this.$sentry.captureException(new Error('Connection Error'))
     }
   }
 })

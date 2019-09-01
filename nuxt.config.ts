@@ -48,7 +48,13 @@ const nuxtConfig: Configuration = {
     ]
   ],
   plugins: ['~/plugins/vue-paginate'],
-  modules: ['@nuxtjs/pwa'],
+  modules: [
+    '@nuxtjs/pwa',
+    '@nuxtjs/sentry'
+  ],
+  sentry: {
+    dsn: 'https://480ae3692a944d568ae3009584a5e9ad@sentry.io/1547851',
+  },
   workbox: {
     dev: true
   },
