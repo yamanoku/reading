@@ -1,6 +1,6 @@
 import { Configuration } from '@nuxt/types'
 
-const nuxtConfig: Configuration = {
+const nuxtConfig: Partial<Configuration> = {
   mode: 'universal',
   head: {
     title: 'READING...',
