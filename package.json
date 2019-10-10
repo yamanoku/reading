@@ -22,7 +22,7 @@
     "vue": "2.6.10"
   },
   "devDependencies": {
-    "@sentry/browser": "5.6.3",
+    "@sentry/browser": "5.7.0",
     "@types/node-emoji": "1.8.1",
     "@typescript-eslint/parser": "2.3.2",
     "axios": "0.19.0",
