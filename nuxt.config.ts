@@ -1,74 +1,117 @@
-import { Configuration } from '@nuxt/types'
+import { Configuration } from "@nuxt/types";
+import axios from "axios";
+import emoji from "node-emoji";
+import { TOKEN } from "./static/config";
 
 const nuxtConfig: Partial<Configuration> = {
-  mode: 'universal',
+  mode: "universal",
   head: {
-    title: 'READING...',
+    title: "READING...",
     htmlAttrs: {
-      lang: 'ja'
+      lang: "ja"
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        hid: 'description',
-        name: 'description',
-        content: '@yamanoku Reading News List'
+        hid: "description",
+        name: "description",
+        content: "@yamanoku Reading News List"
       },
       {
-        hid: 'og:image',
-        name: 'og:image',
-        content: 'https://yamanoku.net/reading/icon.png'
+        hid: "og:image",
+        name: "og:image",
+        content: "https://yamanoku.net/reading/icon.png"
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
-  css: ['modern-normalize'],
+  css: ["modern-normalize"],
   build: {
-    extend (config, ctx) {
+    extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {
-        if (!config.module) { return }
+        if (!config.module) {
+          return;
+        }
         config.module.rules.push({
-          enforce: 'pre',
+          enforce: "pre",
           test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
+          loader: "eslint-loader",
           exclude: /(node_modules)/
-        })
+        });
       }
     },
     quiet: false
   },
   buildModules: [
     [
-      '@nuxt/typescript-build',
+      "@nuxt/typescript-build",
       {
         typeCheck: true,
         ignoreNotFoundWarnings: true
       }
     ]
   ],
-  plugins: ['~/plugins/vue-paginate'],
-  modules: [
-    '@nuxtjs/pwa',
-    '@nuxtjs/sentry'
+  plugins: ["~/plugins/vue-paginate"],
+  modules: ["@nuxtjs/feed", "@nuxtjs/pwa", "@nuxtjs/sentry"],
+  feed: [
+    {
+      path: "/feed.xml",
+      async create(feed: any) {
+        feed.options = {
+          title: "Reading…",
+          link: "https://reading.yamanoku.net/feed.xml",
+          description: "yamanoku's reading feed"
+        };
+        const posts = await (await axios.get(TOKEN)).data.api;
+        const urlRender = function(text: string) {
+          if (text === null) {
+            return;
+          }
+          return text.match(/ <([^\s]+)/)![1].slice(0, -1);
+        };
+        const emojiRender = function(text: string) {
+          return emoji.emojify(text);
+        };
+        posts.forEach(
+          (post: { attachments: { [key: number]: any }; iid: string }) => {
+            if (!post.attachments[0].title) {
+              feed.addItem({
+                title: emojiRender(post.attachments[0].text),
+                guid: post.iid,
+                link: urlRender(post.attachments[0].text)
+              });
+            } else {
+              feed.addItem({
+                title: emojiRender(post.attachments[0].title),
+                guid: post.iid,
+                link: post.attachments[0].title_link
+              });
+            }
+          }
+        );
+      },
+      cacheTime: 1000 * 60 * 15,
+      type: "rss2"
+    }
   ],
   sentry: {
-    dsn: 'https://480ae3692a944d568ae3009584a5e9ad@sentry.io/1547851',
+    dsn: "https://480ae3692a944d568ae3009584a5e9ad@sentry.io/1547851"
   },
   workbox: {
     dev: true
   },
   manifest: {
-    name: 'READING...',
-    short_name: 'READING...',
-    title: 'READING...',
-    'og:title': 'READING...',
-    description: '@yamanoku Reading News List',
-    'og:description': '@yamanoku Reading News List',
-    lang: 'en',
-    theme_color: '#f9f9f9',
-    background_color: '#f9f9f9'
+    name: "READING...",
+    short_name: "READING...",
+    title: "READING...",
+    "og:title": "READING...",
+    description: "@yamanoku Reading News List",
+    "og:description": "@yamanoku Reading News List",
+    lang: "en",
+    theme_color: "#f9f9f9",
+    background_color: "#f9f9f9"
   }
-}
+};
 
-module.exports = nuxtConfig
+module.exports = nuxtConfig;
