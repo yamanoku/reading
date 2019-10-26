@@ -45,9 +45,11 @@ const nuxtConfig: Partial<Configuration> = {
     },
     quiet: false,
     loaders: {
-      sass: {
+      scss: {
         implementation: Sass,
-        fiber: Fiber
+        sassOptions: {
+          fiber: Fiber
+        }
       }
     },
   },
