@@ -5,6 +5,13 @@
 </template>
 
 <style>
+:root {
+  --mainColor: #032f63;
+  --borderColor: #cecece;
+  --buttonColor: #f9f9f9;
+  --fontPrimary: #333;
+  --fontActive: #999;
+}
 html {
   font : inherit;
   font-family : sans-serif;

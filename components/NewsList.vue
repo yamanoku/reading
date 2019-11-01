@@ -108,19 +108,18 @@ export default Vue.extend({
   width: 100vw;
   height: 10vh;
   background-color: #fff;
-  border-top: 1px solid #cecece;
+  border-top: 1px solid var(--borderColor);
   li {
     display: block;
     width: 32px;
     height: 32px;
     line-height: 32px;
     font-weight: 700;
-    color: #3a2c09;
     margin: 0 2px;
     button {
       appearance: none;
       background-color: #fff;
-      border: 1px solid #cecece;
+      border: 1px solid var(--borderColor);
       border-radius: 3px;
       display: block;
       width: 100%;
@@ -138,8 +137,8 @@ export default Vue.extend({
   li.left-arrow button,
   li.right-arrow button {
     color: #fff;
-    border: 1px solid #032f63;
-    background-color: #032f63;
+    border: 1px solid var(--mainColor);
+    background-color: var(--mainColor);
     opacity: 1;
   }
   li button:focus {
@@ -173,18 +172,18 @@ export default Vue.extend({
   }
   a {
     display: block;
-    background-color: #f9f9f9;
+    background-color: var(--buttonColor);
     padding: 8px 10px;
-    color: #333;
+    color: var(--fontPrimary);
     font-weight: 700;
     text-decoration: none;
-    border: 1px solid #cecece;
+    border: 1px solid var(--borderColor);
     border-radius: 3px;
   }
   a:hover,
   a:focus {
-    background-color: #032f63;
-    border: 1px solid #032f63;
+    background-color: var(--mainColor);
+    border: 1px solid var(--mainColor);
     color: #fff;
   }
   a:focus {
@@ -192,12 +191,12 @@ export default Vue.extend({
     box-shadow: inset 0 0 0 3px #fff;
   }
   a:visited {
-    color: #999;
+    color: var(--fontActive);
   }
   a:visited:hover,
   a:visited:focus {
-    background-color: #032f63;
-    border: 1px solid #032f63;
+    background-color: var(--mainColor);
+    border: 1px solid var(--mainColor);
     color: #fff;
   }
 }
