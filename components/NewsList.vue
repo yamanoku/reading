@@ -107,8 +107,8 @@ export default Vue.extend({
   z-index: 10;
   width: 100vw;
   height: 10vh;
-  background-color: #fff;
-  border-top: 1px solid var(--borderColor);
+  background-color: var(--BackNavi);
+  border-top: 1px solid var(--BorderPrimary);
   li {
     display: block;
     width: 32px;
@@ -118,8 +118,8 @@ export default Vue.extend({
     margin: 0 2px;
     button {
       appearance: none;
-      background-color: #fff;
-      border: 1px solid var(--borderColor);
+      background-color: var(--BtnPrimary);
+      border: 1px solid var(--BorderPrimary);
       border-radius: 3px;
       display: block;
       width: 100%;
@@ -136,14 +136,14 @@ export default Vue.extend({
   li.active button,
   li.left-arrow button,
   li.right-arrow button {
-    color: #fff;
-    border: 1px solid var(--mainColor);
-    background-color: var(--mainColor);
+    color: var(--BackMain);
+    border: 1px solid var(--BorderActive);
+    background-color: var(--BtnActive);
     opacity: 1;
   }
   li button:focus {
     outline: none;
-    box-shadow: inset 0 0 0 2px #fff;
+    box-shadow: inset 0 0 0 2px var(--BackMain);
   }
   li.disabled {
     display: none;
@@ -172,32 +172,32 @@ export default Vue.extend({
   }
   a {
     display: block;
-    background-color: var(--buttonColor);
+    background-color: var(--BtnPrimary);
     padding: 8px 10px;
     color: var(--fontPrimary);
     font-weight: 700;
     text-decoration: none;
-    border: 1px solid var(--borderColor);
+    border: 1px solid var(--BorderPrimary);
     border-radius: 3px;
   }
   a:hover,
   a:focus {
-    background-color: var(--mainColor);
-    border: 1px solid var(--mainColor);
-    color: #fff;
+    background-color: var(--BtnActive);
+    border: 1px solid var(--BorderActive);
+    color: var(--BackMain);
   }
   a:focus {
     outline: none;
-    box-shadow: inset 0 0 0 3px #fff;
+    box-shadow: inset 0 0 0 3px var(--BorderActive);
   }
   a:visited {
-    color: var(--fontActive);
+    color: var(--FontVisited);
   }
   a:visited:hover,
   a:visited:focus {
-    background-color: var(--mainColor);
-    border: 1px solid var(--mainColor);
-    color: #fff;
+    background-color: var(--BtnActive);
+    border: 1px solid var(--BorderActive);
+    color: var(--FontActive);
   }
 }
 .off-screen {
