@@ -124,7 +124,7 @@ export default Vue.extend({
       display: block;
       width: 100%;
       height: 100%;
-      color: #333;
+      color: var(--FontPrimary);
       font-weight: 700;
       cursor: pointer;
       padding: 0;
@@ -136,14 +136,14 @@ export default Vue.extend({
   li.active button,
   li.left-arrow button,
   li.right-arrow button {
-    color: var(--BackMain);
+    color: var(--FontActive);
     border: 1px solid var(--BorderActive);
     background-color: var(--BtnActive);
     opacity: 1;
   }
   li button:focus {
     outline: none;
-    box-shadow: inset 0 0 0 2px var(--BackMain);
+    box-shadow: inset 0 0 0 2px var(--BorderFocus);
   }
   li.disabled {
     display: none;
@@ -174,7 +174,7 @@ export default Vue.extend({
     display: block;
     background-color: var(--BtnPrimary);
     padding: 8px 10px;
-    color: var(--fontPrimary);
+    color: var(--FontPrimary);
     font-weight: 700;
     text-decoration: none;
     border: 1px solid var(--BorderPrimary);
@@ -184,11 +184,11 @@ export default Vue.extend({
   a:focus {
     background-color: var(--BtnActive);
     border: 1px solid var(--BorderActive);
-    color: var(--BackMain);
+    color: var(--FontActive);
   }
   a:focus {
     outline: none;
-    box-shadow: inset 0 0 0 3px var(--BorderActive);
+    box-shadow: inset 0 0 0 2px var(--BorderFocus);
   }
   a:visited {
     color: var(--FontVisited);
