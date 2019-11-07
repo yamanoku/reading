@@ -8,7 +8,7 @@
 import Vue from 'vue'
 import axios from 'axios'
 import { TOKEN } from '../static/config'
-import NewsList from '~/components/NewsList.vue'
+import NewsList from '../components/NewsList.vue'
 
 interface AsyncData {
   [lists: string]: { data: { api: Array<Object> } }
