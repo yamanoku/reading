@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@nuxt/typescript-build": "0.5.3",
-    "@nuxt/typescript-runtime": "0.3.2",
+    "@nuxt/typescript-runtime": "0.3.5",
     "@nuxt/vue-app": "2.11.0",
     "@nuxtjs/eslint-config-typescript": "1.0.0",
     "@nuxtjs/feed": "1.1.0",
