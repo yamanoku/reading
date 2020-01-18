@@ -6269,10 +6269,10 @@ num2fraction@^1.2.2:
   resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
   integrity sha1-b2gragJ6Tp3fpFZM0lidHU5mnt4=
 
-nuxt-generate-cluster@2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/nuxt-generate-cluster/-/nuxt-generate-cluster-2.6.1.tgz#8fb91b946371e93f74bed61c6cf84526e0fa850b"
-  integrity sha512-QTqs17tLs+LraJAFYZeUMF54mDJXma7hl4W/rfeC04YLvPkqsUikENaojve607avbxKtjfzF4T+oJqHa2BbN8A==
+nuxt-generate-cluster@2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/nuxt-generate-cluster/-/nuxt-generate-cluster-2.7.0.tgz#31d0ac927fd110097e0130f9e9f51217fd1622b6"
+  integrity sha512-y0pqa1UGuSQ45move1yQysBg43zGtkDm4YRU0FCopqlNY8QNogm+e5EHp32WKJbkSDrV00z6eUToLzXrnZkaMA==
   dependencies:
     consola "^2.11.3"
     data-store "^4.0.3"
