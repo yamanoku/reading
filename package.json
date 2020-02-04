@@ -23,7 +23,7 @@
     "vue": "2.6.11"
   },
   "devDependencies": {
-    "@sentry/browser": "5.11.2",
+    "@sentry/browser": "5.12.0",
     "@types/fibers": "3.1.0",
     "@types/node-emoji": "1.8.1",
     "@types/sass": "1.16.0",
