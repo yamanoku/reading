@@ -63,7 +63,7 @@ const nuxtConfig: Partial<Configuration> = {
     ]
   ],
   plugins: ["~/plugins/vue-paginate"],
-  modules: ["@nuxtjs/feed", "@nuxtjs/pwa", "@nuxtjs/sentry"],
+  modules: ["@nuxtjs/feed", "@nuxtjs/pwa", "@nuxtjs/sentry", "@nuxtjs/amp"],
   feed: [
     {
       path: "/feed.xml",
