@@ -81,34 +81,4 @@ export default {
 
 <style>
 @import "yama-normalize";
-<<<<<<< HEAD
-=======
-
-[role="list"] {
-  margin: calc(var(--rhythm) * 3) 0;
-  line-height: 1;
-  padding-left: calc(var(--rhythm) * 2) !important;
-  list-style-type: none;
-}
-.listitem {
-  line-height: calc(var(--rhythm) * 3);
-  font-size: 1rem;
-}
-.listitem::before {
-  background-color: var(--black);
-  border-radius: 50%;
-  color: #fff;
-  content: "";
-  width: 6px;
-  height: 6px;
-  margin: 9px 0 0;
-  position: absolute;
-  left: 0;
-}
-@media (prefers-color-scheme: dark) {
-  .listitem::before {
-    background-color: var(--white);
-  }
-}
->>>>>>> 678aa412bd860092e0e2d45530568fb11764184f
 </style>
