@@ -33,10 +33,11 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import emoji from 'node-emoji'
 
-const textRender = (text) => {
+const textRender = (text: any) => {
   if (text === undefined) {
     return
   }
@@ -49,7 +50,7 @@ const textRender = (text) => {
   }
 }
 
-export default {
+export default Vue.extend({
   props: {
     data: {
       type: Array,
@@ -65,18 +66,19 @@ export default {
     }
   },
   computed: {
-    filterListItem () {
-      return this.lists.filter((list) => {
-        const searchRegex = new RegExp(this.filterKey, 'i')
+    filterListItem (): any {
+      const searchRegex = new RegExp(this.filterKey, 'i')
+      const listItem = this.lists.filter((list: any) => {
         return (
           searchRegex.test(list.attachments[0].title) ||
           searchRegex.test(textRender(list.attachments[0].text))
         )
       })
+      return listItem
     }
   },
   methods: {
-    textRender (text) {
+    textRender (text: string) {
       if (text.includes('Reading... ')) {
         const mystr = text.split('Reading... ').join('')
         return mystr.replace(/^<[^>]h>|<[^>]*>$/g, '')
@@ -85,16 +87,17 @@ export default {
         return mystr.replace(/^<[^>]h>|<[^>]*>$/g, '')
       }
     },
-    emoji (text) {
+    emoji (text: string) {
       return emoji.emojify(text)
     },
-    urlRender (text) {
+    urlRender (text: string|null) {
       if (text === null) {
         return
       }
-      return text.match(/ <([^\s]+)/)[1].slice(0, -1)
+      const match = text.match(/ <([^\s]+)/)
+      return match && match[1].slice(0, -1)
     },
-    unix2ymd (intTime) {
+    unix2ymd (intTime: number) {
       const d = new Date(intTime * 1000)
       const year = d.getFullYear()
       const month = ('0' + (d.getMonth() + 1)).slice(-2)
@@ -102,7 +105,7 @@ export default {
       return year + '-' + month + '-' + day
     }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
