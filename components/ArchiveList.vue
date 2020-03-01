@@ -90,12 +90,8 @@ export default Vue.extend({
     emoji (text: string) {
       return emoji.emojify(text)
     },
-    urlRender (text: string|null) {
-      if (text === null) {
-        return
-      }
-      const match = text.match(/ <([^\s]+)/)
-      return match && match[1].slice(0, -1)
+    urlRender (text: string | null) {
+      return text?.match(/ <([^\s]+)/)?.[1]?.slice(0, -1) ?? null
     },
     unix2ymd (intTime: number) {
       const d = new Date(intTime * 1000)
