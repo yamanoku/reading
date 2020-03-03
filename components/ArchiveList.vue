@@ -37,15 +37,12 @@
 import Vue from 'vue'
 import emoji from 'node-emoji'
 
-const textRender = (text: any) => {
-  if (text === undefined) {
-    return
-  }
-  if (text.includes('Reading... ')) {
-    const mystr = text.split('Reading... ').join('')
+const textRender = (text: string) => {
+  if (text?.includes('Reading... ')) {
+    const mystr = text?.split('Reading... ').join('')
     return mystr.replace(/^<[^>]h>|<[^>]*>$/g, '')
-  } else if (text.includes('Reading… ')) {
-    const mystr = text.split('Reading… ').join('')
+  } else if (text?.includes('Reading… ')) {
+    const mystr = text?.split('Reading… ').join('')
     return mystr.replace(/^<[^>]h>|<[^>]*>$/g, '')
   }
 }
@@ -68,22 +65,18 @@ export default Vue.extend({
   computed: {
     filterListItem (): any {
       const searchRegex = new RegExp(this.filterKey, 'i')
-      const listItem = this.lists.filter((list: any) => {
-        return (
-          searchRegex.test(list.attachments[0].title) ||
-          searchRegex.test(textRender(list.attachments[0].text))
-        )
-      })
+      const listItem = this.lists.filter((list: any) => (searchRegex.test(list.attachments[0].title) ||
+        searchRegex.test(textRender(list.attachments[0].text) as string)))
       return listItem
     }
   },
   methods: {
     textRender (text: string) {
-      if (text.includes('Reading... ')) {
-        const mystr = text.split('Reading... ').join('')
+      if (text?.includes('Reading... ')) {
+        const mystr = text?.split('Reading... ').join('')
         return mystr.replace(/^<[^>]h>|<[^>]*>$/g, '')
-      } else if (text.includes('Reading… ')) {
-        const mystr = text.split('Reading… ').join('')
+      } else if (text?.includes('Reading… ')) {
+        const mystr = text?.split('Reading… ').join('')
         return mystr.replace(/^<[^>]h>|<[^>]*>$/g, '')
       }
     },
