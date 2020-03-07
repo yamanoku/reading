@@ -62,7 +62,7 @@ const nuxtConfig: Partial<Configuration> = {
       }
     ]
   ],
-  plugins: ["~/plugins/vue-paginate"],
+  plugins: ["~/plugins/vue-paginate", "~/plugins/vue-axe"],
   modules: ["@nuxtjs/feed", "@nuxtjs/pwa", "@nuxtjs/sentry"],
   feed: [
     {

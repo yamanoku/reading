@@ -44,6 +44,7 @@
     "sass": "1.26.1",
     "sass-loader": "8.0.2",
     "ts-loader": "6.2.1",
+    "vue-axe": "1.0.8",
     "vue-loader": "15.9.0",
     "vue-paginate": "yamanoku/vue-paginate"
   }

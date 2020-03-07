@@ -2238,6 +2238,11 @@ autoprefixer@^9.6.1:
     postcss "^7.0.23"
     postcss-value-parser "^4.0.2"
 
+axe-core@^3.4.1:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-3.5.1.tgz#d8d5aaef73f003e8b766ea28bb078343f3622201"
+  integrity sha512-mwpDgPwWB+5kMHyLjlxh4w25ClJfqSxi+c6LQ4ix349TdCUctMwJNPTkhPD1qP9SYIjFgjeVpVZWCvK9oBGwCg==
+
 axios@0.19.2:
   version "0.19.2"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
@@ -9021,6 +9026,13 @@ vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
+
+vue-axe@1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/vue-axe/-/vue-axe-1.0.8.tgz#51df4affe8f403421470da85e160ff16a6edc1f6"
+  integrity sha512-ktvdhKSRlnW01Pnz9MSpjaQsYgt24Nl5KFCOhkdY9gcRXL3moZ2J9iEEDSPqpyUW0BxVpf3zdnWMw4zOVtQOLQ==
+  dependencies:
+    axe-core "^3.4.1"
 
 vue-client-only@^2.0.0:
   version "2.0.0"
