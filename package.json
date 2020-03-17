@@ -14,12 +14,12 @@
   "dependencies": {
     "@nuxt/typescript-build": "0.6.0",
     "@nuxt/typescript-runtime": "0.4.0",
-    "@nuxt/vue-app": "2.11.0",
+    "@nuxt/vue-app": "2.12.0",
     "@nuxtjs/eslint-config-typescript": "1.0.2",
     "@nuxtjs/feed": "1.1.0",
     "@nuxtjs/pwa": "3.0.0-beta.20",
     "@nuxtjs/sentry": "3.3.1",
-    "nuxt": "2.11.0",
+    "nuxt": "2.12.0",
     "vue": "2.6.11"
   },
   "devDependencies": {
