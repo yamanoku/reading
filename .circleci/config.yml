@@ -25,11 +25,11 @@ jobs:
       - run: rm -rf yarn.lock
 
       - run:
-        name: install node_modules
-        command: |
-          if [ ! -e node_modules ]; then
-            yarn install
-          fi
+          name: install node_modules
+          command: |
+            if [ ! -e node_modules ]; then
+              yarn install
+            fi
 
       - save_cache:
           paths:
