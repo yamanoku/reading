@@ -2,6 +2,7 @@
 <template>
   <main>
     <h1>Archive Page</h1>
+    <p>これまで読んできたしてきた情報の年別ページ</p>
     <ul role="list">
       <li role="listitem">
         <a href="/archive/2019">
@@ -17,6 +18,9 @@
   </main>
 </template>
 
-<style>
-@import "yama-normalize";
+<style scoped>
+main {
+  max-width: 48ch;
+  margin: 0 auto 0 6.5rem;
+}
 </style>

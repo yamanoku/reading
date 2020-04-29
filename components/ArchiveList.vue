@@ -1,8 +1,9 @@
 <template>
   <div>
     <form role="search">
-      <label>キーワード検索
-        <input v-model="filterKey" type="text" name="keywords" autocomplete="on" list="title">
+      <label>
+        <span>キーワード検索</span>
+        <input v-model="filterKey" type="text" name="keywords">
       </label>
     </form>
     <ul v-show="filterListItem.length > 0" role="list" class="list">
@@ -99,19 +100,33 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 [role="search"] {
-  margin: calc(var(--rhythm) * 3) 0;
+  margin: calc(.5rem * 3) 0;
+  & > * {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  & > * > * {
+    flex-grow: 1;
+    flex-basis: 120px;
+  }
+  & > * > :last-child {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-width: calc(50% - 90px);
+  }
 }
 
 .list {
   padding: 0;
-  margin: calc(var(--rhythm) * 3) 0;
+  margin: calc(.5rem * 3) 0;
   & > * {
     display: flex;
     flex-wrap: wrap;
   }
   & > * > * {
     flex-grow: 1;
-    flex-basis: 100px;
+    flex-basis: 120px;
   }
   & > * > :last-child {
     flex-basis: 0;

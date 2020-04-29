@@ -62,6 +62,14 @@ const nuxtConfig: Partial<Configuration> = {
       }
     ]
   ],
+  generate: {
+    routes: function () {
+      return [
+        '/archive/2019',
+        '/archive/2018'
+      ]
+    }
+  },
   plugins: ["~/plugins/vue-paginate", "~/plugins/vue-axe"],
   modules: ["@nuxtjs/feed", "@nuxtjs/pwa", "@nuxtjs/sentry"],
   feed: [
