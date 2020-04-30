@@ -2,7 +2,9 @@
   <main>
     <h1>{{ $route.params.id }}</h1>
     <nav>
-      <a href="/archive">/archive</a>
+      <nuxt-link to="/archive">
+        /archive
+      </nuxt-link>
     </nav>
     <archive-list :data="lists" />
   </main>
@@ -25,7 +27,7 @@ export default {
 
 <style scoped>
 main {
-  width: calc(100% - 2rem);
-  margin: 0 2.5rem 0 6.5rem;
+  max-width: 48rem;
+  margin: 0 var(--rhythm) 0 calc(var(--rhythm) * 3);
 }
 </style>

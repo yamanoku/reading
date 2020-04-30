@@ -1,36 +1,37 @@
 <template>
-  <div>
-    <form role="search">
+  <div class="stack">
+    <form class="with-sidebar" role="search">
       <label>
         <span>キーワード検索</span>
         <input v-model="filterKey" type="text" name="keywords">
       </label>
     </form>
-    <ul v-show="filterListItem.length > 0" role="list" class="list">
-      <template v-for="list in filterListItem">
-        <li :key="list.iid" role="listitem">
-          <time :datetime="unix2ymd (list.ts)">{{ unix2ymd (list.ts) }}</time>
-          <!-- title not response -->
-          <a
-            v-if="!list.attachments[0].title"
-            :href="urlRender(list.attachments[0].text)"
-            target="_blank"
-            rel="noopener"
-          >
-            {{ textRender(emoji(list.attachments[0].text)) }}
-          </a>
-          <!-- title response -->
-          <a
-            v-else
-            :href="list.attachments[0].title_link"
-            target="_blank"
-            rel="noopener"
-          >
-            {{ emoji(list.attachments[0].title) }}
-          </a>
-        </li>
-      </template>
-    </ul>
+    <div>
+      <ul v-show="filterListItem" role="list">
+        <template v-for="list in filterListItem">
+          <li :key="list.iid" role="listitem">
+            <!-- title not response -->
+            <a
+              v-if="!list.attachments[0].title"
+              :href="urlRender(list.attachments[0].text)"
+              target="_blank"
+              rel="noopener"
+            >
+              {{ textRender(emoji(list.attachments[0].text)) }}
+            </a>
+            <!-- title response -->
+            <a
+              v-else
+              :href="list.attachments[0].title_link"
+              target="_blank"
+              rel="noopener"
+            >
+              {{ emoji(list.attachments[0].title) }}
+            </a>
+          </li>
+        </template>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -99,39 +100,31 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-[role="search"] {
-  margin: calc(.5rem * 3) 0;
-  & > * {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-  & > * > * {
-    flex-grow: 1;
-    flex-basis: 120px;
-  }
-  & > * > :last-child {
-    flex-basis: 0;
-    flex-grow: 999;
-    min-width: calc(50% - 90px);
-  }
+form {
+  position: sticky;
+  top: 0;
+  padding: calc(var(--rhythm) * 3) 0;
+  background-color: #fff;
+  border-bottom: 1px solid rgb(170, 184, 194);
 }
 
-.list {
-  padding: 0;
-  margin: calc(.5rem * 3) 0;
-  & > * {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  & > * > * {
-    flex-grow: 1;
-    flex-basis: 120px;
-  }
-  & > * > :last-child {
-    flex-basis: 0;
-    flex-grow: 999;
-    min-width: calc(50% - 90px);
-  }
+ul {
+  margin: 0;
+  line-height: calc(var(--rhythm) * 3);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stack > * + * {
+  margin-top: var(--space);
 }
 </style>
