@@ -1,5 +1,5 @@
 declare module 'sentry' {
-  import { default as _Vue } from 'vue'
+  import { default as _Vue } from 'vue' // eslint-disable-line
 
   import * as Sentry from '@sentry/browser'
 
