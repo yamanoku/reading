@@ -2,7 +2,7 @@
   <div class="stack">
     <form class="with-sidebar" role="search">
       <label>
-        <span>キーワード検索</span>
+        <span>Keywords</span>
         <input v-model="filterKey" type="text" name="keywords">
       </label>
     </form>

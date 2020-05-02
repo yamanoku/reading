@@ -2,7 +2,7 @@
 <template>
   <main>
     <h1>Archive Page</h1>
-    <p>これまで読んできたしてきた情報の年別ページ</p>
+    <p>The archive page I've been reading</p>
     <ul role="list">
       <li role="listitem">
         <nuxt-link to="/archive/2019">
@@ -15,6 +15,9 @@
         </nuxt-link>
       </li>
     </ul>
+    <nuxt-link to="/">
+      Back Top Page
+    </nuxt-link>
   </main>
 </template>
 
@@ -31,7 +34,7 @@
   }
   & > * > * {
     flex-grow: 1;
-    flex-basis: 120px;
+    flex-basis: 80px;
   }
   & > * > :last-child {
     flex-basis: 0;
