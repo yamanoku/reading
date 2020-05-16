@@ -8885,12 +8885,10 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-vue-axe@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/vue-axe/-/vue-axe-1.1.0.tgz#80c5612fa4947d259b4fe14c1ee14785cceeb51c"
-  integrity sha512-cD/xopFtNLSsbVEBvyCtpAC3qaEU05f6sqT2KGh570j+sWi6LZ0dDWbubWp+IfsdOhDlJiImya/5uggUX7FzVw==
-  dependencies:
-    axe-core "3.5.3"
+vue-axe@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/vue-axe/-/vue-axe-2.0.0.tgz#d2a3908b9ab5e865769e1cac73c97525893754a9"
+  integrity sha512-JN4yEKMmqBaVtfOeGVI1Kqo+sVw+bHYA0EkaQDrHHllwfScf0p+wgU5I28VD+o8KTlJrJITS2vcVeeuMf22ueg==
 
 vue-client-only@^2.0.0:
   version "2.0.0"
