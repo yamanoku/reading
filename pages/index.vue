@@ -25,7 +25,6 @@ export default Vue.extend({
       }
     } catch (e) {
       error({ statusCode: 404, message: 'Connection Error' })
-      this.$sentry.captureException(new Error('Connection Error'))
     }
   }
 })

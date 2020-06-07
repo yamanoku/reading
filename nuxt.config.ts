@@ -71,7 +71,7 @@ const nuxtConfig: Partial<Configuration> = {
     }
   },
   plugins: ['~/plugins/vue-paginate', '~/plugins/vue-axe'],
-  modules: ['@nuxtjs/feed', '@nuxtjs/pwa', '@nuxtjs/sentry'],
+  modules: ['@nuxtjs/feed', '@nuxtjs/pwa'],
   feed: [
     {
       path: '/feed.xml',
@@ -113,9 +113,6 @@ const nuxtConfig: Partial<Configuration> = {
       type: 'rss2'
     }
   ],
-  sentry: {
-    dsn: 'https://480ae3692a944d568ae3009584a5e9ad@sentry.io/1547851'
-  },
   workbox: {
     dev: true
   },
