@@ -19,12 +19,10 @@
     "@nuxtjs/eslint-config-typescript": "2.0.0",
     "@nuxtjs/feed": "2.0.0",
     "@nuxtjs/pwa": "3.0.0-beta.20",
-    "@nuxtjs/sentry": "4.0.3",
     "nuxt": "2.12.2",
     "vue": "2.6.11"
   },
   "devDependencies": {
-    "@sentry/browser": "5.16.0",
     "@types/fibers": "3.1.0",
     "@types/node-emoji": "1.8.1",
     "@types/sass": "1.16.0",

@@ -17,10 +17,10 @@ module.exports = {
     'vuejs-accessibility'
   ],
   rules: {
-    "vuejs-accessibility/label-has-for": [
-      "error",
+    'vuejs-accessibility/label-has-for': [
+      'error',
       {
-        "allowChildren": true
+        allowChildren: true
       }
     ],
     'vuejs-accessibility/no-redundant-roles': 0
