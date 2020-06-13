@@ -4,508 +4,508 @@
         <title>Reading…</title>
         <link>https://reading.yamanoku.net/feed.xml</link>
         <description>yamanoku's reading feed</description>
-        <lastBuildDate>Sat, 13 Jun 2020 01:01:45 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 13 Jun 2020 10:01:36 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
+            <title><![CDATA[skillset - インターネット・エクスプローラー 2.0]]></title>
+            <link>https://scrapbox.io/sno2wman/skillset</link>
+            <guid>525bf7fd-1eef-47c5-8971-17af380842f4</guid>
+        </item>
+        <item>
             <title><![CDATA[Reading... 一般社団法人ビブリオスタイル 2019年度事業報告書 <https://vivliostyle.github.io/vivliostyle_doc/ja/reports/vivliostyle-report-2019/vf2019report.html>]]></title>
             <link>https://vivliostyle.github.io/vivliostyle_doc/ja/reports/vivliostyle-report-2019/vf2019report.html</link>
-            <guid>85143fda-7d0c-4561-a6c8-f4e3afd747fa</guid>
+            <guid>a42cbc1b-7622-4156-85c9-c7259e7143c0</guid>
         </item>
         <item>
             <title><![CDATA[クソデカ合作開催につきまして：チラシの裏の隅の方]]></title>
             <link>https://ch.nicovideo.jp/Five_Circle/blomaga/ar1911144</link>
-            <guid>642ffad5-6d53-4d79-a5a2-73f2299533c2</guid>
+            <guid>37030840-08bc-4b23-ad02-ca13da517805</guid>
         </item>
         <item>
             <title><![CDATA[blacklistisnotracist/blacklist-is-not-a-racist-word]]></title>
             <link>https://github.com/blacklistisnotracist/blacklist-is-not-a-racist-word</link>
-            <guid>58d7c378-dad0-4890-aae8-37acdadf178e</guid>
+            <guid>60ec9352-9a23-42ae-bb32-cf31b4fbcf9f</guid>
         </item>
         <item>
             <title><![CDATA[Computer Scienceの学位が取れる米国のオンライン大学University of the Peopleに入ってみた感想 - えんぴつぶろぐ]]></title>
             <link>https://empitsu88.hatenablog.com/entry/2020/03/23/201900</link>
-            <guid>91c7869a-c6f2-4631-a362-bed07e6d87f9</guid>
+            <guid>e57469b9-6666-47e8-a07c-c6f773300f2b</guid>
         </item>
         <item>
             <title><![CDATA[英語の論文を翻訳する際はGoogleドキュメントを使うのがおすすめ - えんぴつぶろぐ]]></title>
             <link>https://empitsu88.hatenablog.com/entry/2020/06/12/083000</link>
-            <guid>35c9ed5b-578b-4c88-b9c9-d263f0f145a3</guid>
+            <guid>e3f8e5f6-bede-41f6-82d1-943d5450f0f3</guid>
         </item>
         <item>
             <title><![CDATA[おばさんである私と見た目と中身｜ワダシノブ/イラスト・マンガ｜note]]></title>
             <link>https://note.com/shinobuwada/n/n98b046867d87</link>
-            <guid>c06c9985-4c4f-4737-b314-a08304e51828</guid>
+            <guid>1fdd5a02-e05d-4640-a027-cd557fd1c618</guid>
         </item>
         <item>
             <title><![CDATA[技術書、紙の本で読むか、電子書籍で読むか？ - give IT a try]]></title>
             <link>https://blog.jnito.com/entry/2020/06/11/084955</link>
-            <guid>95276a05-78d6-4be8-b5e4-4edfd2e37883</guid>
+            <guid>46d71fbc-2fa4-4b4f-886b-df8fef8e083a</guid>
         </item>
         <item>
             <title><![CDATA[Accessible Form Validation Messages with ARIA and Vue.js]]></title>
             <link>https://vuejsdevelopers.com/2019/05/13/accessibility-validation-aria-vuejs/</link>
-            <guid>064d15ed-8c3d-4a18-958b-52d37b4d2cdd</guid>
+            <guid>60053db8-b263-4c58-bfb0-33aa1303798c</guid>
         </item>
         <item>
             <title><![CDATA[いかなる理由があろうとリンクは絶対に  にしてほしい - Qiita]]></title>
             <link>https://qiita.com/SaekiTominaga/items/a9484144a0c3f6da1ece</link>
-            <guid>ad4d9b50-bd89-4d7b-a155-75cffd9c4baf</guid>
+            <guid>112785c4-b8b2-4d6f-be64-b4e82f7185a1</guid>
         </item>
         <item>
             <title><![CDATA[Social Impact   | Silent Voice (サイレントボイス) – コミュニケーションの壁とたたかう人へ]]></title>
             <link>https://silentvoice.co.jp/about/social-impact/</link>
-            <guid>2b2063e2-34aa-402d-bbd6-7ce8137e9f8d</guid>
+            <guid>6b55a1f2-bce5-4eaa-8d23-092768965711</guid>
         </item>
         <item>
             <title><![CDATA[Accessible form error auto-focus with Vuelidate in Vue]]></title>
             <link>https://dev.to/marinamosti/accessible-form-error-auto-focus-with-vuelidate-in-vue-4cok</link>
-            <guid>5ca02207-d184-4470-ad01-42188c3f6c29</guid>
+            <guid>9510b1a0-a87e-44c8-9424-b0adaff19219</guid>
         </item>
         <item>
             <title><![CDATA[Failing build: Failed to prepare repo, failed during stage 'preparing repo': exit status 1]]></title>
             <link>https://community.netlify.com/t/failing-build-failed-to-prepare-repo-failed-during-stage-preparing-repo-exit-status-1/10507</link>
-            <guid>1978e9e5-e887-4f4d-82db-d532b272f016</guid>
+            <guid>e7444aa6-7670-4dee-b6f8-2202e14aebbe</guid>
         </item>
         <item>
             <title><![CDATA[`` lost visual indication that it can be activated when hovering over the text · Issue #5626 · whatwg/html]]></title>
             <link>https://github.com/whatwg/html/issues/5626</link>
-            <guid>4675deea-2376-497c-b4a0-a1a30544f335</guid>
+            <guid>961e33f4-e8da-49da-a54e-9cce49f862ef</guid>
         </item>
         <item>
             <title><![CDATA[視覚障害の一人暮らし女性を盗撮、男「目が見えなければバレないと…」 : 国内 : ニュース]]></title>
             <link>https://www.yomiuri.co.jp/national/20200610-OYT1T50167/</link>
-            <guid>59b1f8cb-4e08-4df3-bdd4-ebf378a69b86</guid>
+            <guid>c2d847d2-7d37-46ed-9bf4-e5c32d348446</guid>
         </item>
         <item>
             <title><![CDATA[リモートワークの転職を応援する 『#リモート転職ドラフト』キャンペーン｜転職ドラフトReport]]></title>
             <link>https://job-draft.jp/articles/449</link>
-            <guid>fd3ebdd7-ba6e-42d0-8b0e-cc2ec7b49f48</guid>
+            <guid>7072205c-2da4-4df3-bef9-88f15da4a98a</guid>
         </item>
         <item>
             <title><![CDATA[消去跡に見苦しい落書き　アートは我々の心の中に　印西にバンクシー？その後（前編）]]></title>
             <link>https://www.chibanippo.co.jp/news/local/696873</link>
-            <guid>ce7b7060-753e-4c74-86b7-05aa4b57e169</guid>
+            <guid>f9f253fe-31ee-4e35-a853-ae0ebe1e3d71</guid>
         </item>
         <item>
             <title><![CDATA[Why don't  HTML elements have a CSS cursor pointer by default?]]></title>
             <link>https://ux.stackexchange.com/questions/105024/why-dont-button-html-elements-have-a-css-cursor-pointer-by-default</link>
-            <guid>e6bade03-9463-4132-a276-be7506a8895e</guid>
+            <guid>a6f53bd0-2e68-42b8-91ea-f54d89af7514</guid>
         </item>
         <item>
             <title><![CDATA[ホンダにサイバー攻撃　ウイルスで社内ネット障害、工場一時停止]]></title>
             <link>https://www.sankei.com/economy/news/200609/ecn2006090030-n1.html</link>
-            <guid>740eca1f-a363-4f6b-91d7-cfd739d5e7d3</guid>
+            <guid>987272f5-a5eb-4287-9675-68fe55da93e9</guid>
         </item>
         <item>
             <title><![CDATA[第4回　プロダクティビティの鬼]]></title>
             <link>https://gihyo.jp/dev/serial/01/continue-power/0004</link>
-            <guid>5dc06be9-4260-492d-a9a4-1873ad55685c</guid>
+            <guid>1f21e785-bcc9-498a-b958-9f6cfbcaac9a</guid>
         </item>
         <item>
             <title><![CDATA[非インターネット接続で高セキュアにAI問診Ubieのクラウドサービスが導入できる「閉域VPNプラン」をNTT東西と共同提供]]></title>
             <link>https://prtimes.jp/main/html/rd/p/000000006.000048083.html</link>
-            <guid>f9020672-4a66-4b1f-bdd9-ac31b51a2ea3</guid>
+            <guid>08e365cb-1b79-4128-9a61-4de216241cab</guid>
         </item>
         <item>
             <title><![CDATA[画像にaltテキストを設定したい - Scrapboxへの要望]]></title>
             <link>https://scrapbox.io/forum-jp/%E7%94%BB%E5%83%8F%E3%81%ABalt%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%97%E3%81%9F%E3%81%84</link>
-            <guid>c1eea03a-fb29-4ffa-b9bf-939fc433ff71</guid>
+            <guid>4c00fcac-dc31-4dc6-9434-7666f6fc98ab</guid>
         </item>
         <item>
             <title><![CDATA[初期費用無料、最短1か月でオリジナルアプリの開発を可能にする “公式アプリ開発サービス”の提供を開始 | 株式会社アカツキ（Akatsuki Inc.)]]></title>
             <link>https://aktsk.jp/press/28550/</link>
-            <guid>79b4bae0-0ec2-4506-aac6-65e7c66e6cef</guid>
+            <guid>4f372df1-b85b-4a9c-aee0-b843b32612cf</guid>
         </item>
         <item>
             <title><![CDATA[エルピクセル株式会社 - 生命を探求し、新しい価値を創造する]]></title>
             <link>https://t.co/dVxWnIv6GV</link>
-            <guid>8b37c513-b9b1-4e13-aa56-5498241e9d18</guid>
+            <guid>10c77ff0-dd9f-40f0-9077-72a9a7f6638a</guid>
         </item>
         <item>
             <title><![CDATA[ただリンクにしたいときにhref="url"の代わりにonClick="location.href = 'url'"的なことをすると体験を損ねます - Qiita]]></title>
             <link>https://qiita.com/fruitriin/items/f795613cce153aecc8d6</link>
-            <guid>7aab6b25-425c-4da5-9ecf-741e544a4cdc</guid>
+            <guid>22f01090-0785-4ba7-8f5b-ef9e71a03130</guid>
         </item>
         <item>
             <title><![CDATA[誰かを排除している可能性を学び続ける #ローソンPBに思う｜平尾ゆうてん｜note]]></title>
             <link>https://note.com/yusukehirao/n/ne6cc2090373a</link>
-            <guid>2bbba4e9-4d41-4783-ab6f-a1d0e275d235</guid>
+            <guid>c4f2811d-d18b-4787-b57a-8712918267f0</guid>
         </item>
         <item>
             <title><![CDATA[CSS完全に理解した|デザインTシャツ通販【Tシャツトリニティ】]]></title>
             <link>https://www.ttrinity.jp/shop/funny_jokes/design/2313564</link>
-            <guid>336262b8-b5f2-44da-bdb6-2c5b805cc6ad</guid>
+            <guid>1f6114de-16d4-4478-ae83-b907b81ffb77</guid>
         </item>
         <item>
             <title><![CDATA[【新日本】１５日から無観客で再始動！　７月には観客入れて大阪城２連戦 – 東京スポーツ新聞社]]></title>
             <link>https://www.tokyo-sports.co.jp/prores/njpw/1895427/</link>
-            <guid>58a90d68-8183-43f0-b180-2561a4fd1cf3</guid>
+            <guid>baa70c96-0988-4f0d-ba53-a56c0a0f51eb</guid>
         </item>
         <item>
             <title><![CDATA[雇用調整助成金 オンライン申請で個人情報流出 専門家調査へ | NHKニュース]]></title>
             <link>https://www3.nhk.or.jp/news/html/20200609/k10012463841000.html</link>
-            <guid>39ef8ea2-3875-4581-ba6e-5c9c0a8ce495</guid>
+            <guid>728bfcad-00ac-4e58-8ceb-7d966efa7deb</guid>
         </item>
         <item>
             <title><![CDATA[Reading... blacklist/whitelist master/slave に関する情報集め · GitHub <https://gist.github.com/mattn/488af4c3b3841ea901a1f9820636393c>]]></title>
             <link>https://gist.github.com/mattn/488af4c3b3841ea901a1f9820636393c</link>
-            <guid>5039044d-efe3-401f-b802-ef0f123277ad</guid>
+            <guid>fa3fd444-5607-4377-9df6-c4cf15c585d5</guid>
         </item>
         <item>
             <title><![CDATA[Gatsby + TypeScript で技術ブログを書くための知見]]></title>
             <link>https://blog.ojisan.io/1st-blog-stack/</link>
-            <guid>bee8e1e5-2ab8-4bdf-a6ee-12cd95a9b066</guid>
+            <guid>5fc279f4-8e58-4cb5-9a4e-86e75582647e</guid>
         </item>
         <item>
             <title><![CDATA[Anyflowを使えば、SlackからKING OF TIMEに打刻ができるようになります⏰｜Anyflow | 業務自動化iPaaS]]></title>
             <link>https://blog.anyflow.jp/n/ne27b99db6e9c</link>
-            <guid>3f2bd3d0-97f1-4abb-b010-72336ff74d40</guid>
+            <guid>05798c4a-3b7b-4d5c-a6f6-585a7779aac2</guid>
         </item>
         <item>
             <title><![CDATA[HTML5 Boilerplate 8.0.0 Released]]></title>
             <link>https://htmlcssjavascript.com/web/html5-boilerplate-8-0-0-released/</link>
-            <guid>c666ffe5-cb5d-4677-b6bf-89ef8e1a33db</guid>
+            <guid>ac79c1b5-7c4c-49ef-83ed-83e06e8897c2</guid>
         </item>
         <item>
             <title><![CDATA[WWDC Extended Tokyo 2020 (2020/06/23 00:00〜)]]></title>
             <link>https://yj-meetup.connpass.com/event/178577/</link>
-            <guid>bc876e87-7dd3-4ddd-9249-51ed37cddca2</guid>
+            <guid>096767d8-478f-4063-9126-567ba20f685c</guid>
         </item>
         <item>
             <title><![CDATA[code4sabae/website]]></title>
             <link>https://github.com/code4sabae/website/</link>
-            <guid>d33d00a4-8c13-40ed-b624-6ec43a66dcd7</guid>
+            <guid>60bffbbb-b62c-4896-81cc-31b90f8604cf</guid>
         </item>
         <item>
             <title><![CDATA[記事の内容が思いつかない症候群 ¦ 学ぶ、考える、書き出す。]]></title>
             <link>https://blog.kubosho.com/entry/content-of-article-can-not-think-of-anything-syndrome</link>
-            <guid>7d885d29-14ee-49f4-9275-2eabcf71f953</guid>
+            <guid>ad897336-d440-4dbb-93d8-0d75b0abaa5f</guid>
         </item>
         <item>
             <title><![CDATA[中間管理録トネガワ - 福本伸行/萩原天晴/三好智樹/橋本智広 / 第７５話　熊手 | コミックDAYS]]></title>
             <link>https://comic-days.com/episode/10834108156751253261</link>
-            <guid>ce4c5e45-3711-441b-a9eb-a749fa3a4062</guid>
+            <guid>99848f2e-f0c0-429b-a94b-6175254c1eab</guid>
         </item>
         <item>
             <title><![CDATA[市場価値を気にしすぎないほうが市場価値が高まるんじゃないかなという話｜人事のなべはる｜note]]></title>
             <link>https://note.com/nabeharuj/n/nc3637b0f8702</link>
-            <guid>90c0a6c0-1c89-4ec0-bae2-981e2a7cae33</guid>
+            <guid>f8b9b82f-ec0b-41ab-82cf-872067f9048c</guid>
         </item>
         <item>
             <title><![CDATA[秋葉原通り魔事件１２年で献花｜NHK 首都圏のニュース]]></title>
             <link>https://www3.nhk.or.jp/shutoken-news/20200608/1000049935.html</link>
-            <guid>0fc3f103-8bb2-4126-ada2-82b5e8dfb532</guid>
+            <guid>19d3de6d-9d36-4dbe-b5a4-4fae9c66bd2c</guid>
         </item>
         <item>
             <title><![CDATA[アンカー上の target=_blank が rel=noopener を暗示するようになりました]]></title>
             <link>https://www.fxsitecompat.dev/ja/docs/2020/target-blank-on-anchors-now-implies-rel-noopener/</link>
-            <guid>8f7d5bdd-6a4a-4702-ab61-0bc8d8413aa5</guid>
+            <guid>d6614a52-cd01-48dd-9dc3-b2b532833241</guid>
         </item>
         <item>
             <title><![CDATA[ソフトウェアエンジニアと経験年数 - 29box]]></title>
             <link>https://scrapbox.io/june29/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%81%A8%E7%B5%8C%E9%A8%93%E5%B9%B4%E6%95%B0</link>
-            <guid>1b1ef45a-f168-4ab0-8f26-32f16e50b746</guid>
+            <guid>cf275805-9099-4100-ad3d-6f55a1c8f95e</guid>
         </item>
         <item>
             <title><![CDATA[ビデオ会議の音をよくする / Making Sound Better with Video Conference]]></title>
             <link>https://speakerdeck.com/itochan/making-sound-better-with-video-conference</link>
-            <guid>7db1a0a5-897f-4ac4-abd0-579218843692</guid>
+            <guid>53903f97-f3d0-48b1-b56b-139c10f524c8</guid>
         </item>
         <item>
             <title><![CDATA[経験年数に応じて一般的に求められるスキルが身についてないままソフトウェアエンジニアとして生きている(いた)ことのつらみ｜ぱん｜note]]></title>
             <link>https://note.com/nappan23/n/n54bc973bbc88</link>
-            <guid>2daf51de-db4a-417c-81ea-6512f18e5ed9</guid>
+            <guid>e59e5b47-4c27-4e6b-a8c1-63abe866b246</guid>
         </item>
         <item>
             <title><![CDATA[かるめりちゃんカメラ]]></title>
             <link>https://camera.calmery.moe/</link>
-            <guid>727b39e1-c12c-49bc-bc4f-d0c815264d32</guid>
+            <guid>29bfe258-8a75-4df9-a745-84114d794877</guid>
         </item>
         <item>
             <title><![CDATA[コンビニはなぜ「ユニバーサル」であるべきなのか｜最所あさみ｜note]]></title>
             <link>https://note.com/qzqrnl/n/n7f56118bc0df</link>
-            <guid>904a841d-ce1a-4f85-84eb-0ac84301c188</guid>
+            <guid>66012819-77ea-4ceb-bb3c-9eec4cefbc99</guid>
         </item>
         <item>
             <title><![CDATA[「プロダクト間共通の React コンポーネントライブラリ」がどうなったか、という話 - SmartHR Tech Blog]]></title>
             <link>https://tech.smarthr.jp/entry/2020/06/08/114108</link>
-            <guid>efd4ca0b-a309-4334-96fe-b8ce0eac9343</guid>
+            <guid>234d1b5f-8b10-4f9a-9e6a-5fb4a011c2ba</guid>
         </item>
         <item>
             <title><![CDATA[ムゲンダイな文字｜荒井胤海｜デザイナー｜note]]></title>
             <link>https://note.com/tsugumiarai/n/ndc0a9cf10a86</link>
-            <guid>3a879b57-d4cc-4309-ac3e-13f1ded19883</guid>
+            <guid>748a17ce-f4eb-450b-aa3d-ce7473966551</guid>
         </item>
         <item>
             <title><![CDATA[NuxtJS の full-static export と nuxtjs/content でブログを作った]]></title>
             <link>https://odanado-blog.netlify.app/articles/2020/06/blog/</link>
-            <guid>50db446d-efc3-420b-81df-372d43632272</guid>
+            <guid>75f3e422-cfae-432b-a937-0e2a2b4d2de3</guid>
         </item>
         <item>
             <title><![CDATA[Mozilla、今後はV8の正規表現エンジンをFirefoxにそのまま取り込むと表明。そのための互換レイヤを開発]]></title>
             <link>https://www.publickey1.jp/blog/20/mozillav8firefox.html</link>
-            <guid>e4b51d72-dd85-4b71-9b71-4ad4630e3187</guid>
+            <guid>b5df638f-316e-4fe2-99d6-67101495e9bb</guid>
         </item>
         <item>
             <title><![CDATA[最速で画像を圧縮するAlfred Workflowを作った - Qiita]]></title>
             <link>https://qiita.com/ryo2132/items/358ce9d4baa8a8a27092</link>
-            <guid>a1acbcbb-c9ad-4383-9dfc-a03c31648367</guid>
+            <guid>1be198c1-c536-4cde-b816-53ffb74a2b9d</guid>
         </item>
         <item>
             <title><![CDATA[「お菓子の過剰包装やめて」女子高生がネット署名活動　ステイホームでゴミ増加：東京新聞 TOKYO Web]]></title>
             <link>https://www.tokyo-np.co.jp/article/33291</link>
-            <guid>260948cd-f7d0-43cf-b374-c28bd896d262</guid>
+            <guid>da403e48-c5e4-4267-b27b-0551b43fca1b</guid>
         </item>
         <item>
             <title><![CDATA[「やめたいのにやめられない」ネット中傷を続ける女性の告白]]></title>
             <link>https://www.news-postseven.com/archives/20200607_1568727.html</link>
-            <guid>fa694c79-ca78-49f6-9319-c55937870a60</guid>
+            <guid>4e35f747-ae99-4258-90db-4cbedcc491f1</guid>
         </item>
         <item>
             <title><![CDATA[import文で画像やCSSを読み込むのはECMAScript仕様違反か - uhyo/blog]]></title>
             <link>https://blog.uhy.ooo/entry/2020-06-06/webpack-loader-spec-compliance/</link>
-            <guid>c32ef094-74d9-43ef-b1e3-825ad4e83498</guid>
+            <guid>152fc8fd-7ecf-41c2-a1b0-a4f7e7644239</guid>
         </item>
         <item>
             <title><![CDATA[人はなぜ被害者を責めるのか？（公正世界仮説がもたらすもの） | 受賞作品 展示室 社会 | 心理学ミュージアム - 日本心理学会]]></title>
             <link>https://psychmuseum.jp/show_room/just_world/</link>
-            <guid>b1e5b133-055f-49a0-9aa7-e383aeeacb7c</guid>
+            <guid>e0ea063f-a9f2-4c50-813b-d53cdf328901</guid>
         </item>
         <item>
             <title><![CDATA[フロントエンドにおける「関心の分離」は間違っていた - fsubal]]></title>
             <link>https://scrapbox.io/fsubal/%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%80%8C%E9%96%A2%E5%BF%83%E3%81%AE%E5%88%86%E9%9B%A2%E3%80%8D%E3%81%AF%E9%96%93%E9%81%95%E3%81%A3%E3%81%A6%E3%81%84%E3%81%9F</link>
-            <guid>e1202e1a-8386-4e6f-b0c6-530454e87642</guid>
+            <guid>969b2676-df47-488b-97bc-155bfd38584c</guid>
         </item>
         <item>
             <title><![CDATA[新しい AMP Optimizer で楽々 AMP 開発]]></title>
             <link>https://developers-jp.googleblog.com/2020/03/amp-optimizer-amp.html</link>
-            <guid>4a144c1f-6c08-4511-8320-4c13c1be09d0</guid>
+            <guid>bf340645-dd50-479e-898e-6ede8e0663f2</guid>
         </item>
         <item>
             <title><![CDATA[Google に半年かけて丁寧にお祈りされた回 - もふろぐ]]></title>
             <link>https://mofmoffox.hatenablog.jp/entry/2020/06/05/232311</link>
-            <guid>69e8551e-f0a7-4747-b56a-82b00d8d9e2a</guid>
+            <guid>a123fc5a-9222-4a11-86cc-5db3b1b94653</guid>
         </item>
         <item>
             <title><![CDATA[2013年10月 | マミオン有限会社-パソコン・数学研修、ウェブユーザビリティ評価]]></title>
             <link>https://mamion.net/2013/10/???????????????????/</link>
-            <guid>110d7a88-6434-4647-8003-b051a7796efc</guid>
+            <guid>a1166aea-ae9c-4503-8102-2a9d0ed2f1e6</guid>
         </item>
         <item>
             <title><![CDATA[インターネットの自由はインターネットの自由によって殺され、後に残るのは既得権益という未来予想図 - novtan別館]]></title>
             <link>https://nov1975.hatenablog.com/entry/20140116/p1</link>
-            <guid>47d1b27f-499f-4e94-8174-5c3f40ab307c</guid>
+            <guid>27a3b027-9aab-477c-978e-881766f2aa61</guid>
         </item>
         <item>
             <title><![CDATA[Reading... シンプルで扱いやすいHTMLテーブルライブラリ・「Grid.js」 | <http://かちびと.net|xn--u8j1bva7b.net> <http://kachibito.net/useful-resource/grid-js>]]></title>
             <link>http://かちびと.net|xn--u8j1bva7b.net</link>
-            <guid>5e9922b7-9b80-41fe-9715-9ba52bdf3c90</guid>
+            <guid>d186176b-17a8-43d1-9946-119679ab48c0</guid>
         </item>
         <item>
             <title><![CDATA[最近は音声入力をGoogle音声入力に統一しています。VoiceInが大活躍です。 - 勝間和代が徹底的にマニアックな話をアップするブログ]]></title>
             <link>http://katsumakazuyo.hatenablog.com/entry/2020/06/02/200151</link>
-            <guid>e96c00a3-2903-497c-a551-367ed965aac4</guid>
+            <guid>e640042b-174f-45d8-8748-89250c9ad58a</guid>
         </item>
         <item>
             <title><![CDATA[フロントエンドエンジニアからデザイナーにジョブチェンジして1ヶ月経った]]></title>
             <link>https://medium.com/@takanorioki/%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%81%8B%E3%82%89%E3%83%87%E3%82%B6%E3%82%A4%E3%83%8A%E3%83%BC%E3%81%AB%E3%82%B8%E3%83%A7%E3%83%96%E3%83%81%E3%82%A7%E3%83%B3%E3%82%B8%E3%81%97%E3%81%A61%E3%83%B6%E6%9C%88%E7%B5%8C%E3%81%A3%E3%81%9F-af19fb49bf47</link>
-            <guid>c6449b11-46da-42bb-9ff8-2f6f5131c4ca</guid>
+            <guid>63525976-d8f5-4a2c-9d39-43f2b7ff56cf</guid>
         </item>
         <item>
             <title><![CDATA[インディーゲーム情報番組「INDIE Live Expo 2020」番組コンテンツの詳細発表！ 放送開始は6月6日19:50 | Game*Spark - 国内・海外ゲーム情報サイト]]></title>
             <link>https://www.gamespark.jp/article/2020/06/05/99595.html</link>
-            <guid>555b3486-2d75-4e55-9923-ffa83dd5c4a4</guid>
+            <guid>f7715864-c07f-45dc-bff0-ba4312afa7af</guid>
         </item>
         <item>
             <title><![CDATA[AWSとSlack、戦略的提携を発表　SlackはAmazon Chimeを採用し、AWSは全社でSlackを採用]]></title>
             <link>https://www.itmedia.co.jp/news/articles/2006/05/news065.html</link>
-            <guid>d817f84a-7b33-4e00-8c92-53172100ec00</guid>
+            <guid>24bd5ee0-1588-43e4-a980-44a19272cfe9</guid>
         </item>
         <item>
             <title><![CDATA[JavaScriptの歴史については「JavaScript: The First 20 Years」を読む]]></title>
             <link>https://efcl.info/2020/06/05/javascript-history/</link>
-            <guid>fecdd825-b14a-4384-a5f3-840fc93b399c</guid>
+            <guid>7589e2fd-0c96-4930-9cba-9c4feb6dea0c</guid>
         </item>
         <item>
             <title><![CDATA[【解体新書】Notion編 ~ 社員数たった50人の会社がユニコーンになれた秘密 ~｜若手VCシカタのnote｜note]]></title>
             <link>https://note.com/tomo4kata/n/nb4514c6ad4bf</link>
-            <guid>c5e810de-7054-4db4-bf77-657554092219</guid>
+            <guid>1740c277-0316-4ac5-a689-bcf9f8664a99</guid>
         </item>
         <item>
             <title><![CDATA[スタートアップに向いてる人の特徴 - @kyanny's blog]]></title>
             <link>https://blog.kyanny.me/entry/2020/06/05/060647</link>
-            <guid>51df7ee8-f49a-4d2d-9b25-597681f2ddfe</guid>
+            <guid>6783a32d-53b5-4a88-917c-da476e25c555</guid>
         </item>
         <item>
             <title><![CDATA[renovateしんどい問題 - potato4d]]></title>
             <link>https://scrapbox.io/potato4d/renovate%E3%81%97%E3%82%93%E3%81%A9%E3%81%84%E5%95%8F%E9%A1%8C</link>
-            <guid>cee9cb12-31ca-424a-ae64-4106eb5b99d2</guid>
+            <guid>ccc7d7b7-930f-479f-8cd6-11575473b6c5</guid>
         </item>
         <item>
             <title><![CDATA[Reading... 【お知らせ】アキバBlogの更新がしばらく止まります : アキバBlog <http://blog.livedoor.jp/geek/archives/51603033.html>]]></title>
             <link>http://blog.livedoor.jp/geek/archives/51603033.html</link>
-            <guid>259609d9-d047-44ca-b6b1-1b77d1aeadb0</guid>
+            <guid>bac59bb8-2c29-40c2-aeb0-ff4a20e615ab</guid>
         </item>
         <item>
             <title><![CDATA[コメントでだれかを傷つけないよう、ひと呼吸いれる確認画面をつけました｜note株式会社]]></title>
             <link>https://note.jp/n/n254c6b258cc7</link>
-            <guid>fb9f2399-8aa4-465a-87c0-d6ab92982fdf</guid>
+            <guid>79cc59d8-ef34-4227-bc9f-d7b6e214f249</guid>
         </item>
         <item>
             <title><![CDATA[聖地巡礼]]></title>
             <link>https://keitata.blogspot.com/2012/08/blog-post_15.html</link>
-            <guid>413a1ebc-3b8d-419b-bd20-c98feb739305</guid>
+            <guid>0c0f0e5f-4227-4497-b726-5536c0f37488</guid>
         </item>
         <item>
             <title><![CDATA[Elasticsearchのバージョンを6.8系から7.5系にアップグレードしました - クラウドワークス エンジニアブログ]]></title>
             <link>https://engineer.crowdworks.jp/entry/2020/06/04/132334</link>
-            <guid>ff004e3c-a2d9-4641-be18-4d86f0e33481</guid>
+            <guid>50d67435-0dbc-402f-b59f-b6972a0fcaf8</guid>
         </item>
         <item>
             <title><![CDATA[ソフトウェアエンジニアとして求職活動中です - valid,invalid]]></title>
             <link>https://ohbarye.hatenablog.jp/entry/2020/06/01/searching-software-engineer-jobs</link>
-            <guid>2aa0f0b5-f1f2-4b8b-acf4-eabd7d329490</guid>
+            <guid>21e23fda-9abd-419b-8885-e22d38a89b7a</guid>
         </item>
         <item>
             <title><![CDATA[人に頼るのが苦手すぎる私が欲しいのは、あなたの発信している情報｜ナユ｜note]]></title>
             <link>https://note.com/nayucolony/n/nf2cdcd56b7bf</link>
-            <guid>6a82e1b9-d2b7-40c8-953f-6980ad38e302</guid>
+            <guid>b98411b5-a242-4d17-9a23-562f1af8404f</guid>
         </item>
         <item>
             <title><![CDATA[青森県新型コロナウイルス感染症対策サイトのデータ更新をCircleCIで自動化！/covid19-aomori-circleci]]></title>
             <link>https://speakerdeck.com/biatunky/covid19-aomori-circleci</link>
-            <guid>48274f1a-639d-407b-9152-31e5d421aa50</guid>
+            <guid>10fe3e74-4d23-4b5a-9b90-3d592131ac27</guid>
         </item>
         <item>
             <title><![CDATA[継続的なアウトプットはなぜよいか？ 著作も数多いエンジニアが語る、社外向け発表がチームまで成長させる話  - Findy Engineer Lab - ファインディエンジニアラボ]]></title>
             <link>https://engineer-lab.findy-code.io/why-i-write</link>
-            <guid>6c0cdf05-0328-49d8-a13a-287ff29791e6</guid>
+            <guid>f9540759-4cee-46d3-b623-fe44e72337ad</guid>
         </item>
         <item>
             <title><![CDATA[Maintaining Performance]]></title>
             <link>https://daverupert.com/2020/03/maintaining-performance/</link>
-            <guid>278e39cd-8426-4f81-9336-3f3f9f88ab35</guid>
+            <guid>50516549-e07b-471a-a03b-1d7f59bbcd46</guid>
         </item>
         <item>
             <title><![CDATA[テレワークの満足度は“案外”高い／全員が在宅勤務に取り組んだクラウドワークス従業員の本音を紹介 | ニュース | 株式会社クラウドワークス]]></title>
             <link>https://crowdworks.co.jp/news/yj6prab22/</link>
-            <guid>432c0a8e-aff1-4c62-b19d-38dd3a7cfee7</guid>
+            <guid>0f37f2b2-6ca7-463a-887f-36ad6e4cdd71</guid>
         </item>
         <item>
             <title><![CDATA[Elasticsearchのバージョンを5.6系から6.8系にアップグレードしました - クラウドワークス エンジニアブログ]]></title>
             <link>https://engineer.crowdworks.jp/entry/2020/06/03/123357</link>
-            <guid>697ac676-6821-4e36-807f-c4033e02159c</guid>
+            <guid>8041ec56-e480-4e2a-aa37-3c9f2f2ee9fe</guid>
         </item>
         <item>
             <title><![CDATA[メールアドレスをハッシュ化したものを公開してもよいのか - しまたろさんの掃き溜め]]></title>
             <link>https://simatech.hatenablog.com/entry/2020/06/01/232323</link>
-            <guid>daf40f74-6c2a-4ba0-ad5f-eca590203bdb</guid>
+            <guid>ded7c572-4788-4317-93a0-558d4ff73f83</guid>
         </item>
         <item>
             <title><![CDATA[きちんと対応できている企業は1割！？どうするGDPR対策]]></title>
             <link>https://japan.zdnet.com/extra/heartcore_201910/35144079/</link>
-            <guid>390b1fb2-04ec-4748-ae0c-f713eedbaf17</guid>
+            <guid>13efa0a0-b8fd-43e8-b452-475502c50538</guid>
         </item>
         <item>
             <title><![CDATA[社会貢献するテクノロジー企業に投資するVCが増えない理由]]></title>
             <link>https://jp.techcrunch.com/2020/06/02/2020-05-21-why-dont-more-vcs-care-about-good-tech-yet/</link>
-            <guid>9e0bacde-9fca-42ee-a374-5d21cc035c4e</guid>
+            <guid>2a66f4f6-32a9-4b38-a214-fe7bc68ebed4</guid>
         </item>
         <item>
             <title><![CDATA[GMOペパボ、全社員在宅に移行]]></title>
             <link>https://www.nikkei.com/article/DGXMZO59884530S0A600C2X30000/</link>
-            <guid>35aad466-09e3-41d1-b4c4-53b2d1fe7658</guid>
+            <guid>d273d890-1562-4cd7-9dc9-63cdc02eaed1</guid>
         </item>
         <item>
             <title><![CDATA[goodbye react-router · Issue #7397 · ReactTraining/react-router]]></title>
             <link>https://github.com/ReactTraining/react-router/issues/7397</link>
-            <guid>2395738f-2c32-40b9-b4c3-56346491789d</guid>
+            <guid>4a3bf1a5-7a22-43b2-ac12-6d736cd26c25</guid>
         </item>
         <item>
             <title><![CDATA[メンテナンスページのHTMLの書き方 - Qiita]]></title>
             <link>https://qiita.com/studio15/items/3e5939bcf38d023fda16</link>
-            <guid>f9efe1da-711a-476c-9976-c12990aa4ad0</guid>
+            <guid>6a7ea775-f3eb-4633-8428-3dcdb1fcd0da</guid>
         </item>
         <item>
             <title><![CDATA[【Twitter】「このブラウザは現在サポートされていません」エラーで開けない原因や対策について(Internet Explorer, GoodTwitter)]]></title>
             <link>https://did2memo.net/2020/06/02/twitter-this-browser-is-no-longer-supported-error/</link>
-            <guid>33609ad7-29cb-44d8-92f1-4a5797bb6703</guid>
+            <guid>1d352463-66bf-492b-a6eb-5a1f8684e5cc</guid>
         </item>
         <item>
             <title><![CDATA[「Yahoo!ニュース」、1日約2万件の誹謗中傷コメントを削除--検知AIを外部提供へ]]></title>
             <link>https://japan.cnet.com/article/35154608/</link>
-            <guid>33eb2f5b-89fb-48bf-9a37-d08edaae5ef9</guid>
+            <guid>5c971b86-10a2-4b79-9605-21dace746db2</guid>
         </item>
         <item>
             <title><![CDATA[【自治体ランキング】転出超過ワースト3は小山市、成田市、長崎市…新宿区が11位の驚き（高橋亮平） - Yahoo!ニュース]]></title>
             <link>https://news.yahoo.co.jp/byline/takahashiryohei/20200601-00181282/</link>
-            <guid>d3a2c518-cf97-466e-834e-eac48151393c</guid>
+            <guid>3bc38a58-4da1-444e-b087-1c6aba58d4fb</guid>
         </item>
         <item>
             <title><![CDATA[無印良品が楽天市場に出店、アマゾンなど自社EC以外の販路を拡大]]></title>
             <link>https://www.fashionsnap.com/article/2020-06-01/muij-rakuten/</link>
-            <guid>fd5182c1-5471-4ac3-bfcc-debadf92cead</guid>
+            <guid>2615f1b5-5f82-40ca-86cb-270a40fcb007</guid>
         </item>
         <item>
             <title><![CDATA[ホリエモンこと堀江貴文さん、烈火の如くブチギレる / その理由に賛否両論]]></title>
             <link>https://rocketnews24.com/2019/01/17/1165099/</link>
-            <guid>325d17e3-5079-42ef-b06f-a9cd882f77f8</guid>
+            <guid>046de53c-38ec-4b8f-bae9-85b82a4b3c53</guid>
         </item>
         <item>
             <title><![CDATA[Reading... 登録禁止商品の追加に関するお知らせ - BOOTH <https://booth.pm/announcements/446>]]></title>
             <link>https://booth.pm/announcements/446</link>
-            <guid>c0bfaaff-fb7b-4273-bd3e-7e6aa63fbae8</guid>
+            <guid>2bc13c24-2a39-447a-b12a-96581f8efa48</guid>
         </item>
         <item>
             <title><![CDATA[フリーエンジニアが全員フルリモート中の現場に新規参画して1ヶ月経った所感いろいろ(ぼくの場合) - みんからきりまで]]></title>
             <link>https://kirimin.hatenablog.com/entry/2020/06/01/195641</link>
-            <guid>8096430b-8a55-45d7-bf88-d9edf8d3413d</guid>
+            <guid>a03ffcb1-7626-44d9-a050-8a53b874b00f</guid>
         </item>
         <item>
             <title><![CDATA[OSXで.devドメインにアクセスできない問題 - Qiita]]></title>
             <link>https://qiita.com/ygumaanl/items/6e13ff325aaff980d49e</link>
-            <guid>e9539f1e-a153-4610-bc5c-2deaf78ea0cd</guid>
+            <guid>077a20b6-9435-4ced-871d-4e1564ee4d23</guid>
         </item>
         <item>
             <title><![CDATA[コーポレートエンジニアリングことはじめ - TORANA TECH]]></title>
             <link>https://tech.torana.us/entry/2020/06/01/111845</link>
-            <guid>f9837ac3-d18d-4e53-a3d8-b63a0918ba92</guid>
+            <guid>cbbf55bf-4af3-45d6-845f-90303d1142db</guid>
         </item>
         <item>
             <title><![CDATA[Reading... 11 years of Node: Let’s have an honest conversation - Google スライド <https://docs.google.com/presentation/u/1/d/1zyN4JjRtIuzgSLLqUGgyu7X6fEAGNjFHBy4ZZm0ueOc/>]]></title>
             <link>https://docs.google.com/presentation/u/1/d/1zyN4JjRtIuzgSLLqUGgyu7X6fEAGNjFHBy4ZZm0ueOc/</link>
-            <guid>65166693-cbbc-45ab-9393-5ed0739aac02</guid>
+            <guid>a9aba4fd-86f3-4903-ae5a-3e3bd4872251</guid>
         </item>
         <item>
             <title><![CDATA[気分が落ち込みがちなことが続いたので心療内科に行きはじめてみた - 📦田中、仙台に生きる📦]]></title>
             <link>http://tanakalivesinsendai.hatenablog.com/entry/2020/03/12/210257</link>
-            <guid>37ca0fee-a03a-4512-87dd-2cf3f2a95767</guid>
+            <guid>19bee2ba-00ca-4d0d-b885-2abb3aeb60de</guid>
         </item>
         <item>
             <title><![CDATA[風通しの良さについて | postalk blog]]></title>
             <link>https://postalk.jp/blog/6fphJa73YzkuJ7XAEKNb6D/</link>
-            <guid>4f52af67-8a0a-4f8c-b7c5-803f43330af2</guid>
+            <guid>678c1b80-691e-4a72-a62f-5cfc8e12ae62</guid>
         </item>
         <item>
             <title><![CDATA[JavaScriptのthisは結局何種類あるのか - uhyo/blog]]></title>
             <link>https://blog.uhy.ooo/entry/2020-05-30/this/</link>
-            <guid>d3b598bc-c1ca-4cee-be0f-c39a2673af82</guid>
+            <guid>afc8ed02-5db7-4c6d-b501-8734030a8520</guid>
         </item>
         <item>
             <title><![CDATA[Google、UX関連の新しいランキングシグナル導入を予告、2021年以降 - SEMリサーチ]]></title>
             <link>https://www.sem-r.com/entry/20200529/1590694455</link>
-            <guid>f62c8926-7b49-4291-8853-774c909aed81</guid>
+            <guid>94f5daa1-24a9-4dc6-853b-e811215ca886</guid>
         </item>
         <item>
             <title><![CDATA[Reading... 「点の正論」ではなくて「線の正論」を考えないといけないよねえ、という話｜けんすう <https://kensuu.com/n/n7f2425e62b52>]]></title>
             <link>https://kensuu.com/n/n7f2425e62b52</link>
-            <guid>907bdb24-0a4f-4243-84f8-ed4d2df1ebb3</guid>
-        </item>
-        <item>
-            <title><![CDATA[初心者でも大丈夫！AWSアカウント作成時のセキュリティ設定]]></title>
-            <link>https://speakerdeck.com/fu3ak1/chu-xin-zhe-demoda-zhang-fu-awsakauntozuo-cheng-shi-falsesekiyuriteishe-ding</link>
-            <guid>c76958d0-ef96-4bbb-9bdc-4d34cc22ef34</guid>
+            <guid>1927b766-8aef-4e9f-982d-71f7a0f2c154</guid>
         </item>
     </channel>
 </rss>
