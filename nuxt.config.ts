@@ -7,6 +7,8 @@ import { TOKEN } from './static/config'
 
 const nuxtConfig: Partial<Configuration> = {
   mode: 'universal',
+  target: 'static',
+  telemetry: false,
   head: {
     title: 'READING...',
     htmlAttrs: {
