@@ -13,7 +13,8 @@
     "deploy:gh-pages": "gh-pages -d dist -m 'chore: update [skip ci]' -t"
   },
   "dependencies": {
-    "@nuxt/typescript-build": "1.0.3",
+    "@nuxt/types": "2.13.3",
+    "@nuxt/typescript-build": "2.0.0",
     "@nuxt/typescript-runtime": "1.0.0",
     "@nuxt/vue-app": "2.13.3",
     "@nuxtjs/eslint-config-typescript": "2.0.0",
