@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@nuxt/types": "2.13.3",
-    "@nuxt/typescript-build": "2.0.0",
+    "@nuxt/typescript-build": "2.0.2",
     "@nuxt/typescript-runtime": "1.0.0",
     "@nuxt/vue-app": "2.13.3",
     "@nuxtjs/eslint-config-typescript": "2.0.0",
