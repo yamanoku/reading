@@ -17,10 +17,6 @@ jobs:
 
     steps:
       - checkout
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v3-dependencies-{{ checksum "package.json" }}
 
       - run:
           name: install node_modules
@@ -28,13 +24,6 @@ jobs:
             if [ ! -e node_modules ]; then
               yarn install
             fi
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v3-dependencies-{{ checksum "package.json" }}
-          path:
-            - ./node_modules
 
       - run: echo $tokenAPI | base64 --decode > ./static/config.js
 
