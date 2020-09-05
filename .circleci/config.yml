@@ -22,8 +22,6 @@ jobs:
           keys:
           - v3-dependencies-{{ checksum "package.json" }}
 
-      - run: rm -rf yarn.lock
-
       - run:
           name: install node_modules
           command: |
