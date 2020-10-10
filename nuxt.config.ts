@@ -1,11 +1,11 @@
-import { Configuration } from '@nuxt/types'
+import { NuxtConfig } from '@nuxt/types'
 import axios from 'axios'
 import emoji from 'node-emoji'
 import Fiber from 'fibers'
 import Sass from 'sass'
 import { TOKEN } from './static/config'
 
-const nuxtConfig: Partial<Configuration> = {
+const nuxtConfig: Partial<NuxtConfig> = {
   mode: 'universal',
   target: 'static',
   telemetry: false,
