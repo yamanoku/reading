@@ -17,7 +17,7 @@
               :title="'Read More: ' + emoji(list.attachments[0].text)"
               target="_blank"
               rel="noopener"
-              class="block bg-gray text-black font-bold no-underline rounded-sm border border-solid hover:bg-primary hover:border hover:border-solid hover:text-white focus:bg-primary focus:border focus:border-solid focus:text-white focus:outline-none visited:text-gray visited:hover:bg-primary visited:hover:border visited:hover:border-solid visited:hover:text-white visited:focus:bg-primary visited:focus:border visited:focus:border-solid visited:focus:text-white"
+              class="block bg-gray text-black font-bold no-underline rounded-sm border border-solid hover:bg-primary hover:border hover:border-solid hover:text-white focus:bg-primary focus:border focus:border-solid focus:text-white focus:outline-none"
             >
               <span v-if="list.attachments[0].ts" class="sr-only">{{
                 unix2ymd(list.attachments[0].ts)
@@ -31,7 +31,7 @@
               :title="'Read More: ' + emoji(list.attachments[0].title)"
               target="_blank"
               rel="noopener"
-              class="block bg-gray text-black font-bold no-underline rounded-sm border border-solid hover:bg-primary hover:border hover:border-solid hover:text-white focus:bg-primary focus:border focus:border-solid focus:text-white focus:outline-none visited:text-gray visited:hover:bg-primary visited:hover:border visited:hover:border-solid visited:hover:text-white visited:focus:bg-primary visited:focus:border visited:focus:border-solid visited:focus:text-white"
+              class="block bg-gray text-black font-bold no-underline rounded-sm border border-solid hover:bg-primary hover:text-white focus:bg-primary hover:border-primary focus:border focus:border-primary focus:text-white focus:outline-none"
             >
               <span v-if="list.attachments[0].ts" class="sr-only">{{
                 unix2ymd(list.attachments[0].ts)
@@ -53,7 +53,7 @@
       />
       <nuxt-link
         to="/archive"
-        class="btn bg-white border border-solid rounded-sm flex items-center justify-center w-8 h-8 font-bold text-gray p-0 m-0 group hover:text-white hover:bg-primary focus:text-white focus:bg-primary focus:outline-none hover:border hover:border-solid hover:border-primary focus:border focus:border-solid focus:border-primary visited:hover:bg-primary"
+        class="btn bg-white border border-solid rounded-sm flex items-center justify-center w-8 h-8 font-bold text-gray p-0 m-0 group hover:text-white hover:bg-primary focus:text-white focus:bg-primary focus:outline-none hover:border hover:border-solid hover:border-primary focus:border focus:border-solid focus:border-primary"
       >
         <svg
           aria-hidden="true"

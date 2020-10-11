@@ -28,7 +28,8 @@ module.exports = {
     })
   },
   variants: {
-    textColor: ['hover', 'focus', 'visited']
+    textColor: ['hover', 'focus', 'visited'],
+    fill: ['hover', 'focus', 'group-hover', 'group-focus']
   },
   future: {
     removeDeprecatedGapUtilities: true,

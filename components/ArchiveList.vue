@@ -120,7 +120,7 @@ ul {
 }
 </style>
 
-<style lang="postcss" scoped>
+<style lang="postcss">
 :root {
   --space: 1.5rem;
 }

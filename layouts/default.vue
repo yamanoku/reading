@@ -15,7 +15,7 @@ body {
   @apply h-full;
 }
 body {
-  @apply font-serif;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,"Segoe UI",Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
 }
 *,
 *:before,
