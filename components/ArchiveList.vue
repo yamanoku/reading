@@ -99,31 +99,43 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 form {
-  position: sticky;
-  top: 0;
+  @apply sticky top-0 bg-white;
   padding: calc(var(--rhythm) * 3) 0;
-  background-color: #fff;
   border-bottom: 1px solid rgb(170, 184, 194);
 }
-
+input {
+  @apply border border-solid rounded-sm;
+}
 ul {
-  margin: 0;
+  @apply m-0 pl-8 pr-0 list-disc;
   line-height: calc(var(--rhythm) * 3);
 }
+a {
+  @apply underline;
+}
+</style>
 
+<style lang="postcss" scoped>
+.with-sidebar > * {
+  @apply flex flex-wrap items-start;
+}
+.with-sidebar > * > * {
+  flex-grow: 1;
+  flex-basis: 80px;
+}
+.with-sidebar > * > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(50% - 90px);
+}
 .stack {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  @apply flex flex-col justify-start;
 }
-
 .stack > * {
-  margin-top: 0;
-  margin-bottom: 0;
+  @apply my-0;
 }
-
 .stack > * + * {
   margin-top: var(--space);
 }
