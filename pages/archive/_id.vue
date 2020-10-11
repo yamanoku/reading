@@ -1,6 +1,8 @@
 <template>
-  <main class="archive-main">
-    <h1 class="text-3xl font-bold mt-6 mb-3">{{ $route.params.id }}</h1>
+  <main class="archive-main max-w-3xl">
+    <h1 class="text-3xl font-bold mt-6 mb-3">
+      {{ $route.params.id }}
+    </h1>
     <nav class="my-3">
       <nuxt-link class="underline" to="/archive">
         /archive
