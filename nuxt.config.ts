@@ -30,7 +30,6 @@ const nuxtConfig: Partial<Configuration> = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  css: ['modern-normalize'],
   build: {
     extend (config, ctx) {
       if (ctx.isDev && ctx.isClient) {
@@ -62,7 +61,8 @@ const nuxtConfig: Partial<Configuration> = {
         typeCheck: true,
         ignoreNotFoundWarnings: true
       }
-    ]
+    ],
+    '@nuxtjs/tailwindcss'
   ],
   generate: {
     routes () {
