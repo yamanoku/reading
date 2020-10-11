@@ -49,5 +49,8 @@
     "vue-axe": "2.4.1",
     "vue-loader": "15.9.3",
     "vue-paginate": "yamanoku/vue-paginate"
+  },
+  "resolutions": {
+    "@babel/parser": "7.11.5"
   }
 }

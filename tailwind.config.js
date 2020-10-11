@@ -28,7 +28,7 @@ module.exports = {
     })
   },
   variants: {
-    textColor: ['hover', 'focus', 'visited'],
+    textColor: ['hover', 'focus', 'visited']
   },
   future: {
     removeDeprecatedGapUtilities: true,

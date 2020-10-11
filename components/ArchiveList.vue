@@ -1,14 +1,15 @@
 <template>
   <div class="stack flex flex-col justify-start">
     <form class="with-sidebar sticky top-0 bg-white" role="search">
-      <label>
+      <label for="keywords">
         <span>Keywords</span>
         <input
+          id="keywords"
           v-model="filterKey"
           type="text"
           name="keywords"
           class="border border-solid rounded-sm"
-        />
+        >
       </label>
     </form>
     <div>
@@ -43,70 +44,70 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import emoji from "node-emoji";
+import Vue from 'vue'
+import emoji from 'node-emoji'
 
 const textRender = (text: string) => {
-  if (text?.includes("Reading... ")) {
-    const mystr = text?.split("Reading... ").join("");
-    return mystr.replace(/^<[^>]h>|<[^>]*>$/g, "");
-  } else if (text?.includes("Reading… ")) {
-    const mystr = text?.split("Reading… ").join("");
-    return mystr.replace(/^<[^>]h>|<[^>]*>$/g, "");
+  if (text?.includes('Reading... ')) {
+    const mystr = text?.split('Reading... ').join('')
+    return mystr.replace(/^<[^>]h>|<[^>]*>$/g, '')
+  } else if (text?.includes('Reading… ')) {
+    const mystr = text?.split('Reading… ').join('')
+    return mystr.replace(/^<[^>]h>|<[^>]*>$/g, '')
   }
-};
+}
 
 export default Vue.extend({
   props: {
     data: {
       type: Array,
-      default() {
-        return [];
+      default () {
+        return []
       }
     }
   },
-  data() {
+  data () {
     return {
-      filterKey: "",
+      filterKey: '',
       lists: this.data
-    };
+    }
   },
   computed: {
-    filterListItem(): any {
-      const searchRegex = new RegExp(this.filterKey, "i");
+    filterListItem (): any {
+      const searchRegex = new RegExp(this.filterKey, 'i')
       const listItem = this.lists.filter(
         (list: any) =>
           searchRegex.test(list.attachments[0].title) ||
           searchRegex.test(textRender(list.attachments[0].text) as string)
-      );
-      return listItem;
+      )
+      return listItem
     }
   },
   methods: {
-    textRender(text: string) {
-      if (text?.includes("Reading... ")) {
-        const mystr = text?.split("Reading... ").join("");
-        return mystr.replace(/^<[^>]h>|<[^>]*>$/g, "");
-      } else if (text?.includes("Reading… ")) {
-        const mystr = text?.split("Reading… ").join("");
-        return mystr.replace(/^<[^>]h>|<[^>]*>$/g, "");
+    textRender (text: string) {
+      if (text?.includes('Reading... ')) {
+        const mystr = text?.split('Reading... ').join('')
+        return mystr.replace(/^<[^>]h>|<[^>]*>$/g, '')
+      } else if (text?.includes('Reading… ')) {
+        const mystr = text?.split('Reading… ').join('')
+        return mystr.replace(/^<[^>]h>|<[^>]*>$/g, '')
       }
     },
-    emoji(text: string) {
-      return emoji.emojify(text);
+    emoji (text: string) {
+      return emoji.emojify(text)
     },
-    urlRender(text: string | null) {
-      return text?.match(/ <([^\s]+)/)?.[1]?.slice(0, -1) ?? null;
+    urlRender (text: string | null) {
+      return text?.match(/ <([^\s]+)/)?.[1]?.slice(0, -1) ?? null
     },
-    unix2ymd(intTime: number) {
-      const d = new Date(intTime * 1000);
-      const year = d.getFullYear();
-      const month = ("0" + (d.getMonth() + 1)).slice(-2);
-      const day = ("0" + d.getDate()).slice(-2);
-      return year + "-" + month + "-" + day;
+    unix2ymd (intTime: number) {
+      const d = new Date(intTime * 1000)
+      const year = d.getFullYear()
+      const month = ('0' + (d.getMonth() + 1)).slice(-2)
+      const day = ('0' + d.getDate()).slice(-2)
+      return year + '-' + month + '-' + day
     }
   }
-});
+})
 </script>
 
 <style lang="postcss" scoped>
