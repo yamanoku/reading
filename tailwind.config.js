@@ -1,10 +1,6 @@
 module.exports = {
-  important: true,
+  important: false,
   theme: {
-    fontFamily: {
-      display: ['Gilroy', 'sans-serif'],
-      body: ['Graphik', 'sans-serif']
-    },
     extend: {
       colors: {
         cyan: '#9cdbff'
@@ -30,6 +26,9 @@ module.exports = {
       primary: '#032f63',
       white: theme('colors.white')
     })
+  },
+  variants: {
+    textColor: ['hover', 'focus', 'visited'],
   },
   future: {
     removeDeprecatedGapUtilities: true,
