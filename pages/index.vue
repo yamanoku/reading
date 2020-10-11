@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="bg-white h-screen">
     <news-list :data="lists" />
   </main>
 </template>
@@ -29,9 +29,3 @@ export default Vue.extend({
   }
 })
 </script>
-
-<style>
-main {
-  height: 100vh;
-}
-</style>

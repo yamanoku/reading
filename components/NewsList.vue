@@ -107,179 +107,93 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss">
+<style lang="postcss">
 .pagination {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-  padding: 0 5px;
-  width: 100vw;
+  @apply fixed bottom-0 left-0 z-10 px-1 w-screen bg-white border-solid border-t border-r-0 border-b-0 border-l-0 flex items-center justify-between;
   height: 10vh;
-  background-color: #fff;
-  border-top: 1px solid #cecece;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
-
 .btn {
-  background-color: #fff;
-  border: 1px solid #cecece;
-  border-radius: 3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  color: #333;
-  font-weight: 700;
-  padding: 0;
-  margin: 0;
-  svg {
-    display: block;
-    width: 16px;
-    height: 16px;
-    path {
-      fill: #032f63;
-    }
-  }
-  &:hover,
-  &:focus {
-    color: #fff;
-    border: 1px solid #032f63;
-    background-color: #032f63;
-    opacity: 1;
-    svg {
-      path {
-        fill: #fff;
-      }
-    }
-  }
-  &:focus {
-    outline: none;
-    box-shadow: inset 0 0 0 2px #fff;
-  }
+  @apply bg-white border border-solid rounded-sm flex items-center justify-center w-8 h-8 font-bold text-gray p-0 m-0;
 }
-
-.black {
-  display: block;
-  width: 32px;
-  height: 32px;
+.btn:hover,
+.btn:focus {
+  @apply text-white border border-solid border-primary bg-primary;
 }
-
+.btn:focus {
+  @apply outline-none;
+  box-shadow: inset 0 0 0 2px #fff;
+}
+.btn svg {
+  @apply block w-4 h-4;
+}
+.btn svg path {
+  @apply fill-primary;
+}
+.btn:hover svg path,
+.btn:focus svg path {
+  @apply fill-white;
+}
 .paginate-links {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  li {
-    display: block;
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
-    font-weight: 700;
-    color: #3a2c09;
-    margin: 0 2px;
-    button {
-      appearance: none;
-      background-color: #fff;
-      border: 1px solid #cecece;
-      border-radius: 3px;
-      display: block;
-      width: 100%;
-      height: 100%;
-      color: #333;
-      font-weight: 700;
-      cursor: pointer;
-      padding: 0;
-      margin: 0;
-    }
-  }
-  li button:hover,
-  li button:focus,
-  li.active button,
-  li.left-arrow button,
-  li.right-arrow button {
-    color: #fff;
-    border: 1px solid #032f63;
-    background-color: #032f63;
-    opacity: 1;
-  }
-  li button:focus {
-    outline: none;
-    box-shadow: inset 0 0 0 2px #fff;
-  }
-  li.disabled {
-    display: none;
-  }
+  @apply flex items-center content-center text-center p-0 m-0;
+}
+.paginate-links li {
+  @apply block w-8 h-8 leading-8 font-bold text-primary mx-1
+}
+.paginate-links button {
+  @apply appearance-none block bg-white border border-solid cursor-pointer rounded-sm flex items-center justify-center w-full h-full font-bold text-black p-0 m-0;
+}
+.paginate-links li button:hover,
+.paginate-links li button:focus,
+.paginate-links li.active button,
+.paginate-links li.left-arrow button,
+.paginate-links li.right-arrow button {
+  @apply text-white border border-solid border-primary bg-primary
+}
+.paginate-links li button:focus {
+  @apply outline-none;
+  box-shadow: inset 0 0 0 2px #fff;
+}
+.paginate-links li.disabled {
+  @apply hidden;
 }
 </style>
 
-<style lang="scss">
+<style lang="postcss">
 .news-list {
+  @apply m-auto overflow-y-scroll fixed top-0 left-0 right-0 z-0;
   padding: 10px 0;
-  margin: 0;
   width: calc(100vw - 10px);
   height: 90vh;
-  overflow-y: scroll;
-  position: fixed;
-  top: 0;
-  left: 5px;
-  z-index: 0;
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: grid;
-    grid-gap: 10px;
-  }
-  li {
-    display: block;
-    padding: 0;
-  }
-  a {
-    display: block;
-    background-color: #f9f9f9;
-    padding: 8px 10px;
-    color: #333;
-    font-weight: 700;
-    text-decoration: none;
-    border: 1px solid #cecece;
-    border-radius: 3px;
-  }
-  a:hover,
-  a:focus {
-    background-color: #032f63;
-    border: 1px solid #032f63;
-    color: #fff;
-  }
-  a:focus {
-    outline: none;
-    box-shadow: inset 0 0 0 3px #fff;
-  }
-  a:visited {
-    color: #999;
-  }
-  a:visited:hover,
-  a:visited:focus {
-    background-color: #032f63;
-    border: 1px solid #032f63;
-    color: #fff;
-  }
+}
+.news-list ul {
+  @apply m-0 p-0 list-none grid gap-2;
+}
+.news-list li {
+  @apply block p-0;
+}
+.news-list a {
+  @apply block bg-gray text-black font-bold no-underline rounded-sm border border-solid;
+  padding: 8px 10px;
+}
+.news-list a:hover,
+.news-list a:focus {
+  @apply bg-primary border border-solid text-white;
+}
+.news-list a:focus {
+  @apply outline-none;
+  box-shadow: inset 0 0 0 2px #fff;
+}
+.news-list a:visited {
+  @apply text-gray;
+}
+.news-list a:visited:hover,
+.news-list a:visited:focus {
+  @apply bg-primary border border-solid text-white;
 }
 </style>
 
-<style>
+<style lang="postcss">
 .off-screen {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+  @apply sr-only;
 }
 </style>
