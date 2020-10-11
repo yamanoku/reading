@@ -1,8 +1,10 @@
 <template>
-  <main>
-    <h1>{{ $route.params.id }}</h1>
-    <nav>
-      <nuxt-link to="/archive">
+  <main class="archive-main max-w-3xl">
+    <h1 class="text-3xl font-bold mt-6 mb-3">
+      {{ $route.params.id }}
+    </h1>
+    <nav class="my-3">
+      <nuxt-link class="underline" to="/archive">
         /archive
       </nuxt-link>
     </nav>
@@ -24,10 +26,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-main {
-  max-width: 48rem;
-  margin: 0 var(--rhythm) 0 calc(var(--rhythm) * 3);
-}
-</style>

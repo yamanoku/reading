@@ -4,19 +4,28 @@
   </div>
 </template>
 
-<style>
+<style lang="postcss">
 html {
-  font : inherit;
-  font-family : sans-serif;
-  font-size : 100%;
-  line-height: 1.4;
-  -webkit-font-smoothing : antialiased;
-  background-color: #fff;
+  @apply bg-white leading-normal antialiased;
+  font: inherit;
+  font-size: 100%;
 }
-html, body {
-  height: 100vh;
+html,
+body {
+  @apply h-full;
 }
-*, *:before, *:after {
-  box-sizing: border-box;
+body {
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,"Segoe UI",Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+}
+*,
+*:before,
+*:after {
+  @apply box-border;
+}
+:root {
+  --rhythm: 0.5rem;
+}
+.archive-main {
+  margin: 0 var(--rhythm) 0 calc(var(--rhythm) * 3);
 }
 </style>

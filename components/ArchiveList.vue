@@ -1,13 +1,19 @@
 <template>
-  <div class="stack">
-    <form class="with-sidebar" role="search">
+  <div class="stack flex flex-col justify-start">
+    <form class="with-sidebar sticky top-0 bg-white" role="search">
       <label for="keywords">
         <span>Keywords</span>
-        <input id="keywords" v-model="filterKey" type="text" name="keywords">
+        <input
+          id="keywords"
+          v-model="filterKey"
+          type="text"
+          name="keywords"
+          class="border border-solid rounded-sm"
+        >
       </label>
     </form>
     <div>
-      <ul v-show="filterListItem" role="list">
+      <ul v-show="filterListItem" role="list" class="m-0 pl-8 pr-0 list-disc">
         <template v-for="list in filterListItem">
           <li :key="list.iid" role="listitem">
             <!-- title not response -->
@@ -16,6 +22,7 @@
               :href="urlRender(list.attachments[0].text)"
               target="_blank"
               rel="noopener"
+              class="underline"
             >
               {{ textRender(emoji(list.attachments[0].text)) }}
             </a>
@@ -25,6 +32,7 @@
               :href="list.attachments[0].title_link"
               target="_blank"
               rel="noopener"
+              class="underline"
             >
               {{ emoji(list.attachments[0].title) }}
             </a>
@@ -67,8 +75,11 @@ export default Vue.extend({
   computed: {
     filterListItem (): any {
       const searchRegex = new RegExp(this.filterKey, 'i')
-      const listItem = this.lists.filter((list: any) => (searchRegex.test(list.attachments[0].title) ||
-        searchRegex.test(textRender(list.attachments[0].text) as string)))
+      const listItem = this.lists.filter(
+        (list: any) =>
+          searchRegex.test(list.attachments[0].title) ||
+          searchRegex.test(textRender(list.attachments[0].text) as string)
+      )
       return listItem
     }
   },
@@ -99,31 +110,35 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 form {
-  position: sticky;
-  top: 0;
   padding: calc(var(--rhythm) * 3) 0;
-  background-color: #fff;
   border-bottom: 1px solid rgb(170, 184, 194);
 }
-
 ul {
-  margin: 0;
   line-height: calc(var(--rhythm) * 3);
 }
+</style>
 
-.stack {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+<style lang="postcss">
+:root {
+  --space: 1.5rem;
 }
-
+.with-sidebar > * {
+  @apply flex flex-wrap items-start;
+}
+.with-sidebar > * > * {
+  flex-grow: 1;
+  flex-basis: 80px;
+}
+.with-sidebar > * > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(50% - 90px);
+}
 .stack > * {
-  margin-top: 0;
-  margin-bottom: 0;
+  @apply my-0;
 }
-
 .stack > * + * {
   margin-top: var(--space);
 }
