@@ -6,7 +6,6 @@ import Sass from 'sass'
 import { TOKEN } from './static/config'
 
 const nuxtConfig: Partial<NuxtConfig> = {
-  mode: 'universal',
   target: 'static',
   telemetry: false,
   head: {
