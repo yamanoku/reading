@@ -1,9 +1,9 @@
 <template>
   <div class="stack">
     <form class="with-sidebar" role="search">
-      <label>
+      <label for="keywords">
         <span>Keywords</span>
-        <input v-model="filterKey" type="text" name="keywords">
+        <input id="keywords" v-model="filterKey" type="text" name="keywords">
       </label>
     </form>
     <div>
