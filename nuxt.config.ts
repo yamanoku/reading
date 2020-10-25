@@ -1,3 +1,4 @@
+import path from 'path'
 import { NuxtConfig } from '@nuxt/types'
 import axios from 'axios'
 import emoji from 'node-emoji'
@@ -69,6 +70,12 @@ const nuxtConfig: Partial<NuxtConfig> = {
         '/archive/2019',
         '/archive/2018'
       ]
+    }
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname),
+      '~': path.resolve(__dirname)
     }
   },
   plugins: ['~/plugins/vue-paginate', '~/plugins/vue-axe'],

@@ -26,7 +26,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import ListLink from './ListLink.vue'
+import ListLink from '@/components/link/ListLink.vue'
 
 const textRender = (text: string) => {
   if (text?.includes('Reading... ')) {
