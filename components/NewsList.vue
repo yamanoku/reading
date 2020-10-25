@@ -10,26 +10,7 @@
       <ul class="m-0 p-0 list-none grid gap-2">
         <template v-for="list in paginated('lists')">
           <li v-if="list.attachments" :key="list.iid" class="block p-0">
-            <!-- title not response -->
-            <a
-              v-if="!list.attachments[0].title"
-              :href="urlRender(list.attachments[0].text)"
-              target="_blank"
-              rel="noopener"
-              class="block bg-gray text-black font-bold no-underline rounded-sm border border-solid hover:bg-primary hover:border hover:border-solid hover:text-white focus:bg-primary focus:border focus:border-solid focus:text-white focus:outline-none"
-            >
-              {{ emoji(textRender(list.attachments[0].text)) }}
-            </a>
-            <!-- title response -->
-            <a
-              v-else
-              :href="list.attachments[0].title_link"
-              target="_blank"
-              rel="noopener"
-              class="block bg-gray text-black font-bold no-underline rounded-sm border border-solid hover:bg-primary hover:text-white focus:bg-primary hover:border-primary focus:border focus:border-primary focus:text-white focus:outline-none"
-            >
-              {{ emoji(list.attachments[0].title) }}
-            </a>
+            <list-link :list-data="list" :news-btn-style="true" />
           </li>
         </template>
       </ul>
@@ -66,9 +47,12 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import emoji from 'node-emoji'
+import ListLink from './ListLink.vue'
 
 export default Vue.extend({
+  components: {
+    ListLink
+  },
   props: {
     data: {
       type: Array,
@@ -84,33 +68,8 @@ export default Vue.extend({
     }
   },
   methods: {
-    textRender (text: string) {
-      if (text.includes('Reading... ')) {
-        const mystr = text.split('Reading... ').join('')
-        return mystr.replace(/^<[^>]h>|<[^>]*>$/g, '')
-      } else if (text.includes('Reading… ')) {
-        const mystr = text.split('Reading… ').join('')
-        return mystr.replace(/^<[^>]h>|<[^>]*>$/g, '')
-      }
-    },
-    urlRender (text: string) {
-      if (text === null) {
-        return
-      }
-      return text.match(/ <([^\s]+)/)![1].slice(0, -1)
-    },
-    emoji (text: string) {
-      return emoji.emojify(text)
-    },
     onPageChange (): void {
       document.getElementsByClassName('news-list')[0].scrollTop = 0
-    },
-    unix2ymd (intTime: number) {
-      const d = new Date(intTime * 1000)
-      const year = d.getFullYear()
-      const month = ('0' + (d.getMonth() + 1)).slice(-2)
-      const day = ('0' + d.getDate()).slice(-2)
-      return year + '-' + month + '-' + day
     }
   }
 })
