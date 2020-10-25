@@ -1,17 +1,6 @@
 <template>
   <div class="stack flex flex-col justify-start">
-    <form class="with-sidebar sticky top-0 bg-white" role="search">
-      <label for="keywords">
-        <span>Keywords</span>
-        <input
-          id="keywords"
-          v-model="filterKey"
-          type="text"
-          name="keywords"
-          class="border border-solid rounded-sm"
-        >
-      </label>
-    </form>
+    <archive-keyword-form v-model.lazy="filterKey" />
     <div>
       <ul v-show="filterListItem" role="list" class="m-0 pl-8 pr-0 list-disc">
         <template v-for="list in filterListItem">
@@ -27,6 +16,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import ListLink from '@/components/link/ListLink.vue'
+import ArchiveKeywordForm from '@/components/form/ArchiveKeywordForm.vue'
 
 const textRender = (text: string) => {
   if (text?.includes('Reading... ')) {
@@ -40,7 +30,8 @@ const textRender = (text: string) => {
 
 export default Vue.extend({
   components: {
-    ListLink
+    ListLink,
+    ArchiveKeywordForm
   },
   props: {
     data: {
@@ -71,10 +62,6 @@ export default Vue.extend({
 </script>
 
 <style lang="postcss" scoped>
-form {
-  padding: calc(var(--rhythm) * 3) 0;
-  border-bottom: 1px solid rgb(170, 184, 194);
-}
 ul {
   line-height: calc(var(--rhythm) * 3);
 }
@@ -83,18 +70,6 @@ ul {
 <style lang="postcss">
 :root {
   --space: 1.5rem;
-}
-.with-sidebar > * {
-  @apply flex flex-wrap items-start;
-}
-.with-sidebar > * > * {
-  flex-grow: 1;
-  flex-basis: 80px;
-}
-.with-sidebar > * > :last-child {
-  flex-basis: 0;
-  flex-grow: 999;
-  min-width: calc(50% - 90px);
 }
 .stack > * {
   @apply my-0;
