@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import ArchiveList from '../../components/ArchiveList.vue'
+import ArchiveList from '@/components/list/ArchiveList.vue'
 
 export default {
   components: {
@@ -21,7 +21,7 @@ export default {
   },
   data () {
     return {
-      lists: require(`../../static/reading${this.$route.params.id}.json`)
+      lists: require(`@/static/reading${this.$route.params.id}.json`)
     }
   }
 }
