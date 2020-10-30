@@ -1,6 +1,5 @@
 <template>
   <div class="stack flex flex-col justify-start">
-    <archive-keyword-form v-model.lazy="filterKey" />
     <div>
       <ul v-show="filterListItem" role="list" class="m-0 pl-8 pr-0 list-disc">
         <template v-for="list in filterListItem">
@@ -16,7 +15,6 @@
 <script lang="ts">
 import Vue from 'vue'
 import ListLink from '@/components/link/ListLink.vue'
-import ArchiveKeywordForm from '@/components/form/ArchiveKeywordForm.vue'
 
 const textRender = (text: string) => {
   if (text?.includes('Reading... ')) {
@@ -30,8 +28,7 @@ const textRender = (text: string) => {
 
 export default Vue.extend({
   components: {
-    ListLink,
-    ArchiveKeywordForm
+    ListLink
   },
   props: {
     data: {
