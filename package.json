@@ -51,6 +51,6 @@
     "vue-paginate": "yamanoku/vue-paginate"
   },
   "resolutions": {
-    "@babel/parser": "7.12.5"
+    "@babel/parser": "7.12.7"
   }
 }
