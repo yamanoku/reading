@@ -10,6 +10,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import axios from 'axios'
+import { Context } from '@nuxt/types'
 import { TOKEN } from '@/static/config'
 import NewsList from '@/components/list/NewsList.vue'
 
@@ -20,13 +21,14 @@ export default Vue.extend({
   components: {
     NewsList
   },
-  async asyncData (error: any): Promise<AsyncData | undefined> {
+  async asyncData (context: Context): Promise<AsyncData | undefined> {
     try {
       const { data } = await axios.get<AsyncData>(TOKEN)
       return {
         lists: data.api
       }
     } catch (e) {
+      const { error } = context
       error({ statusCode: 404, message: 'Connection Error' })
     }
   }
