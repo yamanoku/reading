@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/archive/2018", {data:[{}],fetch:[],mutations:void 0});
