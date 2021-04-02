@@ -13,15 +13,15 @@
     "deploy:gh-pages": "gh-pages -d dist -m 'chore: update [skip ci]' -t"
   },
   "dependencies": {
-    "@nuxt/types": "2.15.3",
+    "@nuxt/types": "2.15.4",
     "@nuxt/typescript-build": "2.1.0",
     "@nuxt/typescript-runtime": "2.1.0",
-    "@nuxt/vue-app": "2.15.3",
+    "@nuxt/vue-app": "2.15.4",
     "@nuxtjs/eslint-config-typescript": "6.0.0",
     "@nuxtjs/feed": "2.0.0",
     "@nuxtjs/pwa": "3.3.5",
     "@nuxtjs/tailwindcss": "4.0.2",
-    "nuxt": "2.15.3",
+    "nuxt": "2.15.4",
     "vue": "2.6.12"
   },
   "devDependencies": {
