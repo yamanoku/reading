@@ -44,7 +44,7 @@
     "sass-loader": "11.0.1",
     "ts-loader": "9.0.0",
     "vue-axe": "2.4.4",
-    "vue-loader": "15.9.6",
+    "vue-loader": "15.9.7",
     "vue-paginate": "yamanoku/vue-paginate"
   },
   "resolutions": {
