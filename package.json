@@ -42,7 +42,7 @@
     "nuxt-generate-cluster": "2.7.0",
     "postcss-nested": "5.0.6",
     "sass-loader": "12.1.0",
-    "ts-loader": "9.0.0",
+    "ts-loader": "9.2.5",
     "vue-axe": "2.4.4",
     "vue-loader": "15.9.7",
     "vue-paginate": "yamanoku/vue-paginate"
