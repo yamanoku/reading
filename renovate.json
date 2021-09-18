@@ -2,6 +2,10 @@
   "extends": [
     "config:base"
   ],
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
   "labels": [
     "update-dependencies"
   ]
