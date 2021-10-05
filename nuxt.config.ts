@@ -42,7 +42,7 @@ const nuxtConfig: Partial<NuxtConfig> = {
         })
       }
     },
-    quiet: false,
+    quiet: false
   },
   buildModules: [
     [
@@ -79,7 +79,11 @@ const nuxtConfig: Partial<NuxtConfig> = {
           link: 'https://reading.yamanoku.net/feed.xml',
           description: "yamanoku's reading feed"
         }
-        const posts = await (await axios.get(TOKEN)).data.api
+        interface AsyncData {
+          data: { api: Array<{ attachments: { [key: number]: any }; iid: string }> }
+        }
+        const { data } = await (await axios.get<AsyncData>(TOKEN)).data
+        const posts = data.api
         const urlRender = function (text: string) {
           if (text === null) {
             return
@@ -90,7 +94,7 @@ const nuxtConfig: Partial<NuxtConfig> = {
           return emoji.emojify(text)
         }
         posts.forEach(
-          (post: { attachments: { [key: number]: any }; iid: string }) => {
+          (post) => {
             if (!post.attachments[0].title) {
               feed.addItem({
                 title: emojiRender(post.attachments[0].text),
