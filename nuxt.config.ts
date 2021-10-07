@@ -80,9 +80,9 @@ const nuxtConfig: Partial<NuxtConfig> = {
           description: "yamanoku's reading feed"
         }
         interface AsyncData {
-          data: { api: Array<{ attachments: { [key: number]: any }; iid: string }> }
+          api: Array<{ attachments: { [key: number]: any }; iid: string }>
         }
-        const { data } = await (await axios.get<AsyncData>(TOKEN)).data
+        const { data } = await axios.get<AsyncData>(TOKEN)
         const posts = data.api
         const urlRender = function (text: string) {
           if (text === null) {
