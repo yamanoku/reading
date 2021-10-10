@@ -22,13 +22,24 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue, { PropType } from 'vue'
 import emoji from 'node-emoji'
+
+type listData = {
+  attachments: {
+    [key: number]: {
+      title?: string
+      'title_link'?: string
+      text: string
+    }
+  }
+  iid: string
+}
 
 export default Vue.extend({
   props: {
     listData: {
-      type: Object,
+      type: Object as PropType<listData>,
       required: true,
       default () {
         return {}
@@ -66,9 +77,14 @@ export default Vue.extend({
     },
     urlRender (text: string) {
       if (text === null) {
-        return
+        return ''
       }
-      return text.match(/ <([^\s]+)/)![1].slice(0, -1)
+      const textCheckArray = text.match(/ <([^\s]+)>/)
+      if (textCheckArray !== null) {
+        return textCheckArray[1]
+      } else {
+        return ''
+      }
     },
     emoji (text: string) {
       return emoji.emojify(text)
