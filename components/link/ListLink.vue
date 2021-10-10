@@ -66,9 +66,14 @@ export default Vue.extend({
     },
     urlRender (text: string) {
       if (text === null) {
-        return
+        return ''
       }
-      return text.match(/ <([^\s]+)/)![1].slice(0, -1)
+      const textCheckArray = text.match(/ <([^\s]+)>/)
+      if (textCheckArray !== null) {
+        return textCheckArray[1]
+      } else {
+        return ''
+      }
     },
     emoji (text: string) {
       return emoji.emojify(text)
