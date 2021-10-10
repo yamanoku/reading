@@ -17,15 +17,23 @@ import NewsList from '@/components/list/NewsList.vue'
 interface AsyncData {
   [lists: string]: { data: { api: Array<Object> } }
 }
+
 export default Vue.extend({
   components: {
     NewsList
   },
   async asyncData (context: Context): Promise<AsyncData | undefined> {
     try {
-      const { data } = await axios.get<AsyncData>(TOKEN)
-      return {
-        lists: data.api
+      if (process.env.NODE_ENV === 'development') {
+        const { data } = await axios.get<AsyncData>('/api')
+        return {
+          lists: data.api
+        }
+      } else {
+        const { data } = await axios.get<AsyncData>(TOKEN)
+        return {
+          lists: data.api
+        }
       }
     } catch (e) {
       const { error } = context
