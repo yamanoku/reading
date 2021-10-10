@@ -4,6 +4,28 @@ import axios from 'axios'
 import emoji from 'node-emoji'
 import { TOKEN } from './static/config'
 
+type feed = {
+  options: {
+    title: string
+    link: string
+    description: string
+  }
+  addItem(number: {title: string, guid: string, link: string}): void
+}
+
+interface AsyncData {
+  api: Array<{
+    attachments: {
+      [key: number]: {
+        title?: string
+        'title_link'?: string
+        text: string
+      }
+    }
+    iid: string
+  }>
+}
+
 const nuxtConfig: Partial<NuxtConfig> = {
   target: 'static',
   telemetry: false,
@@ -68,29 +90,41 @@ const nuxtConfig: Partial<NuxtConfig> = {
       '~': path.resolve(__dirname)
     }
   },
-  plugins: ['~/plugins/vue-paginate', '~/plugins/vue-axe'],
+  plugins: [
+    '~/plugins/vue-paginate',
+    '~/plugins/vue-axe',
+    { src: '@/plugins/mock', mode: 'client' }
+  ],
   modules: ['@nuxtjs/feed', '@nuxtjs/pwa'],
   feed: [
     {
       path: '/feed.xml',
-      async create (feed: any) {
+      async create (feed: feed) {
         feed.options = {
           title: 'Reading…',
           link: 'https://reading.yamanoku.net/feed.xml',
           description: "yamanoku's reading feed"
         }
-        interface AsyncData {
-          api: Array<{ attachments: { [key: number]: any }; iid: string }>
+        let posts
+        if (process.env.NODE_ENV !== 'development') {
+          const { data } = await axios.get<AsyncData>('/api')
+          posts = data.api
+        } else {
+          const { data } = await axios.get<AsyncData>(TOKEN)
+          posts = data.api
         }
-        const { data } = await axios.get<AsyncData>(TOKEN)
-        const posts = data.api
-        const urlRender = function (text: string) {
+        const urlRender = function (text: string): string {
           if (text === null) {
-            return
+            return ''
           }
-          return text.match(/ <([^\s]+)/)![1].slice(0, -1)
+          const textCheckArray = text.match(/ <([^\s]+)>/)
+          if (textCheckArray !== null) {
+            return textCheckArray[1]
+          } else {
+            return ''
+          }
         }
-        const emojiRender = function (text: string) {
+        const emojiRender = function (text: string): string {
           return emoji.emojify(text)
         }
         posts.forEach(
@@ -105,7 +139,7 @@ const nuxtConfig: Partial<NuxtConfig> = {
               feed.addItem({
                 title: emojiRender(post.attachments[0].title),
                 guid: post.iid,
-                link: post.attachments[0].title_link
+                link: post.attachments[0].title_link!
               })
             }
           }
