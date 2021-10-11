@@ -32,13 +32,11 @@ jobs:
   deploy:
     docker:
       - image: circleci/node:latest
-    environment:
-      - NODE_ENV: production
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v2-dependencies-{{ checksum "package.json" }}
+      # - restore_cache:
+      #     keys:
+      #       - v2-dependencies-{{ checksum "package.json" }}
       - run: git config user.name $GITHUB_NAME
       - run: git config user.email $GITHUB_EMAIL
       - run:
