@@ -32,6 +32,8 @@ jobs:
   deploy:
     docker:
       - image: circleci/node:latest
+    environment:
+      - NODE_ENV: production
     steps:
       - checkout
       # - restore_cache:
