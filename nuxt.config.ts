@@ -105,8 +105,14 @@ const nuxtConfig: Partial<NuxtConfig> = {
           link: 'https://reading.yamanoku.net/feed.xml',
           description: "yamanoku's reading feed"
         }
-        const { data } = await axios.get<AsyncData>(TOKEN)
-        const posts = data.api
+        let posts
+        if (process.env.NODE_ENV !== 'development') {
+          const { data } = await axios.get<AsyncData>('/api')
+          posts = data.api
+        } else {
+          const { data } = await axios.get<AsyncData>(TOKEN)
+          posts = data.api
+        }
         const urlRender = function (text: string): string {
           if (text === null) {
             return ''
