@@ -91,7 +91,6 @@ const nuxtConfig: Partial<NuxtConfig> = {
     }
   },
   plugins: [
-    '~/plugins/vue-paginate',
     '~/plugins/vue-axe',
     { src: '@/plugins/mock', mode: 'client' }
   ],
@@ -106,7 +105,7 @@ const nuxtConfig: Partial<NuxtConfig> = {
           description: "yamanoku's reading feed"
         }
         let posts
-        if (process.env.NODE_ENV !== 'development') {
+        if (process.env.NODE_ENV === 'development') {
           const { data } = await axios.get<AsyncData>('/api')
           posts = data.api
         } else {
