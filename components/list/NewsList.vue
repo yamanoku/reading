@@ -1,29 +1,25 @@
 <template>
   <div>
-    <paginate
-      tag="nav"
-      name="lists"
-      class="news-list m-auto overflow-y-scroll fixed top-0 left-0 right-0 z-0"
-      :list="lists"
-      :per="20"
-    >
+    <div class="news-list m-auto overflow-y-scroll fixed top-0 left-0 right-0 z-0">
       <ul class="m-0 p-0 list-none grid gap-2">
-        <template v-for="list in paginated('lists')">
+        <template v-for="list in filterItems">
           <li v-if="list.attachments" :key="list.iid" class="block p-0">
             <list-link :list-data="list" :news-btn-style="true" />
           </li>
         </template>
       </ul>
-    </paginate>
+    </div>
     <div
       class="pagination fixed bottom-0 left-0 z-10 px-1 w-screen bg-white border-solid border-t border-r-0 border-b-0 border-l-0 flex items-center justify-between"
     >
       <span class="blank" />
-      <paginate-links
-        for="lists"
-        :show-step-links="false"
-        @change="onPageChange"
-      />
+      <ul class="paginate-links lists">
+        <li v-for="pageItem in totalPage" :key="pageItem" :class="activeClass(pageItem)">
+          <button type="button" @click="onPageChange(pageItem)">
+            {{ pageItem }}
+          </button>
+        </li>
+      </ul>
       <archive-link />
     </div>
   </div>
@@ -48,14 +44,30 @@ export default Vue.extend({
     }
   },
   data () {
+    const perPage = 20
     return {
       lists: this.data,
-      paginate: ['lists']
+      page: 1,
+      perPage,
+      totalPage: this.data.length / perPage
+    }
+  },
+  computed: {
+    filterItems () {
+      return this.$data.lists.filter(
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        (item: any, index: number) =>
+          index >= (this.$data.page - 1) * this.$data.perPage && index < this.$data.page * this.$data.perPage
+      )
     }
   },
   methods: {
-    onPageChange (): void {
+    onPageChange (page: number): void {
       document.getElementsByClassName('news-list')[0].scrollTop = 0
+      this.$data.page = page
+    },
+    activeClass (page: number): string {
+      return page === this.$data.page ? 'active' : ''
     }
   }
 })

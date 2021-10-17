@@ -24,8 +24,7 @@
     "modern-normalize": "1.1.0",
     "node-emoji": "1.11.0",
     "nuxt": "2.15.8",
-    "vue": "2.6.12",
-    "vue-paginate": "yamanoku/vue-paginate"
+    "vue": "2.6.12"
   },
   "devDependencies": {
     "@types/node-emoji": "1.8.1",

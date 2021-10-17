@@ -91,7 +91,6 @@ const nuxtConfig: Partial<NuxtConfig> = {
     }
   },
   plugins: [
-    '~/plugins/vue-paginate',
     '~/plugins/vue-axe',
     { src: '@/plugins/mock', mode: 'client' }
   ],
