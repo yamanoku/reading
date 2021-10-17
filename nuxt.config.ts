@@ -1,5 +1,5 @@
 import path from 'path'
-import { NuxtConfig } from '@nuxt/types'
+import { defineNuxtConfig } from '@nuxt/bridge'
 import axios from 'axios'
 import emoji from 'node-emoji'
 import { TOKEN } from './static/config'
@@ -26,7 +26,8 @@ interface AsyncData {
   }>
 }
 
-const nuxtConfig: Partial<NuxtConfig> = {
+export default defineNuxtConfig({
+  bridge: false,
   target: 'static',
   telemetry: false,
   head: {
@@ -50,39 +51,9 @@ const nuxtConfig: Partial<NuxtConfig> = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  build: {
-    extend (config, ctx) {
-      if (ctx.isDev && ctx.isClient) {
-        if (!config.module) {
-          return
-        }
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    },
-    quiet: false
-  },
-  buildModules: [
-    [
-      '@nuxt/typescript-build',
-      {
-        typeCheck: true,
-        ignoreNotFoundWarnings: true
-      }
-    ],
-    '@nuxtjs/tailwindcss'
-  ],
+  buildModules: ['@nuxtjs/tailwindcss'],
   generate: {
-    routes () {
-      return [
-        '/archive/2019',
-        '/archive/2018'
-      ]
-    }
+    routes: ['/archive/2019','/archive/2018']
   },
   resolve: {
     alias: {
@@ -162,6 +133,4 @@ const nuxtConfig: Partial<NuxtConfig> = {
     theme_color: '#f9f9f9',
     background_color: '#f9f9f9'
   }
-}
-
-module.exports = nuxtConfig
+})

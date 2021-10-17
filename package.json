@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@nuxt/types": "2.15.8",
-    "@nuxt/typescript-build": "2.1.0",
     "@nuxt/vue-app": "2.15.8",
     "@nuxtjs/eslint-config-typescript": "6.0.1",
     "@nuxtjs/feed": "2.0.0",
@@ -24,9 +23,11 @@
     "modern-normalize": "1.1.0",
     "node-emoji": "1.11.0",
     "nuxt": "2.15.8",
+    "nuxt-edge": "2.16.0-27226092.034b9901",
     "vue": "2.6.12"
   },
   "devDependencies": {
+    "@nuxt/bridge": "npm:@nuxt/bridge-edge",
     "@types/node-emoji": "1.8.1",
     "@typescript-eslint/parser": "5.0.0",
     "axe-core": "4.3.3",
@@ -43,6 +44,7 @@
     "postcss-nested": "5.0.6",
     "sass-loader": "12.2.0",
     "ts-loader": "9.0.0",
+    "typescript": "4.4.4",
     "vue-axe": "2.4.4",
     "vue-loader": "15.9.8"
   },
