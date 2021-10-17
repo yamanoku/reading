@@ -61,6 +61,6 @@ workflows:
           cron: "0 1,10 * * *"
           filters:
             branches:
-              only: master
+              only: main
     jobs:
       - deploy
