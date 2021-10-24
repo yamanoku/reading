@@ -1,8 +1,8 @@
 import path from 'path'
 import { NuxtConfig } from '@nuxt/types'
+import { WebClient } from '@slack/web-api'
 import axios from 'axios'
 import { emojify } from 'node-emoji'
-import { TOKEN } from './static/config'
 
 type feed = {
   options: {
@@ -113,8 +113,17 @@ const nuxtConfig: Partial<NuxtConfig> = {
           const { data } = await axios.get<AsyncData>('/api')
           posts = data.api
         } else {
-          const { data } = await axios.get<AsyncData>(TOKEN)
-          posts = data.api
+          const token = process.env.SLACK_TOKEN
+          const web = new WebClient(token)
+          const messages = await web.search.messages({
+            query: 'Reading',
+            sort: 'timestamp',
+            sort_dir: 'desc',
+            count: 100
+          }).then((res) => {
+            return res.messages
+          })
+          posts = messages?.matches
         }
         const urlRender = function (text: string): string {
           if (text === null) {
@@ -139,13 +148,13 @@ const nuxtConfig: Partial<NuxtConfig> = {
         const emojiRender = function (text: string): string {
           return emojify(text)
         }
-        posts.forEach(
-          (post) => {
+        posts?.forEach(
+          (post: any) => {
             if (post.attachments[0].title) {
               feed.addItem({
                 title: emojiRender(post.attachments[0].title),
-                guid: post.iid,
-                link: post.attachments[0].title_link!
+                guid: post.iid!,
+                link: urlRender(post.attachments[0].title)
               })
             } else {
               feed.addItem({
