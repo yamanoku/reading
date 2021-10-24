@@ -1,23 +1,23 @@
 <template>
-  <!-- title not response -->
-  <a
-    v-if="!linkData.attachments[0].title"
-    :href="urlRender(linkData.attachments[0].text)"
-    target="_blank"
-    rel="noopener"
-    :class="btnStyle"
-  >
-    {{ emojiRender(textRender(linkData.attachments[0].text)) }}
-  </a>
   <!-- title response -->
   <a
-    v-else
+    v-if="linkData.attachments[0].title"
     :href="linkData.attachments[0].title_link"
     target="_blank"
     rel="noopener"
     :class="btnStyle"
   >
-    {{ emojiRender(linkData.attachments[0].title) }}
+    {{ emojiRender(textRender(linkData.attachments[0].title)) }}
+  </a>
+  <!-- title not response -->
+  <a
+    v-else
+    :href="urlRender(linkData.attachments[0].pretext)"
+    target="_blank"
+    rel="noopener"
+    :class="btnStyle"
+  >
+    {{ emojiRender(linkData.attachments[0].pretext) }}
   </a>
 </template>
 
@@ -30,7 +30,8 @@ type listData = {
     [key: number]: {
       title?: string
       'title_link'?: string
-      text: string
+      text?: string
+      pretext: string
     }
   }
   iid: string
@@ -66,13 +67,13 @@ export default Vue.extend({
     }
   },
   methods: {
-    textRender (text: string) {
+    preTextRender (text: string) {
       if (text.includes('Reading... ')) {
         const mystr = text.split('Reading... ').join('')
-        return mystr.replace(/^<[^>]h>|<[^>]*>$/g, '')
+        return mystr.replace(/<[^a-z]*> : /g, '').replace(/^<[^>]h>|<[^>]*>/g, '').replace(/.via Twitter ./g, '')
       } else if (text.includes('Reading… ')) {
         const mystr = text.split('Reading… ').join('')
-        return mystr.replace(/^<[^>]h>|<[^>]*>$/g, '')
+        return mystr.replace(/<[^a-z]*> : /g, '').replace(/^<[^>]h>|<[^>]*>/g, '').replace(/.via Twitter ./g, '')
       }
     },
     urlRender (text: string) {
