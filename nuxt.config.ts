@@ -14,16 +14,19 @@ type feed = {
 }
 
 interface AsyncData {
-  api: Array<{
-    attachments: {
-      [key: number]: {
-        title?: string
-        'title_link'?: string
-        text: string
-      }
-    }
-    iid: string
-  }>
+  api: Array<Response>
+}
+
+export interface Response {
+  iid: string;
+  attachments:  AttachmentData[];
+}
+
+export interface AttachmentData {
+  pretext: string;
+  title?: string;
+  title_link?: string;
+  text?: string;
 }
 
 const nuxtConfig: Partial<NuxtConfig> = {
