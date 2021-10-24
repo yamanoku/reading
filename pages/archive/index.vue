@@ -9,6 +9,11 @@
     </p>
     <ul class="my-3 pl-8 pr-0 list-disc" role="list">
       <li role="listitem">
+        <nuxt-link class="underline" to="/archive/2020">
+          2020
+        </nuxt-link>
+      </li>
+      <li role="listitem">
         <nuxt-link class="underline" to="/archive/2019">
           2019
         </nuxt-link>

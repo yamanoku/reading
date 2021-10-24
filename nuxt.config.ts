@@ -79,6 +79,7 @@ const nuxtConfig: Partial<NuxtConfig> = {
   generate: {
     routes () {
       return [
+        '/archive/2020',
         '/archive/2019',
         '/archive/2018'
       ]
