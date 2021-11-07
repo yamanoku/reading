@@ -40,7 +40,7 @@ jobs:
               yarn install
             fi
 
-      - run: echo $tokenAPI | base64 --decode > ./static/config.js
+      - run: echo $SlackTOKEN > .env
 
       - run: yarn build
 
@@ -60,7 +60,7 @@ jobs:
           name: Deploy gh-pages
           command: |
             yarn && \
-            echo $tokenAPI | base64 --decode > ./static/config.js && \
+            echo $SlackTOKEN > .env && \
             yarn generate && \
             yarn deploy:gh-pages && \
             curl -X POST -d {} https://api.netlify.com/build_hooks/5cc93fb77d8bfbb0cf910b05
