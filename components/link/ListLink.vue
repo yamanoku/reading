@@ -7,7 +7,7 @@
     rel="noopener"
     :class="btnStyle"
   >
-    {{ emoji(textRender(linkData.attachments[0].text)) }}
+    {{ emojiRender(textRender(linkData.attachments[0].text)) }}
   </a>
   <!-- title response -->
   <a
@@ -17,7 +17,7 @@
     rel="noopener"
     :class="btnStyle"
   >
-    {{ emoji(linkData.attachments[0].title) }}
+    {{ emojiRender(linkData.attachments[0].title) }}
   </a>
 </template>
 
@@ -86,7 +86,7 @@ export default Vue.extend({
         return ''
       }
     },
-    emoji (text: string) {
+    emojiRender (text: string) {
       return emojify(text)
     }
   }
