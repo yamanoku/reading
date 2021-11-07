@@ -7,7 +7,7 @@
     rel="noopener"
     :class="btnStyle"
   >
-    {{ emoji(textRender(linkData.attachments[0].text)) }}
+    {{ emojiRender(textRender(linkData.attachments[0].text)) }}
   </a>
   <!-- title response -->
   <a
@@ -17,13 +17,13 @@
     rel="noopener"
     :class="btnStyle"
   >
-    {{ emoji(linkData.attachments[0].title) }}
+    {{ emojiRender(linkData.attachments[0].title) }}
   </a>
 </template>
 
 <script lang="ts">
 import Vue, { PropType } from 'vue'
-import emoji from 'node-emoji'
+import { emojify } from 'node-emoji'
 
 type listData = {
   attachments: {
@@ -86,8 +86,8 @@ export default Vue.extend({
         return ''
       }
     },
-    emoji (text: string) {
-      return emoji.emojify(text)
+    emojiRender (text: string) {
+      return emojify(text)
     }
   }
 })
