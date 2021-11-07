@@ -13,17 +13,20 @@ type feed = {
   addItem(number: {title: string, guid: string, link: string}): void
 }
 
+export interface AttachmentData {
+  pretext: string;
+  title?: string;
+  'title_link'?: string;
+  text?: string;
+}
+
+export interface Response {
+  iid: string;
+  attachments: AttachmentData[];
+}
+
 interface AsyncData {
-  api: Array<{
-    attachments: {
-      [key: number]: {
-        title?: string
-        'title_link'?: string
-        text: string
-      }
-    }
-    iid: string
-  }>
+  api: Array<Response>
 }
 
 const nuxtConfig: Partial<NuxtConfig> = {
@@ -124,22 +127,31 @@ const nuxtConfig: Partial<NuxtConfig> = {
             return ''
           }
         }
+        const preTextRender = function (text: string): string | undefined {
+          if (text.includes('Reading... ')) {
+            const mystr = text.split('Reading... ').join('')
+            return mystr.replace(/<[^a-z]*> : /g, '').replace(/^<[^>]h>|<[^>]*>/g, '').replace(/.via Twitter ./g, '')
+          } else if (text.includes('Reading… ')) {
+            const mystr = text.split('Reading… ').join('')
+            return mystr.replace(/<[^a-z]*> : /g, '').replace(/^<[^>]h>|<[^>]*>/g, '').replace(/.via Twitter ./g, '')
+          }
+        }
         const emojiRender = function (text: string): string {
           return emojify(text)
         }
         posts.forEach(
           (post) => {
-            if (!post.attachments[0].title) {
-              feed.addItem({
-                title: emojiRender(post.attachments[0].text),
-                guid: post.iid,
-                link: urlRender(post.attachments[0].text)
-              })
-            } else {
+            if (post.attachments[0].title) {
               feed.addItem({
                 title: emojiRender(post.attachments[0].title),
                 guid: post.iid,
                 link: post.attachments[0].title_link!
+              })
+            } else {
+              feed.addItem({
+                title: emojiRender(preTextRender(post.attachments[0].pretext)!),
+                guid: post.iid,
+                link: urlRender(post.attachments[0].pretext)
               })
             }
           }
