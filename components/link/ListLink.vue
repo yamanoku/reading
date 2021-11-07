@@ -7,7 +7,7 @@
     rel="noopener"
     :class="btnStyle"
   >
-    {{ emojiRender(textRender(linkData.attachments[0].title)) }}
+    {{ emojiRender(linkData.attachments[0].title) }}
   </a>
   <!-- title not response -->
   <a
@@ -17,7 +17,7 @@
     rel="noopener"
     :class="btnStyle"
   >
-    {{ emojiRender(linkData.attachments[0].pretext) }}
+    {{ emojiRender(preTextRender(linkData.attachments[0].pretext)) }}
   </a>
 </template>
 
