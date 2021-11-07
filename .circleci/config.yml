@@ -4,6 +4,20 @@
 #
 version: 2
 jobs:
+  test:
+    docker:
+      - image: cimg/node:16.13.0
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run:
+          name: install node_modules
+          command: |
+            if [ ! -e node_modules ]; then
+              yarn install
+            fi
+      - run: yarn lint
+
   build:
     docker:
       # specify the version you desire here
@@ -55,6 +69,7 @@ workflows:
   version: 2
   commit:
     jobs:
+      - test
       - build
   nightly:
     triggers:
