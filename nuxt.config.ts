@@ -1,7 +1,7 @@
 import path from 'path'
 import { NuxtConfig } from '@nuxt/types'
 import axios from 'axios'
-import emoji from 'node-emoji'
+import { emojify } from 'node-emoji'
 import { TOKEN } from './static/config'
 
 type feed = {
@@ -125,7 +125,7 @@ const nuxtConfig: Partial<NuxtConfig> = {
           }
         }
         const emojiRender = function (text: string): string {
-          return emoji.emojify(text)
+          return emojify(text)
         }
         posts.forEach(
           (post) => {

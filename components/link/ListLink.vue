@@ -23,7 +23,7 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue'
-import emoji from 'node-emoji'
+import { emojify } from 'node-emoji'
 
 type listData = {
   attachments: {
@@ -87,7 +87,7 @@ export default Vue.extend({
       }
     },
     emoji (text: string) {
-      return emoji.emojify(text)
+      return emojify(text)
     }
   }
 })
