@@ -13,20 +13,20 @@ type feed = {
   addItem(number: {title: string, guid: string, link: string}): void
 }
 
-interface AsyncData {
-  api: Array<Response>
+export interface AttachmentData {
+  pretext: string;
+  title?: string;
+  'title_link'?: string;
+  text?: string;
 }
 
 export interface Response {
   iid: string;
-  attachments:  AttachmentData[];
+  attachments: AttachmentData[];
 }
 
-export interface AttachmentData {
-  pretext: string;
-  title?: string;
-  title_link?: string;
-  text?: string;
+interface AsyncData {
+  api: Array<Response>
 }
 
 const nuxtConfig: Partial<NuxtConfig> = {
