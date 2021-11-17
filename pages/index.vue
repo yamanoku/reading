@@ -10,12 +10,12 @@
 <script lang="ts">
 import Vue from 'vue'
 import axios from 'axios'
+import { WebClient } from '@slack/web-api'
 import { Context } from '@nuxt/types'
-import { TOKEN } from '@/static/config'
 import NewsList from '@/components/list/NewsList.vue'
 
-interface AsyncData {
-  [lists: string]: { data: { api: Array<Object> } }
+export interface AsyncData {
+  [lists: string]: any
 }
 
 export default Vue.extend({
@@ -30,9 +30,18 @@ export default Vue.extend({
           lists: data.api
         }
       } else {
-        const { data } = await axios.get<AsyncData>(TOKEN)
+        const token = process.env.SLACK_TOKEN
+        const web = new WebClient(token)
+        const messages = await web.search.messages({
+          query: 'Reading',
+          sort: 'timestamp',
+          sort_dir: 'desc',
+          count: 100
+        }).then((res) => {
+          return res.messages
+        })
         return {
-          lists: data.api
+          lists: messages?.matches
         }
       }
     } catch (e) {

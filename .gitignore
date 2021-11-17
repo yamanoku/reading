@@ -65,7 +65,3 @@ dist
 
 # PWA
 sw.*
-
-# Config file
-static/config.js
-static/feed.xml
