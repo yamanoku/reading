@@ -48,7 +48,7 @@
     "vue-axe": "2.4.4"
   },
   "resolutions": {
-    "@babel/parser": "7.16.7"
+    "@babel/parser": "7.16.8"
   },
   "msw": {
     "workerDirectory": "static"
