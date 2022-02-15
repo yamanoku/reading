@@ -30,7 +30,7 @@
     "postcss-nested": "5.0.6",
     "sass-loader": "12.6.0",
     "ts-loader": "9.0.0",
-    "vue": "2.6.12",
+    "vue": "3.2.31",
     "vue-loader": "15.9.8"
   },
   "devDependencies": {
