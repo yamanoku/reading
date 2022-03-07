@@ -41,7 +41,7 @@
     "eslint-plugin-html": "6.2.0",
     "eslint-plugin-vue": "8.5.0",
     "eslint-plugin-vuejs-accessibility": "1.1.1",
-    "msw": "0.38.2",
+    "msw": "0.39.0",
     "nuxt-generate-cluster": "2.7.0",
     "vue-axe": "2.4.4"
   },
