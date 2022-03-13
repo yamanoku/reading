@@ -8,5 +8,11 @@
   },
   "labels": [
     "update-dependencies"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["ts-loader"],
+      "enabled": false
+    }
   ]
 }
