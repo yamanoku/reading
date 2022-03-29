@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/archive/2020", {data:[{}],fetch:{},mutations:void 0});
