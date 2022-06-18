@@ -42,7 +42,7 @@ jobs:
 
       - run: echo $SlackTOKEN > .env
 
-      - run: yarn build
+      - run: export SET NODE_OPTIONS=--openssl-legacy-provider && yarn build
 
   deploy:
     docker:
@@ -61,6 +61,7 @@ jobs:
           command: |
             yarn && \
             echo $SlackTOKEN > .env && \
+            export SET NODE_OPTIONS=--openssl-legacy-provider && \
             yarn generate && \
             yarn deploy:gh-pages && \
             curl -X POST -d {} https://api.netlify.com/build_hooks/5cc93fb77d8bfbb0cf910b05
