@@ -6,7 +6,7 @@ version: 2
 jobs:
   test:
     docker:
-      - image: cimg/node:16.15.1
+      - image: cimg/node:18.4.0
     working_directory: ~/repo
     steps:
       - checkout
@@ -21,7 +21,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: cimg/node:16.15.1
+      - image: cimg/node:18.4.0
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -42,11 +42,11 @@ jobs:
 
       - run: echo $SlackTOKEN > .env
 
-      - run: yarn build
+      - run: export SET NODE_OPTIONS=--openssl-legacy-provider && yarn build
 
   deploy:
     docker:
-      - image: cimg/node:16.15.1
+      - image: cimg/node:18.4.0
     environment:
       - NODE_ENV: production
     steps:
@@ -61,6 +61,7 @@ jobs:
           command: |
             yarn && \
             echo $SlackTOKEN > .env && \
+            export SET NODE_OPTIONS=--openssl-legacy-provider && \
             yarn generate && \
             yarn deploy:gh-pages && \
             curl -X POST -d {} https://api.netlify.com/build_hooks/5cc93fb77d8bfbb0cf910b05
