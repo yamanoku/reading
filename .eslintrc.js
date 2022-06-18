@@ -2,10 +2,13 @@ module.exports = {
   root: true,
   env: {
     browser: true,
+    es2021: true,
     node: true
   },
   parserOptions: {
-    parser: '@typescript-eslint/parser'
+    ecmaVersion: 'latest',
+    parser: '@typescript-eslint/parser',
+    sourceType: 'module'
   },
   extends: [
     'plugin:vue/essential',
@@ -14,7 +17,8 @@ module.exports = {
   ],
   plugins: [
     'vue',
-    'vuejs-accessibility'
+    'vuejs-accessibility',
+    '@typescript-eslint'
   ],
   rules: {
     'vue/multi-word-component-names': 'off',
