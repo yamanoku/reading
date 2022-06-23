@@ -27,7 +27,7 @@
     "modern-normalize": "1.1.0",
     "node-emoji": "1.11.0",
     "nuxt": "2.15.8",
-    "postcss-nesting": "10.1.8",
+    "postcss-nesting": "10.1.9",
     "sass-loader": "13.0.0",
     "ts-loader": "9.0.0"
   },
@@ -47,7 +47,7 @@
   },
   "resolutions": {
     "@babel/parser": "7.18.5",
-    "postcss-nesting": "10.1.8"
+    "postcss-nesting": "10.1.9"
   },
   "msw": {
     "workerDirectory": "static"
