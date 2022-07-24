@@ -3,7 +3,7 @@
     <h1 class="sr-only">
       NewsList
     </h1>
-    <news-list :data="lists" />
+    <news-list :lists="lists" />
   </main>
 </template>
 
