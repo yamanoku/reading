@@ -64,7 +64,8 @@ const nuxtConfig: Partial<NuxtConfig> = {
         ignoreNotFoundWarnings: true
       }
     ],
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/eslint-module'
   ],
   generate: {
     routes () {
