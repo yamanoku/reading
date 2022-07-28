@@ -54,19 +54,6 @@ const nuxtConfig: Partial<NuxtConfig> = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   build: {
-    extend (config, ctx) {
-      if (ctx.isDev && ctx.isClient) {
-        if (!config.module) {
-          return
-        }
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    },
     quiet: false
   },
   buildModules: [
