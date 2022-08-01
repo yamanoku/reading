@@ -33,7 +33,7 @@
     "ts-loader": "9.0.0"
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "5.31.0",
+    "@typescript-eslint/parser": "5.32.0",
     "axe-core": "4.4.3",
     "babel-eslint": "10.1.0",
     "eslint": "8.21.0",
